@@ -65,14 +65,28 @@ end
 function M.select_light()
   vim.ui.select(M.list.light, { prompt = "Select light Ef theme: " }, function(choice)
     if not choice then return end
+    vim.o.bg = "light"
+
     M.load({ name = choice, bg = "light" })
+
+    vim.g.colors_name = choice
+
+    vim.notify(choice, vim.log.levels.INFO)
+    vim.schedule(function() vim.api.nvim_exec_autocmds("ColorScheme", { pattern = choice }) end)
   end)
 end
 
 function M.select_dark()
   vim.ui.select(M.list.dark, { prompt = "Select dark Ef theme: " }, function(choice)
     if not choice then return end
+    vim.o.bg = "dark"
+
     M.load({ name = choice, bg = "dark" })
+
+    vim.g.colors_name = choice
+
+    vim.notify(choice, vim.log.levels.INFO)
+    vim.schedule(function() vim.api.nvim_exec_autocmds("ColorScheme", { pattern = choice }) end)
   end)
 end
 
@@ -81,12 +95,18 @@ function M.load_random()
   local theme_list
   if is_dark then
     theme_list = M.list.dark
+    vim.o.bg = "dark"
   else
     theme_list = M.list.light
+    vim.o.bg = "light"
   end
 
   local idx = math.random(1, #theme_list)
   M.load({ name = theme_list[idx], bg = is_dark and "dark" or "light" })
+  vim.g.colors_name = theme_list[idx]
+
+  vim.notify("Ef-themes: " .. theme_list[idx], vim.log.levels.INFO)
+  vim.schedule(function() vim.api.nvim_exec_autocmds("ColorScheme", { pattern = theme_list[idx] }) end)
 end
 
 return M
