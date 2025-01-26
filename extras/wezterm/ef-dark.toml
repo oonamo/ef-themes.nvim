@@ -1,0 +1,46 @@
+[colors]
+foreground = "#d0d0d0"
+background = "#000000"
+cursor_bg = "#ff76ff"
+cursor_border = "#ff76ff"
+cursor_fg = "#000000"
+selection_bg = "#2a234a"
+selection_fg = "#d0d0d0"
+split = "#4f4f5f"
+compose_cursor = "#bf9032"
+scrollbar_thumb = "#002435"
+
+ansi = ["black", "#ef6560", "#0faa26", "#bf9032", "#3f95f6", "#d369af", "#6fafff", "gray65"]
+brights = ["gray35", "#f47360", "#6aad0f", "#df8a5a", "#029fff", "#af85ff", "#1dbfcf", "white"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#4b4b4b"
+background = "#000000"
+
+[colors.tab_bar.active_tab]
+fg_color = "#000000"
+bg_color = "#89afef"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#89afef"
+bg_color = "#2b2b2b"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#89afef"
+bg_color = "#002435"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#0faa26"
+bg_color = "#000000"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#3f95f6"
+bg_color = "#000000"
+
+[metadata]
+aliases = []
+author = "prot"
+name = "ef-dark"

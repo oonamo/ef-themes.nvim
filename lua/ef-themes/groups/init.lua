@@ -4,7 +4,9 @@ local M = {
     "blink",
     "mini",
     "treesitter",
+    "fzf",
     --   "semantic-tokens"
+    --   "fzf-lua"
   },
 }
 

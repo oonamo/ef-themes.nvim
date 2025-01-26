@@ -79,10 +79,26 @@ function M.write_all_themes()
   end
 end
 
+function M.write_all_extras()
+  local list = require("ef-themes").list
+  for _, theme in ipairs(list.dark) do
+    local palette = require("ef-themes.themes").get_palette(theme)
+    require("ef-themes.extras").generate(theme, palette)
+  end
+  for _, theme in ipairs(list.light) do
+    local palette = require("ef-themes.themes").get_palette(theme)
+    require("ef-themes.extras").generate(theme, palette)
+  end
+end
+
+-- stylua: ignore
+-- HACK: Until ci is created,
+-- visual select the `dofile` line and do :source
 local function run_local()
   dofile(vim.api.nvim_buf_get_name(0))
 end
 
-M.write_all_themes()
+-- M.write_all_themes()
+M.write_all_extras()
 
 return M

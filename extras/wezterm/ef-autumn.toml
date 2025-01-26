@@ -1,0 +1,46 @@
+[colors]
+foreground = "#cfbcba"
+background = "#0f0e06"
+cursor_bg = "#ffaa33"
+cursor_border = "#ffaa33"
+cursor_fg = "#0f0e06"
+selection_bg = "#3f1324"
+selection_fg = "#cfbcba"
+split = "#58514f"
+compose_cursor = "#c48702"
+scrollbar_thumb = "#302a3a"
+
+ansi = ["black", "#ff7a7f", "#2fa526", "#c48702", "#6a88ff", "#d570af", "#4fb0cf", "gray65"]
+brights = ["gray35", "#f06a3f", "#64aa0f", "#d0730f", "#029fff", "#af8aff", "#6fafff", "white"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#56524f"
+background = "#0f0e06"
+
+[colors.tab_bar.active_tab]
+fg_color = "#0f0e06"
+bg_color = "#70a89f"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#70a89f"
+bg_color = "#36322f"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#70a89f"
+bg_color = "#302a3a"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#2fa526"
+bg_color = "#0f0e06"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#379cf6"
+bg_color = "#0f0e06"
+
+[metadata]
+aliases = []
+author = "prot"
+name = "ef-autumn"

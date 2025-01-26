@@ -1,0 +1,46 @@
+[colors]
+foreground = "#e4d3e1"
+background = "#322023"
+cursor_bg = "#ef607a"
+cursor_border = "#ef607a"
+cursor_fg = "#322023"
+selection_bg = "#45524a"
+selection_fg = "#e4d3e1"
+split = "#6f5f58"
+compose_cursor = "#e4c53f"
+scrollbar_thumb = "#42352f"
+
+ansi = ["black", "#ff707f", "#5fbb5f", "#e4c53f", "#57aff6", "#ffb2d6", "#5fc0dc", "gray65"]
+brights = ["gray35", "#ff7f5f", "#8ad05a", "#f2a85f", "#78b2ff", "#cfb1ff", "#80dfbf", "white"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#6a5862"
+background = "#322023"
+
+[colors.tab_bar.active_tab]
+fg_color = "#322023"
+bg_color = "#96c4af"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#96c4af"
+bg_color = "#4a3842"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#96c4af"
+bg_color = "#42352f"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#5fbb5f"
+bg_color = "#322023"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#57aff6"
+bg_color = "#322023"
+
+[metadata]
+aliases = []
+author = "prot"
+name = "ef-rosa"

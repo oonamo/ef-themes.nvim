@@ -1,0 +1,46 @@
+[colors]
+foreground = "#4f204f"
+background = "#f3eddf"
+cursor_bg = "#9d5744"
+cursor_border = "#9d5744"
+cursor_fg = "#f3eddf"
+selection_bg = "#e0d0ba"
+selection_fg = "#4f204f"
+split = "#c5afb6"
+compose_cursor = "#87591f"
+scrollbar_thumb = "#e7d9e0"
+
+ansi = ["black", "#ba2d2f", "#5a7400", "#87591f", "#5059c0", "#9f4e74", "#3060af", "gray65"]
+brights = ["gray35", "#b21f00", "#008250", "#a05900", "#265fbf", "#7755b4", "#0b6e8a", "white"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#b9aaa8"
+background = "#f3eddf"
+
+[colors.tab_bar.active_tab]
+fg_color = "#f3eddf"
+bg_color = "#55447f"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#55447f"
+bg_color = "#d9cac8"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#55447f"
+bg_color = "#e7d9e0"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#007a0a"
+bg_color = "#f3eddf"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#375cc6"
+bg_color = "#f3eddf"
+
+[metadata]
+aliases = []
+author = "prot"
+name = "ef-reverie"

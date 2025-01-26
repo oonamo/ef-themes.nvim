@@ -1,0 +1,46 @@
+[colors]
+foreground = "#e8e4b1"
+background = "#352718"
+cursor_bg = "#f9cf7a"
+cursor_border = "#f9cf7a"
+cursor_fg = "#352718"
+selection_bg = "#443a4f"
+selection_fg = "#e8e4b1"
+split = "#6f5f58"
+compose_cursor = "#e4b53f"
+scrollbar_thumb = "#4f311f"
+
+ansi = ["black", "#ff7f7f", "#6fd560", "#e4b53f", "#57aff6", "#fa90aa", "#6fcad0", "gray65"]
+brights = ["gray35", "#ff8f98", "#65d590", "#e7a06f", "#98bfff", "#c6a2fe", "#70e0cf", "white"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#79665f"
+background = "#352718"
+
+[colors.tab_bar.active_tab]
+fg_color = "#352718"
+bg_color = "#ccaa70"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#ccaa70"
+bg_color = "#59463f"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#ccaa70"
+bg_color = "#4f311f"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#6fd560"
+bg_color = "#352718"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#57aff6"
+bg_color = "#352718"
+
+[metadata]
+aliases = []
+author = "prot"
+name = "ef-melissa-dark"

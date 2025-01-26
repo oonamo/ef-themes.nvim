@@ -1,0 +1,46 @@
+[colors]
+foreground = "#dfd0d5"
+background = "#15050f"
+cursor_bg = "#fd3333"
+cursor_border = "#fd3333"
+cursor_fg = "#15050f"
+selection_bg = "#293140"
+selection_fg = "#dfd0d5"
+split = "#555564"
+compose_cursor = "#c48702"
+scrollbar_thumb = "#3f1515"
+
+ansi = ["black", "#d24f7f", "#2fa526", "#c48702", "#6a88ff", "#b0648f", "#3fafcf", "gray65"]
+brights = ["gray35", "#df4f4f", "#64aa0f", "#d0730f", "#029fff", "#a6699f", "#4fafaf", "white"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#554f4f"
+background = "#15050f"
+
+[colors.tab_bar.active_tab]
+fg_color = "#15050f"
+bg_color = "#afdaef"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#afdaef"
+bg_color = "#352f2f"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#afdaef"
+bg_color = "#3f1515"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#2fa526"
+bg_color = "#15050f"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#379cf6"
+bg_color = "#15050f"
+
+[metadata]
+aliases = []
+author = "prot"
+name = "ef-tritanopia-dark"

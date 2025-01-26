@@ -1,0 +1,46 @@
+[colors]
+foreground = "#d0d0d0"
+background = "#130911"
+cursor_bg = "#f0af7f"
+cursor_border = "#f0af7f"
+cursor_fg = "#130911"
+selection_bg = "#3f2f40"
+selection_fg = "#d0d0d0"
+split = "#4d4a4b"
+compose_cursor = "#bf9032"
+scrollbar_thumb = "#1f2f3f"
+
+ansi = ["black", "#fe5a7a", "#0faa26", "#bf9032", "#6a9fff", "#d369af", "#4fbaef", "gray65"]
+brights = ["gray35", "#ff7355", "#6aad0f", "#df8a5a", "#029fff", "#af85ff", "#1dbfcf", "white"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#4b3f47"
+background = "#130911"
+
+[colors.tab_bar.active_tab]
+fg_color = "#130911"
+bg_color = "#89afef"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#89afef"
+bg_color = "#372d32"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#89afef"
+bg_color = "#1f2f3f"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#0faa26"
+bg_color = "#130911"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#3f95f6"
+bg_color = "#130911"
+
+[metadata]
+aliases = []
+author = "prot"
+name = "ef-symbiosis"

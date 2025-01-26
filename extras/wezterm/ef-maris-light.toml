@@ -1,0 +1,46 @@
+[colors]
+foreground = "#151a27"
+background = "#edf4f8"
+cursor_bg = "#036f99"
+cursor_border = "#036f99"
+cursor_fg = "#edf4f8"
+selection_bg = "#c8dcff"
+selection_fg = "#151a27"
+split = "#a2a6af"
+compose_cursor = "#805a1f"
+scrollbar_thumb = "#dae5f0"
+
+ansi = ["black", "#b02440", "#007010", "#805a1f", "#444fcf", "#80308f", "#1f66af", "gray65"]
+brights = ["gray35", "#d00000", "#007047", "#8b4400", "#003faf", "#5f2fba", "#006f70", "white"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#afb8c3"
+background = "#edf4f8"
+
+[colors.tab_bar.active_tab]
+fg_color = "#edf4f8"
+bg_color = "#3f4f99"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#3f4f99"
+bg_color = "#cfd8e3"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#3f4f99"
+bg_color = "#dae5f0"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#007010"
+bg_color = "#edf4f8"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#375cc6"
+bg_color = "#edf4f8"
+
+[metadata]
+aliases = []
+author = "prot"
+name = "ef-maris-light"

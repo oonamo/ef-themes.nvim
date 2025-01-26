@@ -1,0 +1,46 @@
+[colors]
+foreground = "#201f36"
+background = "#fff7f7"
+cursor_bg = "#d06f30"
+cursor_border = "#d06f30"
+cursor_fg = "#fff7f7"
+selection_bg = "#dfe4f4"
+selection_fg = "#201f36"
+split = "#bab7bc"
+compose_cursor = "#9a6012"
+scrollbar_thumb = "#f2e5d9"
+
+ansi = ["black", "#b00234", "#217a3c", "#9a6012", "#3c3bbe", "#a01f64", "#2f5f9f", "gray65"]
+brights = ["gray35", "#e00033", "#4a7d00", "#a04646", "#4250ef", "#7022bf", "#1077ab", "white"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#c0bbbb"
+background = "#fff7f7"
+
+[colors.tab_bar.active_tab]
+fg_color = "#fff7f7"
+bg_color = "#af4988"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#af4988"
+bg_color = "#e0dbdb"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#af4988"
+bg_color = "#f2e5d9"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#217a3c"
+bg_color = "#fff7f7"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#3c3bbe"
+bg_color = "#fff7f7"
+
+[metadata]
+aliases = []
+author = "prot"
+name = "ef-kassio"

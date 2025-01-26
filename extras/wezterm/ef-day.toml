@@ -1,0 +1,46 @@
+[colors]
+foreground = "#584141"
+background = "#fff5ea"
+cursor_bg = "#cf1f00"
+cursor_border = "#cf1f00"
+cursor_fg = "#fff5ea"
+selection_bg = "#f0d2df"
+selection_fg = "#584141"
+split = "#c8bdb6"
+compose_cursor = "#a45a22"
+scrollbar_thumb = "#f9e2b2"
+
+ansi = ["black", "#ba2d2f", "#007a0a", "#a45a22", "#375cc6", "#ca3e54", "#3f60af", "gray65"]
+brights = ["gray35", "#ce3f00", "#5f7200", "#aa4f30", "#5f5fdf", "#8448aa", "#0f7b8f", "white"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#c9c0b8"
+background = "#fff5ea"
+
+[colors.tab_bar.active_tab]
+fg_color = "#fff5ea"
+bg_color = "#8f5f4a"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#8f5f4a"
+bg_color = "#e9e0d8"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#8f5f4a"
+bg_color = "#f9e2b2"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#007a0a"
+bg_color = "#fff5ea"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#375cc6"
+bg_color = "#fff5ea"
+
+[metadata]
+aliases = []
+author = "prot"
+name = "ef-day"

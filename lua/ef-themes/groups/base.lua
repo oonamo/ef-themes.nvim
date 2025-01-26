@@ -20,7 +20,7 @@ function M.get(c, opts)
 		Conceal                     = { fg = c.fg_alt }                               , -- placeholder characters substituted for concealed text (see 'conceallevel')
 		Constant                    = { fg = c.constant }                             , -- (preferred) any constant
 		CurSearch                   = { bg = c.bg_search_current }                    ,
-		Cursor                      = { fg = c.fg_main, bg = c.bg_main }              ,
+		Cursor                      = { fg = c.bg_main, bg = c.cursor }              ,
 		CursorColumn                = { bg = c.bg_alt }                               , -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		CursorIM                    = { link = "Cursor" }                             ,
 		CursorLine                  = { bg = c.bg_hl_line }                           ,

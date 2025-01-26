@@ -1,0 +1,46 @@
+[colors]
+foreground = "#d8cfd5"
+background = "#160f0f"
+cursor_bg = "#ff99ff"
+cursor_border = "#ff99ff"
+cursor_fg = "#160f0f"
+selection_bg = "#16304f"
+selection_fg = "#d8cfd5"
+split = "#605760"
+compose_cursor = "#d4a052"
+scrollbar_thumb = "#34223f"
+
+ansi = ["black", "#ff85aa", "#60b444", "#d4a052", "#8895ff", "#d37faf", "#8fbaff", "gray65"]
+brights = ["gray35", "#ff7560", "#a0c27f", "#ef926f", "#72afff", "#a698ef", "#8fcfdf", "white"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#564f55"
+background = "#160f0f"
+
+[colors.tab_bar.active_tab]
+fg_color = "#160f0f"
+bg_color = "#afdacf"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#afdacf"
+bg_color = "#362f35"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#afdacf"
+bg_color = "#34223f"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#60b444"
+bg_color = "#160f0f"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#7fa5f6"
+bg_color = "#160f0f"
+
+[metadata]
+aliases = []
+author = "prot"
+name = "ef-trio-dark"
