@@ -51,6 +51,8 @@ vim.o.background = "%s"
   local f = loadstring(table.concat(lines, "\n"), "=")
   if not f then error("could not create load string") end
 
+  if vim.g.ef_themes_debug then utils.write("debug", table.concat(lines, "\n")) end
+
   utils.write_byte(write_path, f())
 end
 

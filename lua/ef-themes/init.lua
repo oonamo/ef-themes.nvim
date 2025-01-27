@@ -88,7 +88,9 @@ function M.load(theme_opts, opts)
   if vim.o.bg ~= bg or (name == "ef-theme") then
     if vim.g.colors_name == name then
       name = opts[vim.o.bg]
+      bg = vim.o.bg
       theme_opts.name = opts[vim.o.bg]
+      theme_opts.bg = vim.o.bg
     else
       vim.o.background = bg
     end

@@ -29,6 +29,8 @@ function M.build(palette, opts, name, theme_opts)
     end
   end
 
+  M.terminal(palette)
+
   opts.on_highlights(all_groups, palette, name)
   if opts.options.compile then require("ef-themes.compiler").compile(opts, all_groups, theme_opts) end
 end
