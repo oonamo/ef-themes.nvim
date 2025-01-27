@@ -50,9 +50,12 @@ end
 
 function M.generate_docs()
   local readme_file = vim.fn.fnamemodify(debug.getinfo(1).source:sub(2), ":p:h:h:h:h:") .. "/README.md"
-  local tag = "extras"
-  local pattern = "(<%!%-%- " .. tag .. ":start %-%->).*(<%!%-%- " .. tag .. ":end %-%->)"
-  local readme = Utils.read(readme_file)
+  local pattern = "(<%!%-%- extras:start %-%->).*(<%!%-%- extras:end %-%->)"
+  -- local pattern = "(<%!%-%- " .. tag .. ":start %-%->).*(<%!%-%- " .. tag .. ":end %-%->)"
+
+  local readme = Utils.read(readme_file, "*a")
+  local old_length = #readme
+
   local lines = {}
   local names = vim.tbl_keys(M.extras)
   table.sort(names)
@@ -72,15 +75,25 @@ function M.generate_docs()
   end
 
   table.insert(lines, "")
-  readme = readme_file:gsub(pattern, "%1\n" .. table.concat(lines, "\n") .. "\n%2")
+  vim.print(lines)
 
-  Utils.write(readme_file, readme)
+  readme = readme:gsub(
+    "(<%!%-%- extras:start %-%->).*(<%!%-%- extras:end %-%->)",
+    "%1\n" .. table.concat(lines, "\n") .. "\n%2"
+  )
+
+  vim.print(readme)
+  print("old_length", old_length, "new_length", #readme)
+
+  assert(#readme > old_length, "The file did not correctly add the extras")
+
+  Utils.write(readme_file, readme, "w+")
 end
 
 -- Reference: https://github.com/miikanissi/modus-themes.nvim/blob/9f0343bcb3be4dd5545624db135f2b1c369e7ce4/lua/modus-themes/extras/init.lua#L57
 function M.generate(name, palette)
   for k, v in pairs(M.extras) do
-    print("[Generating Extra]", v.name)
+    print("[Generating Extra]", v.label)
     local template = require("ef-themes.extras." .. k).template()
     local parsed = M.substitute(template, name, palette)
 
@@ -90,8 +103,29 @@ function M.generate(name, palette)
     print("[write]", write_path)
     Utils.write(write_path, parsed)
   end
-
-  M.generate_docs()
 end
+
+local test_readme = [[
+<h1 align="center">Ef-Themes</h1>
+sometokm aoakmsd koa oamskfo m
+oaksdj
+aoksdmf
+makosdm
+
+aoskdjok
+okasdmo
+makosdmok
+a
+sdfomkoamsdf
+
+
+<!-- extras:start -->
+<!-- extras:end -->
+
+Thing a bob
+]]
+
+-- local sub = test_readme:gsub("(<%!%-%- extras:start %-%->).*(<%!%-%- extras:end %-%->)", "%1\n- 1\n- 2\n- 3\n%2")
+-- print(sub)
 
 return M

@@ -4,8 +4,6 @@
     Ported from <a href="https://github.com/protesilaos/ef-themes" target="_blank">Ef (εὖ) themes for GNU Emacs</a>
 </p>
 
-Includes extras for [Kitty](https://sw.kovidgoyal.net/kitty/conf/), [Alacritty](https://github.com/alacritty/alacritty), [fzf](https://junegunn.github.io/fzf/) and more!
-
 <p align="center">
     <img src="https://private-user-images.githubusercontent.com/43306454/406818537-ef09fa7c-dd9b-4960-925e-5b2c2708aa87.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzc5NTk1MTksIm5iZiI6MTczNzk1OTIxOSwicGF0aCI6Ii80MzMwNjQ1NC80MDY4MTg1MzctZWYwOWZhN2MtZGQ5Yi00OTYwLTkyNWUtNWIyYzI3MDhhYTg3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAxMjclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMTI3VDA2MjY1OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWUzMjMwODdhZDg0ZWY4MmI4ZWNlNzZlYTgwNmRjYmJkYTZjYmRiMjA0ODNhMjQ1NWQ5ODcwNmM4YWE1YmVjYmUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.u1pH9xL3pI55S0SdZtx-A0ZPAbrXHmg4s7ykG-friCU"/>
 </p>
@@ -129,6 +127,14 @@ require("ef-themes").setup({
 ```
 
 <!-- extras:start -->
+- [Fzf](https://github.com/junegunn/fzf) ([fzf](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/fzf))
+- [Ghostty](https://github.com/ghostty-org/ghostty) ([ghostty](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/ghostty))
+- [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) ([kitty](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/kitty))
+- [Lazygit](https://github.com/jesseduffield/lazygit) ([lazygit](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/lazygit))
+- [Vimium](https://vimium.github.io/) ([vimium](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/vimium))
+- [WezTerm](https://wezfurlong.org/wezterm/config/files.html) ([wezterm](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/wezterm))
+- [Windows Terminal](https://aka.ms/terminal-documentation) ([windows_terminal](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/windows_terminal))
+- [Yazi](https://github.com/sxyazi/yazi) ([yazi](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/yazi))
 
 <!-- extras:end -->
 

@@ -2,9 +2,9 @@ local M = {}
 
 ---@param file string File to write to
 ---@param contents string Content to write to file
-M.write = function(file, contents)
+M.write = function(file, contents, mode)
   vim.fn.mkdir(vim.fn.fnamemodify(file, ":h"), "p")
-  local fd = assert(io.open(file, "w+"))
+  local fd = assert(io.open(file, mode or "w+"))
   fd:write(contents)
   fd:close()
 end
@@ -18,10 +18,15 @@ M.write_byte = function(file, contents)
   fd:close()
 end
 
-M.read = function(filepath)
+M.read = function(filepath, mode)
   local file = io.open(filepath, "r")
   if file then
-    local content = file:read()
+    local content
+    if mode then
+      content = file:read(mode)
+    else
+      content = file:read()
+    end
     file:close()
     return content
   end
