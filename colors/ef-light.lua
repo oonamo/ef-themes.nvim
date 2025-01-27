@@ -1,3 +1,1 @@
-vim.cmd.hi("clear")
-require("ef-themes").load({name = "ef-light", bg = "light"})
-vim.g.colors_name = "ef-light"
+require("ef-themes").load({ name = "ef-light", bg = "light" })

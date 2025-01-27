@@ -46,16 +46,24 @@ function M.setup(opts)
   M.__did_setup = true
 end
 
+function M.is_dark(color) return vim.tbl_contains(M.list.dark, color) end
+
 function M.load(theme_opts, opts)
   local name, bg = theme_opts.name, theme_opts.bg
 
   if not M.__did_setup then M.setup(opts) end
   opts = require("ef-themes.config").extend(opts)
 
-  if vim.o.bg ~= bg or (name == "ef-theme") then name = opts[vim.o.bg] end
+  if vim.o.bg ~= bg or (name == "ef-theme") then
+    if vim.g.colors_name == name then
+      name = opts[vim.o.bg]
+    else
+      vim.o.background = bg
+    end
+  end
 
   local palette = require("ef-themes.themes").get_palette(name)
-  require("ef-themes.groups").build(palette, opts)
+  require("ef-themes.groups").build(palette, opts, name)
 
   require("ef-themes.config").extend({
     [vim.o.bg] = name,

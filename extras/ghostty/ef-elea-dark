@@ -1,0 +1,23 @@
+palette = 0=black
+palette = 1=#ff656a
+palette = 2=#7fc87f
+palette = 3=#cac85f
+palette = 4=#57aff6
+palette = 5=#f59acf
+palette = 6=#7fcfdf
+palette = 7=gray65
+palette = 8=gray35
+palette = 9=#ff7a5f
+palette = 10=#50cf89
+palette = 11=#e0b02f
+palette = 12=#78afff
+palette = 13=#cfaaff
+palette = 14=#60d5c2
+palette = 15=white
+
+background = #222524
+foreground = #eaf2ef
+cursor-color = #ef7fa8
+selection-background = #2f413f
+selection-foreground = #eaf2ef
+  

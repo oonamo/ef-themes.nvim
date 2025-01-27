@@ -62,11 +62,7 @@ function M._create_color(name)
   local theme_name = name:gsub("-?theme%.el", "")
   local is_dark = M._is_dark(theme_name)
   out:write(
-    [[vim.cmd.hi("clear")]],
-    "\n",
-    string.format([[require("ef-themes").load({name = "%s", bg = "%s"})]], theme_name, is_dark and "dark" or "light"),
-    "\n",
-    string.format([[vim.g.colors_name = "%s"]], theme_name)
+    string.format([[require("ef-themes").load({ name = "%s", bg = "%s" })]], theme_name, is_dark and "dark" or "light")
   )
   out:close()
 end
@@ -82,10 +78,12 @@ end
 function M.write_all_extras()
   local list = require("ef-themes").list
   for _, theme in ipairs(list.dark) do
+    print("[Generating]", theme)
     local palette = require("ef-themes.themes").get_palette(theme)
     require("ef-themes.extras").generate(theme, palette)
   end
   for _, theme in ipairs(list.light) do
+    print("[Generating]", theme)
     local palette = require("ef-themes.themes").get_palette(theme)
     require("ef-themes.extras").generate(theme, palette)
   end

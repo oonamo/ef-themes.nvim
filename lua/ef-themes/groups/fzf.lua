@@ -12,7 +12,7 @@ function M.get(c, opts)
     FzfLuaFzfSeparator = { fg = c.border, bg = c.bg_dim },
     FzfLuaHeaderBind = { link = "@punctuation.special" },
     FzfLuaHeaderText = { link = "Title" },
-    FzfLuaNormal = { fg = c.fg, bg = c.bg_float },
+    FzfLuaNormal = { fg = c.fg_main, bg = c.bg_dim },
     FzfLuaPath = { link = "Directory" },
     FzfLuaPreviewTitle = { fg = c.border, bg = c.bg_dim },
     FzfLuaTitle = { fg = c.name, bold = true },

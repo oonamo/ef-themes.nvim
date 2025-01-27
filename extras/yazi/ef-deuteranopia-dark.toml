@@ -36,7 +36,7 @@ border_style  = { fg = "#555a64" }
 normal_main = { fg = "black", bg = "#3f90f0", bold = true }
 normal_alt  = { fg = "#3f90f0", bg = "#7f8797" }
 
-select_main = { fg = "${black}", bg = "#b379bf", bold = true }
+select_main = { fg = "black", bg = "#b379bf", bold = true }
 select_alt  = { fg = "#b379bf", bg = "#7f8797" }
 
 unset_main  = { fg = "black", bg = "#9f95ff", bold = true }
@@ -126,7 +126,7 @@ icon_info = ""
 [help]
 on      = { fg = "#3faa26" }
 run     = { fg = "#b379bf" }
-hovered = { bg = "${bg_highlight}" }
+hovered = { bg = "#2e2e1b" }
 footer  = { fg = "#ddddee", bg = "#000a1f" }
 
 [filetype]

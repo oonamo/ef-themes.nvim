@@ -40,7 +40,7 @@ border_style  = { fg = "${border}" }
 normal_main = { fg = "${fg_term_black}", bg = "${blue}", bold = true }
 normal_alt  = { fg = "${blue}", bg = "${fg_dim}" }
 
-select_main = { fg = "${black}", bg = "${magenta}", bold = true }
+select_main = { fg = "${fg_term_black}", bg = "${magenta}", bold = true }
 select_alt  = { fg = "${magenta}", bg = "${fg_dim}" }
 
 unset_main  = { fg = "${fg_term_black}", bg = "${magenta_cooler}", bold = true }
@@ -130,7 +130,7 @@ icon_info = ""
 [help]
 on      = { fg = "${green}" }
 run     = { fg = "${magenta}" }
-hovered = { bg = "${bg_highlight}" }
+hovered = { bg = "${bg_hl_line}" }
 footer  = { fg = "${fg_main}", bg = "${bg_main}" }
 
 [filetype]

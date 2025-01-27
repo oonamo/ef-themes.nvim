@@ -1,0 +1,26 @@
+# Add the following object to your Windows Terminal configuration
+# https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes#creating-your-own-color-scheme
+{
+    "background": "#fcf7ef",
+    "black": "black",
+    "blue": "#375cc6",
+    "brightBlack": "black",
+    "brightBlue": "#375cc6",
+    "brightCyan": "#1f70af",
+    "brightGreen": "#006f00",
+    "brightPurple": "#8448aa",
+    "brightRed": "#9f0d0f",
+    "brightWhite": "#242521",
+    "brightYellow": "#a7601f",
+    "cursorColor": "#242521",
+    "cyan": "#1f70af",
+    "foreground": "#242521",
+    "green": "#006f00",
+    "name": "ef-cyprus",
+    "purple": "#9a456f",
+    "red": "#9f0d0f",
+    "selectionBackground": "#f0e0d4",
+    "white": "#59786f",
+    "yellow": "#a7601f"
+}
+  
