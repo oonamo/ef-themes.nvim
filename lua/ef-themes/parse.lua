@@ -30,7 +30,8 @@ function M.parse_theme(in_file_path, out_file_path)
 end
 
 local sep = package.config:sub(1, 1)
-local base_path = debug.getinfo(1).source:sub(2, string.len("./parse.lua") * -1) .. sep
+local this_file_path = debug.getinfo(1).source:sub(2, string.len("./parse.lua") * -1) .. sep
+local base_path = this_file_path:sub(1, string.len("/lua/ef-themes/") * -1)
 
 function M.get_all_ef_themes()
   local raw_themes_path = base_path .. "raw_themes" .. sep
@@ -55,7 +56,8 @@ function M._is_dark(name)
 end
 
 function M._create_color(name)
-  local sub_path = string.sub(base_path, 1, string.len("/lua/ef-themes/") * -1)
+  local sub_path = base_path
+  -- local sub_path = string.sub(this_file_path, 1, string.len("/lua/ef-themes/") * -1)
   local path = sub_path .. "colors" .. sep .. name:gsub("-?theme%.el", "%.lua")
   local out = io.open(path, "w")
   if not out then error("could not create theme " .. name) end
@@ -70,7 +72,7 @@ end
 function M.write_all_themes()
   local ef_themes, path = M.get_all_ef_themes()
   for _, ef_theme in ipairs(ef_themes or {}) do
-    M.parse_theme(path .. ef_theme, base_path .. "themes" .. sep .. ef_theme:gsub("-?theme%.el", "%.lua"))
+    M.parse_theme(path .. ef_theme, this_file_path .. "themes" .. sep .. ef_theme:gsub("-?theme%.el", "%.lua"))
     M._create_color(ef_theme)
   end
 end
@@ -96,7 +98,7 @@ local function run_local()
   dofile(vim.api.nvim_buf_get_name(0))
 end
 
--- M.write_all_themes()
+M.write_all_themes()
 M.write_all_extras()
 
 return M
