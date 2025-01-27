@@ -26,7 +26,8 @@ jobs:
       - uses: rhysd/action-setup-vim@v1
         with:
           neovim: true
-      - run: ./scripts/build
+      - name: Run Build
+        run: ./scripts/build
       - name: Push Changes
         if: ${{ github.event_name == 'push' }}
         uses: stefanzweifel/git-auto-commit-action@v5

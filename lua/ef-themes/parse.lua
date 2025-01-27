@@ -101,7 +101,7 @@ local function run_local()
   dofile(vim.api.nvim_buf_get_name(0))
 end
 
--- NOTE: Uncomment these if testing locally, then run the function contents of 'run_local' 
+-- NOTE: Uncomment these if testing locally, then run the function contents of 'run_local'
 -- M.write_all_themes()
 -- M.write_all_extras()
 
