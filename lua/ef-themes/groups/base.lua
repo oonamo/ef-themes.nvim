@@ -53,7 +53,7 @@ function M.get(c, opts)
 		Folded                      = { fg = c.border, bg = c.bg_alt }                , -- line used for closed folds
 		Function                    = { fg = c.fnname }                               ,
 		Identifier                  = { fg = c.identifier }                           ,
-		IncSearch                   = { bg = c.bg_search_match, fg = c.fg_intense }   , -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+		IncSearch                   = { bg = c.bg_search_current, fg = c.fg_intense }   , -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		Italic                      = { italic = true, fg = c.fg_main }               , -- (preferred) any italic text
 		Keyword                     = { fg = c.keyword, bold = true }                 ,
 		LineNr                      = { fg = c.fg_dim }                               , -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
