@@ -1,10 +1,10 @@
 <h1 align="center">Ef-Themes</h1>
 <p align="center">
     Colourful and legible themes for Neovim,
-    ported from [Ef (εὖ) themes for GNU Emacs](https://github.com/protesilaos/ef-themes)
+    Ported from <a href="https://github.com/protesilaos/ef-themes" target="_blank">Ef (εὖ) themes for GNU Emacs</a>
 </p>
 
-
+Includes extras for [Kitty](https://sw.kovidgoyal.net/kitty/conf/), [Alacritty](https://github.com/alacritty/alacritty), [fzf](https://junegunn.github.io/fzf/) and more!
 
 <p align="center">
     <img src="https://private-user-images.githubusercontent.com/43306454/406818537-ef09fa7c-dd9b-4960-925e-5b2c2708aa87.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzc5NTk1MTksIm5iZiI6MTczNzk1OTIxOSwicGF0aCI6Ii80MzMwNjQ1NC80MDY4MTg1MzctZWYwOWZhN2MtZGQ5Yi00OTYwLTkyNWUtNWIyYzI3MDhhYTg3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAxMjclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMTI3VDA2MjY1OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWUzMjMwODdhZDg0ZWY4MmI4ZWNlNzZlYTgwNmRjYmJkYTZjYmRiMjA0ODNhMjQ1NWQ5ODcwNmM4YWE1YmVjYmUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.u1pH9xL3pI55S0SdZtx-A0ZPAbrXHmg4s7ykG-friCU"/>
@@ -76,12 +76,12 @@ require("ef-themes").setup({
     "mini", -- for mini.nvim
     "treesitter", -- for treesitter
     -- "semantic-tokens", -- Currently not recommended to enable
-    -- "fzf",
+    -- "fzf", -- for fzf.lua
   },
 
   --- Override any color from the ef-theme
-  ---@param colors Ef-Theme Color Palette
-  ---@param name string Then name of the ef-theme
+  ---@param colors Ef-Theme
+  ---@param name string
   on_colors = function(colors, name) end, -- TODO: Unimplemented
 
   --- Override specific highlights
@@ -121,12 +121,16 @@ require("ef-themes").setup({
 ```lua
 require("ef-themes").setup({
         on_highlights = function(hls, palette, name)
-            if name == "ef-spinrg" then
+            if name == "ef-spring" then
                 hls.FloatBorder = { fg = palette.fg_main, bg = palette.bg_alt }
             end
         end,
 })
 ```
+
+<!-- extras:start -->
+
+<!-- extras:end -->
 
 # Acknowledgments
 - [protesilaos](https://github.com/protesilaos/ef-themes) (Original Creator)
