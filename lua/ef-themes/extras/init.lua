@@ -1,5 +1,6 @@
 local M = {
-  extras = { fzf = { ext = "sh", name = "Fzf" },
+  extras = {
+    fzf = { ext = "sh", name = "Fzf" },
     ghostty = { ext = "", name = "Ghostty" },
     lazygit = { ext = "yaml", name = "LazyGit" },
     vimium = { ext = "css", name = "Vimium" },
