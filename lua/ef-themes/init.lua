@@ -58,7 +58,6 @@ function M.setup(opts)
     local hash = require("ef-themes.compiler").hash(opts) .. (git_time == -1 and git_path or git_time)
 
     if previous_hash ~= hash then
-
       -- HACK: Don't delete the cached files, but rather make them invalid
       require("ef-themes.utils").for_file_in_dir_write(opts.options.compile_path, "()")
       require("ef-themes.utils").write_byte(cache_path, hash)
