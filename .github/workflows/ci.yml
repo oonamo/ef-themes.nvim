@@ -22,8 +22,7 @@ jobs:
     needs: stylua
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.RELEASE_TOKEN != null && secrets.RELEASE_TOKEN || secrets.GITHUB_TOKEN }}
+      - run: git pull
       - uses: rhysd/action-setup-vim@v1
         with:
           neovim: true
@@ -33,5 +32,4 @@ jobs:
         if: ${{ github.event_name == 'push' }}
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          file_pattern: "extras/*"
           commit_message: "chore(extras): auto-generate extras"
