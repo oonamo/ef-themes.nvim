@@ -4,15 +4,17 @@
     Ported from <a href="https://github.com/protesilaos/ef-themes" target="_blank">Ef (εὖ) themes for GNU Emacs</a>
 </p>
 
-<p align="center">
-    <img src="https://private-user-images.githubusercontent.com/43306454/406818537-ef09fa7c-dd9b-4960-925e-5b2c2708aa87.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzc5NTk1MTksIm5iZiI6MTczNzk1OTIxOSwicGF0aCI6Ii80MzMwNjQ1NC80MDY4MTg1MzctZWYwOWZhN2MtZGQ5Yi00OTYwLTkyNWUtNWIyYzI3MDhhYTg3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAxMjclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMTI3VDA2MjY1OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWUzMjMwODdhZDg0ZWY4MmI4ZWNlNzZlYTgwNmRjYmJkYTZjYmRiMjA0ODNhMjQ1NWQ5ODcwNmM4YWE1YmVjYmUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.u1pH9xL3pI55S0SdZtx-A0ZPAbrXHmg4s7ykG-friCU"/>
-</p>
+![ef-themes-preview](https://github.com/user-attachments/assets/82ddbecf-1ec2-41e3-bf4a-dce0ef78671f)
+
 
 # Showcase 
 
 <details>
+
+![ef-dream](https://github.com/user-attachments/assets/1ea903f6-affc-44dd-890a-d8c7114a1322)
+
 <summary>ef-dream</summary>
-<img src="https://private-user-images.githubusercontent.com/43306454/406818778-41719929-9096-4fa5-882f-2b06d12cb128.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzc5NTk5MTMsIm5iZiI6MTczNzk1OTYxMywicGF0aCI6Ii80MzMwNjQ1NC80MDY4MTg3NzgtNDE3MTk5MjktOTA5Ni00ZmE1LTg4MmYtMmIwNmQxMmNiMTI4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAxMjclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMTI3VDA2MzMzM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWI5MGU3MDgzOTUxNGViMzMwMjI4ZTFkYTFlMjE1Njg4Y2ZhZTlmMzlhYTE3OTJmOGY1Njc1MWY5ODMyMWFkNjAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.osutDmchn0tWTkCmcZ1VBjgP24yN6hnpL-ANjUFNFtw"/>
+
 </details>
 
 **[See the rest](https://github.com/oonamo/ef-themes.nvim/issues/1)**
