@@ -27,7 +27,7 @@ M.defaults = {
 
   options = {
     compile = true, -- TODO: Unimplemented
-    compile_path = vim.fn.stdpath("cache") .. "/ef-themes"
+    compile_path = vim.fn.stdpath("cache") .. "/ef-themes",
   },
 }
 
