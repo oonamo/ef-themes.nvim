@@ -28,7 +28,7 @@ jobs:
           neovim: true
       - run: ./scripts/build
       - name: Push Changes
-        if: ${{ github.event_name == "push" }}
+        if: ${{ github.event_name == 'push' }}
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           file_pattern: "extras/*"
