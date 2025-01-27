@@ -106,7 +106,7 @@ end
 -- NOTE: Uncomment these if testing locally, then run the function contents of 'run_local'
 -- M.write_all_themes()
 -- M.write_all_extras()
-require("ef-themes.extras").generate_docs()
+-- require("ef-themes.extras").generate_docs()
 
 function M.build()
   M.write_all_themes()

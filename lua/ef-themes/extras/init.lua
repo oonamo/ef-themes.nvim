@@ -75,17 +75,13 @@ function M.generate_docs()
   end
 
   table.insert(lines, "")
-  vim.print(lines)
-
   readme = readme:gsub(
     "(<%!%-%- extras:start %-%->).*(<%!%-%- extras:end %-%->)",
     "%1\n" .. table.concat(lines, "\n") .. "\n%2"
   )
-
-  vim.print(readme)
   print("old_length", old_length, "new_length", #readme)
 
-  assert(#readme > old_length, "The file did not correctly add the extras")
+  assert(#readme >= old_length, "The file did not correctly add the extras")
 
   Utils.write(readme_file, readme, "w+")
 end
@@ -104,28 +100,5 @@ function M.generate(name, palette)
     Utils.write(write_path, parsed)
   end
 end
-
-local test_readme = [[
-<h1 align="center">Ef-Themes</h1>
-sometokm aoakmsd koa oamskfo m
-oaksdj
-aoksdmf
-makosdm
-
-aoskdjok
-okasdmo
-makosdmok
-a
-sdfomkoamsdf
-
-
-<!-- extras:start -->
-<!-- extras:end -->
-
-Thing a bob
-]]
-
--- local sub = test_readme:gsub("(<%!%-%- extras:start %-%->).*(<%!%-%- extras:end %-%->)", "%1\n- 1\n- 2\n- 3\n%2")
--- print(sub)
 
 return M
