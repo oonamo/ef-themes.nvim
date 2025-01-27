@@ -1,3 +1,4 @@
+-- stylua: ignore 
 return {
 	bg_main = "#fff9f9",
 	fg_main = "#1a1a1a",
