@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  stylua:
+    name: Stylua Formatting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: JohnnyMorganz/stylua-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: latest
+          args: --check lua
+  build:
+    runs-on: ubuntu-latest
+    name: Build Extras
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.RELEASE_TOKEN != null && secrets.RELEASE_TOKEN || secrets.GITHUB_TOKEN }}
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+      - run: ./scripts/build
+      - name: Push Changes
+        if: ${{ github.event_name == "push" }}
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: "extras/*"
+          commit_message: "chore(extras): auto-generate extras"
