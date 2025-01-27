@@ -128,6 +128,8 @@ require("ef-themes").setup({
 })
 ```
 
+
+# Extras
 <!-- extras:start -->
 - [Fzf](https://github.com/junegunn/fzf) ([fzf](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/fzf))
 - [Ghostty](https://github.com/ghostty-org/ghostty) ([ghostty](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/ghostty))
