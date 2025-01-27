@@ -20,8 +20,11 @@ function M._resolve_palette(palette)
   return palette
 end
 
-function M.get_palette(name)
+function M.get_palette(name, opts)
   local palette = require("ef-themes.themes." .. name)
+
+  opts.on_colors(palette, name)
+
   return M._resolve_palette(palette)
 end
 

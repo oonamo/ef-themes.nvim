@@ -1,5 +1,8 @@
 local M = {}
 
+---@class Ef-themes.Config
+---@field on_colors fun(palette: Ef-Theme, name: string)
+---@field on_highlights fun(highlights: table, colors: Ef-Theme, name: string)
 M.defaults = {
   light = "ef-spring",
   dark = "ef-winter",
@@ -10,6 +13,21 @@ M.defaults = {
     "mini",
     "treesitter",
     --   "semantic-tokens"
+  },
+
+  --- Override any color from the ef-theme
+  ---@param colors Ef-Theme Color Palette
+  ---@param name string Then name of the ef-theme
+  on_colors = function(colors, name) end, -- TODO: Unimplemented
+
+  --- Override specific highlights
+  ---@param highlights table
+  ---@param colors Ef-Theme
+  on_highlights = function(highlights, colors, name) end, -- TODO: Unimplemented
+
+  options = {
+    compile = true, -- TODO: Unimplemented
+    compile_path = vim.fn.stdpath("cache") .. "/ef-themes"
   },
 }
 

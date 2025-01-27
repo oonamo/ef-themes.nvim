@@ -13,18 +13,27 @@ local M = {
 ---@param palette Ef-Theme
 ---@param opts table
 ---@param name string
-function M.build(palette, opts, name)
+---@param theme_opts table
+function M.build(palette, opts, name, theme_opts)
   if vim.g.colors_name then vim.cmd.hi("clear") end
   vim.o.termguicolors = true
   vim.g.colors_name = name
 
+  local all_groups = {}
+
   for _, mod in ipairs(opts.modules or {}) do
-    local theme_opts = require("ef-themes.groups." .. mod).get(palette)
-    for k, v in pairs(theme_opts or {}) do
+    local mod_highlights = require("ef-themes.groups." .. mod).get(palette)
+    for k, v in pairs(mod_highlights or {}) do
       vim.api.nvim_set_hl(0, k, v)
+      all_groups[k] = v
     end
   end
 
+  opts.on_highlights(all_groups, palette, name)
+  if opts.options.compile then require("ef-themes.compiler").compile(opts, all_groups, theme_opts) end
+end
+
+function M.terminal(palette)
   -- dark
   vim.g.terminal_color_0 = palette.fg_term_black
   vim.g.terminal_color_8 = palette.fg_term_black_bright
