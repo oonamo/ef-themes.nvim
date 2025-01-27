@@ -77,6 +77,7 @@ function M.generate_docs()
   Utils.write(readme_file, readme)
 end
 
+-- Reference: https://github.com/miikanissi/modus-themes.nvim/blob/9f0343bcb3be4dd5545624db135f2b1c369e7ce4/lua/modus-themes/extras/init.lua#L57
 function M.generate(name, palette)
   for k, v in pairs(M.extras) do
     print("[Generating Extra]", v.name)
