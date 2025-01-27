@@ -29,9 +29,9 @@ local M = {
     -- xfceterm = { ext = "theme", url = "https://docs.xfce.org/apps/terminal/advanced", label = "Xfce Terminal" },
     -- xresources = { ext = "Xresources", url = "https://wiki.archlinux.org/title/X_resources", label = "Xresources" },
     yazi = { ext = "toml", url = "https://github.com/sxyazi/yazi", label = "Yazi" },
-    zathura = { ext = "zathurarc", url = "https://pwmt.org/projects/zathura/", label = "Zathura" },
     -- vimium = { ext = "css", url = name = "Vimium" },
     vimium = { ext = "css", url = "https://vimium.github.io/", label = "Vimium" },
+    -- zathura = { ext = "zathurarc", url = "https://pwmt.org/projects/zathura/", label = "Zathura" },
     -- zellij = { ext = "kdl", url = "https://github.com/zellij-org/zellij", label = "Zellij" },
   },
 }
