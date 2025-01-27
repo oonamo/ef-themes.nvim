@@ -78,15 +78,17 @@ function M.write_all_themes()
 end
 
 function M.write_all_extras()
+  local default_config = require("ef-themes.config").get_default()
+
   local list = require("ef-themes").list
   for _, theme in ipairs(list.dark) do
     print("[Generating]", theme)
-    local palette = require("ef-themes.themes").get_palette(theme)
+    local palette = require("ef-themes.themes").get_palette(theme, default_config)
     require("ef-themes.extras").generate(theme, palette)
   end
   for _, theme in ipairs(list.light) do
     print("[Generating]", theme)
-    local palette = require("ef-themes.themes").get_palette(theme)
+    local palette = require("ef-themes.themes").get_palette(theme, default_config)
     require("ef-themes.extras").generate(theme, palette)
   end
 end

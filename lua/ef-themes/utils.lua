@@ -32,7 +32,6 @@ M.for_file_in_dir_write = function(dir, str)
   if ok then
     for _, v in ipairs(err_or_value or {}) do
       local path = vim.fs.joinpath(dir, v)
-      DD("cleangin", path)
       M.write(path, str)
     end
   end
