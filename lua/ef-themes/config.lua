@@ -18,15 +18,15 @@ M.defaults = {
   --- Override any color from the ef-theme
   ---@param colors Ef-Theme Color Palette
   ---@param name string Then name of the ef-theme
-  on_colors = function(colors, name) end, -- TODO: Unimplemented
+  on_colors = function(colors, name) end,
 
   --- Override specific highlights
   ---@param highlights table
   ---@param colors Ef-Theme
-  on_highlights = function(highlights, colors, name) end, -- TODO: Unimplemented
+  on_highlights = function(highlights, colors, name) end,
 
   options = {
-    compile = true, -- TODO: Unimplemented
+    compile = true,
     compile_path = vim.fn.stdpath("cache") .. "/ef-themes",
   },
 }

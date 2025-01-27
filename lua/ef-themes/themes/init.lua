@@ -18,7 +18,7 @@ end
 function M.get_palette(name, opts)
   local palette = require("ef-themes.themes." .. name)
 
-  opts.on_colors(palette, name)
+  if opts then opts.on_colors(palette, name) end
 
   return M._resolve_palette(palette)
 end
