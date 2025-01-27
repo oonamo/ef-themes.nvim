@@ -1,0 +1,7 @@
+#!/bin/env bash
+
+# Clone the original ef-themes
+git clone --depth=1 https://github.com/protesilaos/ef-themes.git ./raw_themes
+
+# Build the palettes and extras
+nvim -u tests/minit.lua --headless +"lua require('ef-themes.parse').build()" +qa

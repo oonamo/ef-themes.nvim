@@ -91,14 +91,23 @@ function M.write_all_extras()
   end
 end
 
+-- HACK: DO NOT CALL RUN_LOCAL
+--       IF YOU RUN IT BE CALLING IT INSIDE THE BUFFER
+--       IT WILL CREATE INFINITE RECURSION
 -- stylua: ignore
--- HACK: Until ci is created,
--- visual select the `dofile` line and do :source
+---@diagnostic disable-next-line: unused-local
 local function run_local()
+  -- NOTE: Select this line and do :so
   dofile(vim.api.nvim_buf_get_name(0))
 end
 
-M.write_all_themes()
-M.write_all_extras()
+-- NOTE: Uncomment these if testing locally, then run the function contents of 'run_local' 
+-- M.write_all_themes()
+-- M.write_all_extras()
+
+function M.build()
+  M.write_all_themes()
+  M.write_all_extras()
+end
 
 return M
