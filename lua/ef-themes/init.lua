@@ -53,7 +53,7 @@ function M.setup(opts)
     local cache_path = string.format("%s%s%s", opts.options.compile_path, sep, "cache")
     local previous_hash = require("ef-themes.utils").read(cache_path)
 
-    local git_path = debug.getinfo(1).source:sub(2, string.len("/lua/ef-themes/init.lua") * -1)
+    local git_path = debug.getinfo(1).source:sub(2, string.len("/lua/ef-themes/init.lua") * -1) .. ".git"
     local git_time = vim.fn.getftime(git_path)
     local hash = require("ef-themes.compiler").hash(opts) .. (git_time == -1 and git_path or git_time)
 
