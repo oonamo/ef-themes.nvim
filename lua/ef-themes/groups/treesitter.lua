@@ -48,7 +48,7 @@ function M.get(c, opts)
      ["@function.macro"]               = { link = "Macro" },
      ["@function.method"]              = { link = "Function" },
      ["@function.method.call"]         = { link = "@function.method" },
-     ["@keyword"]                      = { fg = c.purple, style = opts.styles.keywords }, -- For keywords that don't fall in previous categories.
+     -- ["@keyword"]                      = { fg = c.purple, style = opts.styles.keywords }, -- For keywords that don't fall in previous categories.
      ["@keyword.storage"]              = { link = "StorageClass" },
      ["@label"]                        = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
      ["@markup"]                       = { link = "@none" },
