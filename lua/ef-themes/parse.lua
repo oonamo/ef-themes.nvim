@@ -7,7 +7,7 @@ function M.parse_theme(in_file_path, out_file_path)
   if not f then return print("could not open file " .. in_file_path) end
   if not out then return print("could not create file " .. out_file_path) end
 
-  out:write([[return {]], "\n")
+  out:write([[-- stylua: ignore ]], "\n", [[return {]], "\n")
 
   while true do
     local line = f:read()
