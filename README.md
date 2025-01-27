@@ -135,7 +135,6 @@ require("ef-themes").setup({
 - [WezTerm](https://wezfurlong.org/wezterm/config/files.html) ([wezterm](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/wezterm))
 - [Windows Terminal](https://aka.ms/terminal-documentation) ([windows_terminal](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/windows_terminal))
 - [Yazi](https://github.com/sxyazi/yazi) ([yazi](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/yazi))
-
 <!-- extras:end -->
 
 # Acknowledgments
