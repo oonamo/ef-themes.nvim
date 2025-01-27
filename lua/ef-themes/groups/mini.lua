@@ -65,11 +65,11 @@ function M.get(c, opts)
     MiniIndentscopePrefix         = { nocombine = true }, -- Make it invisible
     MiniIndentscopeSymbol         = { fg        = c.blue_warmer, nocombine = true },
 
-    MiniJump                      = { bg        = c.magenta2, fg           = "#ffffff" },
+    MiniJump                      = { bg        = c.magenta_warmer, fg           = "#ffffff" },
     MiniJump2dDim                 = { link      = "Comment" },
     MiniJump2dSpot                = { fg        = c.magenta_warmer, bold   = true, nocombine     = true },
     MiniJump2dSpotAhead           = { fg        = c.info, bg               = c.bg_alt, nocombine = true },
-    MiniJump2dSpotUnique          = { fg        = c.yellow_warmer, bold    = true, nocombine     = true },
+    MiniJump2dSpotUnique          = { fg        = c.accent_0, bold    = true, nocombine     = true, undercurl = true },
 
     MiniMapNormal                 = { link      = "NormalFloat" },
     MiniMapSymbolCount            = { link      = "Special" },
@@ -117,7 +117,7 @@ function M.get(c, opts)
     MiniStatuslineModeReplace     = { fg        = c.fg_term_black, bg      = c.red, bold         = true },
     MiniStatuslineModeVisual      = { fg        = c.fg_term_black, bg      = c.magenta, bold     = true },
 
-    MiniSurround                  = { bg        = c.orange, fg             = c.fg_term_black },
+    MiniSurround                  = { bg        = c.yellow_cooler, fg             = c.fg_term_black },
 
     MiniTablineCurrent            = { fg        = c.fg_main, bg            = c.fg_dim },
     MiniTablineFill               = { bg        = c.fg_term_black },
