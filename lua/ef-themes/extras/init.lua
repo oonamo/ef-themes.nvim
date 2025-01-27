@@ -32,7 +32,7 @@ local M = {
     zathura = { ext = "zathurarc", url = "https://pwmt.org/projects/zathura/", label = "Zathura" },
     -- vimium = { ext = "css", url = name = "Vimium" },
     vimium = { ext = "css", url = "https://vimium.github.io/", label = "Vimium" },
-    zellij = { ext = "kdl", url = "https://github.com/zellij-org/zellij", label = "Zellij" },
+    -- zellij = { ext = "kdl", url = "https://github.com/zellij-org/zellij", label = "Zellij" },
   },
 }
 
