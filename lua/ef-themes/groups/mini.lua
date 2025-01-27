@@ -69,7 +69,7 @@ function M.get(c, opts)
     MiniJump2dDim                 = { link      = "Comment" },
     MiniJump2dSpot                = { fg        = c.magenta_warmer, bold   = true, nocombine     = true },
     MiniJump2dSpotAhead           = { fg        = c.info, bg               = c.bg_alt, nocombine = true },
-    MiniJump2dSpotUnique          = { fg        = c.orange, bold           = true, nocombine     = true },
+    MiniJump2dSpotUnique          = { fg        = c.yellow_warmer, bold    = true, nocombine     = true },
 
     MiniMapNormal                 = { link      = "NormalFloat" },
     MiniMapSymbolCount            = { link      = "Special" },
