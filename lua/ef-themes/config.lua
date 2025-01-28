@@ -4,9 +4,11 @@ local M = {}
 ---@field on_colors fun(palette: Ef-Theme, name: string)
 ---@field on_highlights fun(highlights: table, colors: Ef-Theme, name: string)
 M.defaults = {
-  light = "ef-spring",
-  dark = "ef-winter",
+  light = "ef-spring", -- Ef-theme to select for light backgrounds
+  dark = "ef-winter", -- Ef-theme to select for dark backgrounds
   styles = {
+    -- Set specific styles for specific highlight groups
+    -- Can be any valid attr-list value. See `:h nvim_set_hl`
     comments = { italic = true },
     keywords = { bold = true },
     functions = {},
@@ -14,26 +16,28 @@ M.defaults = {
   },
 
   modules = {
+    -- Enable/Disable highlights for a module
     blink = true,
-    mini = true,
-    treesitter = true,
     fzf = false,
+    mini = true,
     semantic_tokens = false,
+    treesitter = true,
   },
 
   --- Override any color from the ef-theme
-  ---@param colors Ef-Theme Color Palette
-  ---@param name string Then name of the ef-theme
+  ---@param colors Ef-Theme
+  ---@param name string
   on_colors = function(colors, name) end,
 
   --- Override specific highlights
   ---@param highlights table
   ---@param colors Ef-Theme
+  ---@param name string
   on_highlights = function(highlights, colors, name) end,
 
   options = {
-    compile = true,
-    compile_path = vim.fn.stdpath("cache") .. "/ef-themes",
+    compile = true, -- Whether to compile a theme
+    compile_path = vim.fn.stdpath("cache") .. "/ef-themes", -- Directory in which to place compiled themes
   },
 }
 
