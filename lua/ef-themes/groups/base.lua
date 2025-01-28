@@ -58,9 +58,9 @@ function M.get(c, opts)
     LspCodeLens                 = { fg        = c.comment },
     LspInfoBorder               = { fg        = c.border, bg                   = c.menu },
     LspInlayHint                = { bg        = c.bg_inactive, fg              = c.fg_intense },
-    LspReferenceRead            = { bg        = c.fg_dim }, -- used for highlighting "read" references
-    LspReferenceText            = { bg        = c.fg_dim }, -- used for highlighting "text" references
-    LspReferenceWrite           = { bg        = c.fg_dim }, -- used for highlighting "write" references
+    LspReferenceRead            = { bg        = c.bg_dim }, -- used for highlighting "read" references
+    LspReferenceText            = { bg        = c.bg_dim }, -- used for highlighting "text" references
+    LspReferenceWrite           = { bg        = c.bg_dim }, -- used for highlighting "write" references
     LspSignatureActiveParameter = { bg        = c.bg_hover, bold               = true },
     MatchParen                  = { fg        = c.fg_intense, bg               = c.bg_paren }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg                     = { fg        = c.accent_0, bold               = true }, -- 'showmode' message (e.g., "-- INSERT -- ")
