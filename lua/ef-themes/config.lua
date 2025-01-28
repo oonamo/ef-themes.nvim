@@ -45,6 +45,8 @@ M.defaults = {
 
 function M.setup(options) M.options = vim.tbl_deep_extend("force", {}, M.defaults, options or {}) end
 
+---@param opts? Ef-themes.Config
+---@return Ef-themes.Config
 function M.extend(opts) return opts and vim.tbl_deep_extend("force", {}, M.options, opts) or M.options end
 
 function M.get_default() return vim.deepcopy(M.defaults) end

@@ -2,11 +2,11 @@ local M = {
   groups = {
     "base",
     "blink",
-    "mini",
-    "treesitter",
     "fzf",
+    "mini",
     "semantic_tokens",
     "snacks",
+    "treesitter",
   },
 }
 
