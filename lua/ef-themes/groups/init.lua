@@ -5,8 +5,7 @@ local M = {
     "mini",
     "treesitter",
     "fzf",
-    --   "semantic-tokens"
-    --   "fzf-lua"
+    "semantic_tokens",
   },
 }
 
@@ -21,11 +20,21 @@ function M.build(palette, opts, name, theme_opts)
 
   local all_groups = {}
 
-  for _, mod in ipairs(opts.modules or {}) do
-    local mod_highlights = require("ef-themes.groups." .. mod).get(palette)
-    for k, v in pairs(mod_highlights or {}) do
-      vim.api.nvim_set_hl(0, k, v)
-      all_groups[k] = v
+  for k, v in pairs(require("ef-themes.groups.base").get(palette, opts)) do
+    vim.api.nvim_set_hl(0, k, v)
+    all_groups[k] = v
+  end
+
+  for modname, use in pairs(opts.modules or {}) do
+    if use then
+      if not vim.tbl_contains(M.groups, modname) then
+        return vim.notify(string.format("[ef-themes]: Module '%s' does not exist.", vim.log.levels.ERROR))
+      end
+      local mod_highlights = require("ef-themes.groups." .. modname).get(palette)
+      for k, v in pairs(mod_highlights or {}) do
+        vim.api.nvim_set_hl(0, k, v)
+        all_groups[k] = v
+      end
     end
   end
 

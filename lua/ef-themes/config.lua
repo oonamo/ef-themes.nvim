@@ -8,11 +8,11 @@ M.defaults = {
   dark = "ef-winter",
 
   modules = {
-    "base",
-    "blink",
-    "mini",
-    "treesitter",
-    --   "semantic-tokens"
+    blink = true,
+    mini = true,
+    treesitter = true,
+    fzf = false,
+    semantic_tokens = false,
   },
 
   --- Override any color from the ef-theme
