@@ -73,9 +73,22 @@ end
 
 function M.write_all_themes()
   local ef_themes, path = M.get_all_ef_themes()
+  local lualine_path = vim.fs.joinpath(base_path, "lua", "lualine", "themes")
+
+  local function create_lualine_theme(theme)
+    print("[lualine]", theme)
+    local theme_file = vim.fs.joinpath(lualine_path, theme .. ".lua")
+    print("[write (lualine)]", theme_file)
+
+    local contents = string.format([[return require("ef-themes.lualine")("%s")]], theme) .. "\n"
+    utils.write(theme_file, contents)
+  end
+
   for _, ef_theme in ipairs(ef_themes or {}) do
     M.parse_theme(path .. ef_theme, this_file_path .. "themes" .. sep .. ef_theme:gsub("-?theme%.el", "%.lua"))
     M._create_color(ef_theme)
+
+    create_lualine_theme(ef_theme:gsub("-?theme%.el", ""))
   end
 end
 
@@ -95,27 +108,6 @@ function M.write_all_extras()
   end
 end
 
-function M.build_lualine()
-  local lualine_path = vim.fs.joinpath(base_path, "lua", "lualine", "themes")
-
-  local function write_theme(theme)
-    print("[lualine]", theme)
-    local theme_file = vim.fs.joinpath(lualine_path, theme .. ".lua")
-    print("[write (lualine)]", theme_file)
-
-    local contents = string.format([[return require("ef-themes.lualine")("%s")]], theme) .. "\n"
-    utils.write(theme_file, contents)
-  end
-
-  local list = require("ef-themes").list
-  for _, theme in ipairs(list.dark) do
-    write_theme(theme)
-  end
-  for _, theme in ipairs(list.light) do
-    write_theme(theme)
-  end
-end
-
 -- HACK: DO NOT CALL RUN_LOCAL
 --       IF YOU RUN IT BE CALLING IT INSIDE THE BUFFER
 --       IT WILL CREATE INFINITE RECURSION
@@ -129,14 +121,12 @@ end
 -- NOTE: Uncomment these if testing locally, then run the function contents of 'run_local'
 -- M.write_all_themes()
 -- M.write_all_extras()
-M.build_lualine()
 -- require("ef-themes.extras").generate_docs()
 
 function M.build()
   local ok, err = pcall(M.write_all_themes)
   if not ok then print("Error while building themes", err) end
 
-  M.build_lualine()
   M.write_all_extras()
   require("ef-themes.extras").generate_docs()
 end
