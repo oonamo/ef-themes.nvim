@@ -1,7 +1,39 @@
 #!/bin/env bash
 
-# Clone the original ef-themes
-git clone --depth=1 https://github.com/protesilaos/ef-themes.git ./raw_themes
+REPO_OWNER="protesilaos"
+REPO_NAME="ef-themes"
+BRANCH="main"
+
+HASH_FILE="ef_themes_hash"
+
+latest_commit_hash=$(curl -s "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/commits/$BRANCH" | jq -r ".sha")
+
+clone_and_write_hash() {
+    # Clone the original ef-themes
+    git clone --depth=1 https://github.com/protesilaos/ef-themes.git ./raw_themes
+
+    # Write last hash to a file
+    cd raw_themes
+    git rev-parse HEAD > "../$HASH_FILE"
+
+    # Return to root directory
+    cd ..
+}
+
+if [ -f "$HASH_FILE" ]; then
+  previous_commit_hash = $(cat "$HASH_FILE")
+
+  if [ "$latest_commit_hash" != "$previous_commit_hash"]; then
+    echo "Updating Ef-themes"
+
+    clone_and_write_hash
+  else
+    echo "Ef-themes is up to date"
+  fi
+else
+  clone_and_write_hash
+fi
+
 
 # Build the palettes and extras
 nvim -u tests/mininit.lua --headless +"lua require('ef-themes.parse').build()" +qa
