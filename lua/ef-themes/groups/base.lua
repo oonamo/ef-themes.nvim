@@ -73,9 +73,9 @@ function M.get(c, opts)
     NormalSB                    = { fg        = c.fg_alt, bg                   = c.bg_alt }, -- normal text in sidebar
     Operator                    = { link      = "Bold" }, -- "sizeof", "+", "*", etc.
     Pmenu                       = { fg        = c.fg_main, bg                  = c.bg_inactive },
-    PmenuMatch                  = { fg        = c.bg_search_match },
-    PmenuMatchSel               = { fg        = c.fg_dim },
-    PmenuSel                    = { fg        = c.fg_main, bg                  = c.bg_completion },
+    PmenuMatch                  = { fg        = c.accent_0, bold               = true },
+    PmenuMatchSel               = { fg        = "NONE", bg                     = c.bg_completion },
+    PmenuSel                    = { bg        = c.bg_completion },
     PreProc                     = { fg        = c.preprocessor }, -- (preferred) generic Preprocessor
     Question                    = { fg        = c.accent_3 }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine                = { bg        = c.bg_region, bold              = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
