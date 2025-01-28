@@ -283,8 +283,7 @@
 <!-- DarkThemes:end -->
 
 # Features
-- Fast loading with caching on a per-need basis
-- Configurable with templates
+- Fast loading with compiling on a per-need basis
 
 # Requirements
 - Neovim >= 0.8
@@ -328,33 +327,40 @@ vim.cmd.colorscheme("ef-dream")
 # Configuration
 ```lua
 require("ef-themes").setup({
-  light = "ef-spring", -- Color to default to when background is light
-  dark = "ef-winter", -- Color to default to when background is dark
+  light = "ef-spring", -- Ef-theme to select for light backgrounds
+  dark = "ef-winter", -- Ef-theme to select for dark backgrounds
+  styles = {
+    -- Set specific styles for specific highlight groups
+    -- Can be any valid attr-list value. See `:h nvim_set_hl`
+    comments = { italic = true },
+    keywords = { bold = true },
+    functions = {},
+    variables = {},
+  },
 
-  -- modules are the type of highlights to load
-  -- remove one to not use its highlights
   modules = {
-    "base", -- Recommended. Holds essential highlights for neovim
-    "blink", -- for blink.cmp
-    "mini", -- for mini.nvim
-    "treesitter", -- for treesitter
-    -- "semantic-tokens", -- Currently not recommended to enable
-    -- "fzf", -- for fzf.lua
+    -- Enable/Disable highlights for a module
+    blink = true,
+    fzf = false,
+    mini = true,
+    semantic_tokens = false,
+    treesitter = true,
   },
 
   --- Override any color from the ef-theme
   ---@param colors Ef-Theme
   ---@param name string
-  on_colors = function(colors, name) end, -- TODO: Unimplemented
+  on_colors = function(colors, name) end,
 
   --- Override specific highlights
   ---@param highlights table
   ---@param colors Ef-Theme
-  on_highlights = function(highlights, colors, name) end, -- TODO: Unimplemented
+  ---@param name string
+  on_highlights = function(highlights, colors, name) end,
 
   options = {
-    compile = true, -- Whether to compile the colorscheme
-    compile_path = vim.fn.stdpath("cache") .. "/ef-themes", -- folder to compile to
+    compile = true, -- Whether to compile a theme
+    compile_path = vim.fn.stdpath("cache") .. "/ef-themes", -- Directory in which to place compiled themes
   },
 })
 
