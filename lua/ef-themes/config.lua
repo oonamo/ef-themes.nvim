@@ -6,6 +6,12 @@ local M = {}
 M.defaults = {
   light = "ef-spring",
   dark = "ef-winter",
+  styles = {
+    comments = { italic = true },
+    keywords = { bold = true },
+    functions = {},
+    variables = {},
+  },
 
   modules = {
     blink = true,

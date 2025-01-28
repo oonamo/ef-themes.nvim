@@ -1,9 +1,11 @@
 local M = {}
 
+---@param c Ef-Theme
+---@param opts Ef-themes.Config
 function M.get(c, opts)
   -- stylua: ignore
   return {
-    BlinkCmpDoc                 = { fg = c.fg, bg         = c.bg_dim },
+    BlinkCmpDoc                 = { fg = c.fg_main, bg         = c.bg_dim },
     BlinkCmpDocBorder           = { fg = c.border, bg     = c.bg_dim },
     BlinkCmpGhostText           = { fg = c.fg_alt },
     BlinkCmpKindCodeium         = { fg = c.cyan_faint, bg = "NONE" },

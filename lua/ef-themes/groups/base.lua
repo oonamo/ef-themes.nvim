@@ -1,5 +1,7 @@
 local M = {}
 
+---@param c Ef-Theme
+---@param opts Ef-themes.Config
 function M.get(c, opts)
   -- stylua: ignore
   return {
@@ -12,7 +14,7 @@ function M.get(c, opts)
     Bold                        = { bold      = true, fg                       = c.fg_main }, -- (preferred) any bold text
     Character                   = { fg        = c.accent_2 }, --  a character constant: 'c', '\n'
     ColorColumn                 = { bg        = c.bg_alt }, -- used for the columns set with 'colorcolumn'
-    Comment                     = { fg        = c.comment, italic              = true }, -- any comment
+    Comment                     = { fg        = c.comment, style = opts.styles.comments  }, -- any comment
     Conceal                     = { fg        = c.fg_alt }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Constant                    = { fg        = c.constant }, -- (preferred) any constant
     CurSearch                   = { bg        = c.bg_search_current },
@@ -21,13 +23,13 @@ function M.get(c, opts)
     CursorIM                    = { link      = "Cursor" },
     CursorLine                  = { bg        = c.bg_hl_line },
     CursorLineNr                = { fg        = c.fg_intense, bold             = true }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-    Debug                       = { fg        = c.orange }, --    debugging statements
+    Debug                       = { fg        = c.yellow_cooler }, --    debugging statements
     Delimiter                   = { link      = "Comment" }, --  character that needs attention
     DiagnosticError             = { fg        = c.err }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticHint              = { fg        = c.info }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticInfo              = { fg        = c.info }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticUnderlineError    = { undercurl = true, sp                       = c.err }, -- Used to underline "Error" diagnostics
-    DiagnosticUnderlineHint     = { undercurl = true, sp                       = c.hint }, -- Used to underline "Hint" diagnostics
+    DiagnosticUnderlineHint     = { undercurl = true, sp                       = c.info }, -- Used to underline "Hint" diagnostics
     DiagnosticUnderlineInfo     = { undercurl = true, sp                       = c.info }, -- Used to underline "Information" diagnostics
     DiagnosticUnderlineWarn     = { undercurl = true, sp                       = c.warning }, -- Used to underline "Warning" diagnostics
     DiagnosticVirtualTextError  = { fg        = c.err, bg                      = c.bg_err },
@@ -47,16 +49,16 @@ function M.get(c, opts)
     FloatTitle                  = { fg        = c.name, bg                     = c.bg_dim },
     FoldColumn                  = { bg        = c.bg_main, fg                  = c.comment }, -- 'foldcolumn'
     Folded                      = { fg        = c.border, bg                   = c.bg_alt }, -- line used for closed folds
-    Function                    = { fg        = c.fnname },
-    Identifier                  = { fg        = c.identifier },
+    Function                    = { fg        = c.fnname, style = opts.styles.functions },
+    Identifier                  = { fg        = c.identifier, style = opts.styles.variables },
     IncSearch                   = { bg        = c.bg_search_current, fg        = c.fg_intense }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     Italic                      = { italic    = true, fg                       = c.fg_main }, -- (preferred) any italic text
-    Keyword                     = { fg        = c.keyword, bold                = true },
+    Keyword                     = { fg        = c.keyword, style = opts.styles.keywords },
     LineNr                      = { fg        = c.fg_dim }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     LineNrAbove                 = { fg        = c.fg_dim },
     LineNrBelow                 = { fg        = c.fg_dim },
     LspCodeLens                 = { fg        = c.comment },
-    LspInfoBorder               = { fg        = c.border, bg                   = c.menu },
+    LspInfoBorder               = { fg        = c.border, bg                   = c.bg_dim },
     LspInlayHint                = { bg        = c.bg_inactive, fg              = c.fg_intense },
     LspReferenceRead            = { bg        = c.bg_dim }, -- used for highlighting "read" references
     LspReferenceText            = { bg        = c.bg_dim }, -- used for highlighting "text" references
@@ -79,7 +81,7 @@ function M.get(c, opts)
     PreProc                     = { fg        = c.preprocessor }, -- (preferred) generic Preprocessor
     Question                    = { fg        = c.accent_3 }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine                = { bg        = c.bg_region, bold              = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    Search                      = { bg        = c.bg_search, fg                = c.fg_intense }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    Search                      = { bg        = c.bg_search_current, fg                = c.fg_intense }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     SignColumn                  = { bg        = c.bg_main, fg                  = c.fg_alt }, -- column where |signs| are displayed
     Special                     = { fg        = c.blue_faint }, -- (preferred) any special symbol
     SpecialKey                  = { fg        = c.accent_0 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
@@ -96,7 +98,7 @@ function M.get(c, opts)
     TabLineFill                 = { bg        = c.bg_main }, -- tab pages line, where there are no labels
     TabLineSel                  = { fg        = c.fg_alt, bg                   = c.bg_tab_current }, -- tab pages line, active tab page label
     Title                       = { fg        = c.rainbow_0 }, -- titles for output from ":set all", ":autocmd" etc.
-    Todo                        = { fg        = c.prose_todo, bg               = c.yellow_intense }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo                        = { fg        = c.prose_todo, bg               = c.yellow_warmer }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     Type                        = { fg        = c.type }, -- (preferred) int, long, char, etc.
     Underlined                  = { underline = true }, -- (preferred) text that stands out, HTML links
     Variable                    = { fg        = c.fg_main },
@@ -115,7 +117,7 @@ function M.get(c, opts)
     diffFile                    = { fg        = c.blue },
     diffIndexLine               = { fg        = c.magenta },
     diffLine                    = { fg        = c.comment },
-    diffNewFile                 = { fg        = c.orange },
+    diffNewFile                 = { fg        = c.yellow_faint },
     diffOldFile                 = { fg        = c.yellow },
     diffRemoved                 = { fg        = c.fg_removed },
     healthError                 = { fg        = c.err },

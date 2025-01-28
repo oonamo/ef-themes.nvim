@@ -1,5 +1,7 @@
 local M = {}
 
+---@param c Ef-Theme
+---@param opts Ef-themes.Config
 function M.get(c, opts)
   -- stylua: ignore
   return {
@@ -9,7 +11,7 @@ function M.get(c, opts)
     -- ["@keyword.directive"] = { link = "PreProc" },
     -- ["@keyword.directive.define"] = { link = "Define" },
     -- ["@keyword.exception"] = { link = "Exception" },
-    -- ["@keyword.function"] = { fg = c.magenta, style = opts.styles.functions, }, -- For keywords used to define a function.
+    -- ["@keyword.function"] = { fg = c.keyword, style = opts.styles.functions, }, -- For keywords used to define a function.
     -- ["@keyword.import"] = { link = "Include" },
     -- ["@keyword.operator"] = { link = "@operator" },
     -- ["@keyword.repeat"] = { link = "Repeat" },
@@ -38,7 +40,7 @@ function M.get(c, opts)
      ["@constant.builtin"]             = { link = "Special" },
      ["@constant.macro"]               = { link = "Define" },
      ["@constructor"]                  = { fg = c.magenta }, -- For constructor calls and definitions: `= { }
-     ["@constructor.tsx"]              = { fg = c.blue1 },
+     ["@constructor.tsx"]              = { fg = c.blue_cooler },
      ["@diff.delta"]                   = { link = "DiffChange" },
      ["@diff.minus"]                   = { link = "DiffDelete" },
      ["@diff.plus"]                    = { link = "DiffAdd" },
@@ -48,7 +50,7 @@ function M.get(c, opts)
      ["@function.macro"]               = { link = "Macro" },
      ["@function.method"]              = { link = "Function" },
      ["@function.method.call"]         = { link = "@function.method" },
-     -- ["@keyword"]                      = { fg = c.purple, style = opts.styles.keywords }, -- For keywords that don't fall in previous categories.
+     ["@keyword"]                      = { fg = c.keyword, style = opts.styles.keywords }, -- For keywords that don't fall in previous categories.
      ["@keyword.storage"]              = { link = "StorageClass" },
      ["@label"]                        = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
      ["@markup"]                       = { link = "@none" },
@@ -69,7 +71,7 @@ function M.get(c, opts)
      ["@markup.link.url"]              = { fg = c.link, underline = true },
      ["@markup.list"]                  = { fg = c.blue_faint }, -- For special punctutation that does not fall in the categories before.
      ["@markup.list.checked"]          = { fg = c.green_cooler }, -- For brackets and parens.
-     ["@markup.list.markdown"]         = { fg = c.orange, bold = true },
+     ["@markup.list.markdown"]         = { fg = c.yellow_cooler, bold = true },
      ["@markup.list.unchecked"]        = { fg = c.blue }, -- For brackets and parens.
      ["@markup.math"]                  = { link = "Special" },
      ["@markup.raw"]                   = { link = "String" },

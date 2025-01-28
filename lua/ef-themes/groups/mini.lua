@@ -1,5 +1,7 @@
 local M = {}
 
+---@param c Ef-Theme
+---@param opts Ef-themes.Config
 function M.get(c, opts)
   -- stylua: ignore
   return {
@@ -110,7 +112,7 @@ function M.get(c, opts)
     MiniStatuslineDevinfo         = { fg        = c.fg_dim, bg             = c.bg_dim },
     MiniStatuslineFileinfo        = { fg        = c.fg_dim, bg             = c.bg_dim },
     MiniStatuslineFilename        = { fg        = c.fg_dim, bg             = c.bg_region },
-    MiniStatuslineInactive        = { fg        = c.blue, bg               = c.bg_statusline },
+    MiniStatuslineInactive        = { fg        = c.blue, bg               = c.bg_mode_line },
     MiniStatuslineModeCommand     = { fg        = c.fg_term_black, bg      = c.yellow, bold      = true },
     MiniStatuslineModeInsert      = { fg        = c.fg_term_black, bg      = c.green, bold       = true },
     MiniStatuslineModeNormal      = { fg        = c.fg_term_black, bg      = c.blue, bold        = true },
@@ -122,11 +124,11 @@ function M.get(c, opts)
 
     MiniTablineCurrent            = { fg        = c.fg_main, bg            = c.fg_dim },
     MiniTablineFill               = { bg        = c.fg_term_black },
-    MiniTablineHidden             = { fg        = c.alt, bg                = c.bg_mode_line },
+    MiniTablineHidden             = { fg        = c.fg_alt, bg                = c.bg_mode_line },
     MiniTablineModifiedCurrent    = { fg        = c.warning, bg            = c.fg_dim },
     MiniTablineModifiedHidden     = { bg        = c.bg_mode_line, fg       = c.bg_err },
     MiniTablineModifiedVisible    = { fg        = c.warning, bg            = c.bg_mode_line },
-    MiniTablineTabpagesection     = { bg        = c.fg_dim, fg             = c.none },
+    MiniTablineTabpagesection     = { bg        = c.fg_dim, fg             = "NONE" },
     MiniTablineVisible            = { fg        = c.fg_main, bg            = c.bg_mode_line },
 
     MiniTestEmphasis              = { bold      = true },

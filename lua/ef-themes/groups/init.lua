@@ -9,6 +9,18 @@ local M = {
   },
 }
 
+local function resolve_hl(hl)
+  if type(hl) == "string" then return { link = hl } end
+
+  if not hl.style then return hl end
+  for name, value in pairs(hl.style) do
+    hl[name] = value
+  end
+  hl.style = nil
+
+  return hl
+end
+
 ---@param palette Ef-Theme
 ---@param opts table
 ---@param name string
@@ -21,7 +33,8 @@ function M.build(palette, opts, name, theme_opts)
   local all_groups = {}
 
   for k, v in pairs(require("ef-themes.groups.base").get(palette, opts)) do
-    vim.api.nvim_set_hl(0, k, v)
+    local hl = resolve_hl(v)
+    vim.api.nvim_set_hl(0, k, hl)
     all_groups[k] = v
   end
 
@@ -30,9 +43,10 @@ function M.build(palette, opts, name, theme_opts)
       if not vim.tbl_contains(M.groups, modname) then
         return vim.notify(string.format("[ef-themes]: Module '%s' does not exist.", vim.log.levels.ERROR))
       end
-      local mod_highlights = require("ef-themes.groups." .. modname).get(palette)
+      local mod_highlights = require("ef-themes.groups." .. modname).get(palette, opts)
       for k, v in pairs(mod_highlights or {}) do
-        vim.api.nvim_set_hl(0, k, v)
+        local hl = resolve_hl(v)
+        vim.api.nvim_set_hl(0, k, hl)
         all_groups[k] = v
       end
     end

@@ -1,5 +1,7 @@
 local M = {}
 
+---@param c Ef-Theme
+---@param opts Ef-themes.Config
 function M.get(c, opts)
   -- stylua: ignore
   return {
