@@ -109,9 +109,9 @@ function M.get(c, opts)
     MiniStarterQuery              = { fg        = c.prompt },
     MiniStarterSection            = { fg        = c.fg_main, bold          = true },
 
-    MiniStatuslineDevinfo         = { fg        = c.fg_mode_line, bg       = c.bg_dim },
-    MiniStatuslineFileinfo        = { fg        = c.fg_mode_line, bg       = c.bg_dim },
-    MiniStatuslineFilename        = { fg        = c.fg_mode_line, bg       = c.bg_mode_line },
+    MiniStatuslineDevinfo         = { fg        = c.fg_mode_line, bg       = c.bg_mode_line },
+    MiniStatuslineFileinfo        = { fg        = c.fg_mode_line, bg       = c.bg_mode_line },
+    MiniStatuslineFilename        = { fg        = c.fg_mode_line, bg       = c.bg_dim },
     MiniStatuslineInactive        = { fg        = c.fg_mode_line, bg       = c.bg_mode_line },
     MiniStatuslineModeCommand     = { fg        = c.fg_term_black, bg      = c.yellow, bold      = true },
     MiniStatuslineModeInsert      = { fg        = c.fg_term_black, bg      = c.green, bold       = true },
