@@ -6,6 +6,7 @@ local M = {
     "treesitter",
     "fzf",
     "semantic_tokens",
+    "snacks",
   },
 }
 

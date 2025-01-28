@@ -6,6 +6,7 @@ local M = {}
 M.defaults = {
   light = "ef-spring", -- Ef-theme to select for light backgrounds
   dark = "ef-winter", -- Ef-theme to select for dark backgrounds
+  transparent = false,
   styles = {
     -- Set specific styles for specific highlight groups
     -- Can be any valid attr-list value. See `:h nvim_set_hl`
