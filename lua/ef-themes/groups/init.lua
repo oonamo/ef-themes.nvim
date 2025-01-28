@@ -8,6 +8,7 @@ local M = {
     "render_markdown",
     "semantic_tokens",
     "snacks",
+    "telescope",
     "treesitter",
   },
 }
@@ -44,7 +45,7 @@ function M.build(palette, opts, name, theme_opts)
   for modname, use in pairs(opts.modules or {}) do
     if use then
       if not vim.tbl_contains(M.groups, modname) then
-        vim.notify(string.format("[ef-themes]: Module '%s' does not exist.", vim.log.levels.ERROR))
+        vim.notify(string.format("[ef-themes]: Module '%s' does not exist.", modname), vim.log.levels.ERROR)
       else
         local mod_highlights = require("ef-themes.groups." .. modname).get(palette, opts)
         for k, v in pairs(mod_highlights or {}) do
