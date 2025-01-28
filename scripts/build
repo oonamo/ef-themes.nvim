@@ -31,6 +31,7 @@ if [ -f "$HASH_FILE" ]; then
     echo "Ef-themes is up to date"
   fi
 else
+  echo "Initing hash"
   clone_and_write_hash
 fi
 
