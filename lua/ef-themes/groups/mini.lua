@@ -16,8 +16,9 @@ function M.get(c, opts)
 
     MiniCompletionActiveParameter = { underline = true },
 
-    MiniCursorword                = { bg        = c.fg_dim },
-    MiniCursorwordCurrent         = { bg        = c.fg_dim },
+    -- TODO: Improve these
+    MiniCursorword                = { bg        = c.bg_dim },
+    MiniCursorwordCurrent         = { bg        = c.bg_dim },
 
     MiniDepsChangeAdded           = { link      = "diffAdded" },
     MiniDepsChangeRemoved         = { link      = "diffRemoved" },
