@@ -109,7 +109,9 @@ end
 -- require("ef-themes.extras").generate_docs()
 
 function M.build()
-  M.write_all_themes()
+  local ok, err = pcall(M.write_all_themes)
+  if not ok then print("Error while building themes", err) end
+
   M.write_all_extras()
   require("ef-themes.extras").generate_docs()
 end
