@@ -9,11 +9,11 @@ function M.get(c, opts)
     MiniAnimateNormalFloat        = { link      = "NormalFloat" },
 
     MiniClueBorder                = { link      = "FloatBorder" },
-    MiniClueDescGroup             = { link      = "DiagnosticFloatingWarn" },
-    MiniClueDescSingle            = { link      = "NormalFloat" },
-    MiniClueNextKey               = { link      = "DiagnosticFloatingHint" },
-    MiniClueNextKeyWithPostkeys   = { link      = "DiagnosticFloatingError" },
-    MiniClueSeparator             = { link      = "DiagnosticFloatingInfo" },
+    MiniClueDescGroup             = { fg = c.keyword },
+    MiniClueDescSingle            = { fg = c.fg_main },
+    MiniClueNextKey               = { fg = c.keybind, bold = true },
+    MiniClueNextKeyWithPostkeys   = { fg = c.err },
+    MiniClueSeparator             = { fg = c.fg_dim },
     MiniClueTitle                 = { link      = "FloatTitle" },
 
     MiniCompletionActiveParameter = { underline = true },
