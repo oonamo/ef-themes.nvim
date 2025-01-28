@@ -35,7 +35,7 @@ function M.build(palette, opts, name, theme_opts)
   for k, v in pairs(require("ef-themes.groups.base").get(palette, opts)) do
     local hl = resolve_hl(v)
     vim.api.nvim_set_hl(0, k, hl)
-    all_groups[k] = v
+    all_groups[k] = hl
   end
 
   for modname, use in pairs(opts.modules or {}) do
@@ -47,7 +47,7 @@ function M.build(palette, opts, name, theme_opts)
       for k, v in pairs(mod_highlights or {}) do
         local hl = resolve_hl(v)
         vim.api.nvim_set_hl(0, k, hl)
-        all_groups[k] = v
+        all_groups[k] = hl
       end
     end
   end
