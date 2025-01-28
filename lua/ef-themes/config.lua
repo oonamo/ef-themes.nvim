@@ -22,6 +22,7 @@ M.defaults = {
     fzf = false,
     mini = true,
     semantic_tokens = false,
+    snacks = false,
     treesitter = true,
   },
 
