@@ -4,6 +4,7 @@ local M = {
     "blink",
     "fzf",
     "mini",
+    "render_markdown",
     "semantic_tokens",
     "snacks",
     "treesitter",
