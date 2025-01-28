@@ -21,7 +21,8 @@ clone_and_write_hash() {
 }
 
 if [ -f "$HASH_FILE" ]; then
-  previous_commit_hash = $(cat "$HASH_FILE")
+
+  previous_commit_hash=$(cat "$HASH_FILE")
 
   if [ "$latest_commit_hash" != "$previous_commit_hash" ]; then
     echo "Updating Ef-themes"
