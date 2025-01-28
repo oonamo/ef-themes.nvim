@@ -4,6 +4,7 @@ local M = {
     "blink",
     "cmp",
     "fzf",
+    "gitsigns",
     "mini",
     "render_markdown",
     "semantic_tokens",
