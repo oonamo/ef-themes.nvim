@@ -15,6 +15,9 @@ function M._resolve_palette(palette)
   return palette
 end
 
+---@param name string
+---@param opts Ef-themes.Config
+---@return Ef-Theme
 function M.get_palette(name, opts)
   local palette = require("ef-themes.themes." .. name)
 
