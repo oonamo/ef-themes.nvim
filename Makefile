@@ -1,7 +1,10 @@
-
 .PHONY: test
 test:
 	nvim --headless --noplugin -u ./tests/mininit.lua -l ./scripts/minitest.lua -c
+
+.PHONY: docs
+docs:
+	nvim --headless --noplugin -u ./tests/mininit.lua -l ./scripts/minidoc.lua
 
 .PHONY: build
 build:

@@ -1,0 +1,13 @@
+EfThemes	ef-themes.txt	/*EfThemes*
+EfThemes-modules	ef-themes.txt	/*EfThemes-modules*
+EfThemes.Defaults	ef-themes.txt	/*EfThemes.Defaults*
+EfThemes.clean()	ef-themes.txt	/*EfThemes.clean()*
+EfThemes.get_palette()	ef-themes.txt	/*EfThemes.get_palette()*
+EfThemes.is_dark()	ef-themes.txt	/*EfThemes.is_dark()*
+EfThemes.load_random()	ef-themes.txt	/*EfThemes.load_random()*
+EfThemes.select()	ef-themes.txt	/*EfThemes.select()*
+EfThemes.select_dark()	ef-themes.txt	/*EfThemes.select_dark()*
+EfThemes.select_light()	ef-themes.txt	/*EfThemes.select_light()*
+EfThemes.setup()	ef-themes.txt	/*EfThemes.setup()*
+ef-themes.nvim	ef-themes.txt	/*ef-themes.nvim*
+ef-themes.txt	ef-themes.txt	/*ef-themes.txt*

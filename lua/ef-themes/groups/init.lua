@@ -1,4 +1,7 @@
 local M = {
+---@eval return MiniDoc.afterlines_to_code(MiniDoc.current.eval_section)
+---@text # Modules ~
+--- These are the available modules in |Config.defaults|
   groups = {
     "base",
     "blink",
@@ -14,6 +17,7 @@ local M = {
     "treesitter",
     "which_key",
   },
+  --minidoc_afterlines_end
 }
 
 local function resolve_hl(hl)
@@ -32,6 +36,8 @@ end
 ---@param opts table
 ---@param name string
 ---@param theme_opts table
+---
+---@private
 function M.build(palette, opts, name, theme_opts)
   if vim.g.colors_name then vim.cmd.hi("clear") end
   vim.o.termguicolors = true
@@ -66,6 +72,8 @@ function M.build(palette, opts, name, theme_opts)
   if opts.options.compile then require("ef-themes.lib.compiler").compile(opts, all_groups, theme_opts) end
 end
 
+---@param palette Ef-Theme
+---@private
 function M.terminal(palette)
   -- dark
   vim.g.terminal_color_0 = palette.fg_term_black

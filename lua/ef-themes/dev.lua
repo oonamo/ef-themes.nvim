@@ -1,5 +1,5 @@
 --- Dev file
-local M = {}
+local Dev = {}
 
 local function reload()
   for k in pairs(package.loaded) do
@@ -7,6 +7,6 @@ local function reload()
   end
 end
 
-function M.reset() reload() end
+function Dev.reset() reload() end
 
-return M
+return Dev

@@ -1,8 +1,8 @@
-local M = {}
+local Utils = {}
 
 ---@param file string File to write to
 ---@param contents string Content to write to file
-M.write = function(file, contents, mode)
+Utils.write = function(file, contents, mode)
   vim.fn.mkdir(vim.fn.fnamemodify(file, ":h"), "p")
   local fd = assert(io.open(file, mode or "w+"))
   fd:write(contents)
@@ -11,14 +11,14 @@ end
 
 ---@param file string File to write to
 ---@param contents string Content to write to file
-M.write_byte = function(file, contents)
+Utils.write_byte = function(file, contents)
   vim.fn.mkdir(vim.fn.fnamemodify(file, ":h"), "p")
   local fd = assert(io.open(file, "wb"))
   fd:write(contents)
   fd:close()
 end
 
-M.read = function(filepath, mode)
+Utils.read = function(filepath, mode)
   local file = io.open(filepath, "r")
   if file then
     local content
@@ -32,14 +32,14 @@ M.read = function(filepath, mode)
   end
 end
 
-M.for_file_in_dir_write = function(dir, str)
+Utils.for_file_in_dir_write = function(dir, str)
   local ok, err_or_value = pcall(vim.fn.readdir, dir)
   if ok then
     for _, v in ipairs(err_or_value or {}) do
       local path = vim.fs.joinpath(dir, v)
-      M.write(path, str)
+      Utils.write(path, str)
     end
   end
 end
 
-return M
+return Utils

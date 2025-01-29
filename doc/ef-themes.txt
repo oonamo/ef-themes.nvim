@@ -1,0 +1,462 @@
+*ef-themes.nvim* Colourful and legible themes for Neovim
+*ef-themes.txt*
+
+GNU License
+==============================================================================
+
+Features:
+- 34 Unique themes, ported exactly from emacs
+
+- 8 Extras Available for each theme, for a total of 272 extras
+
+- Close to source. By using a script (see (`./lua/ef-themes/lib/parser.lua`))
+  to extract the colors and themes from the original `Emacs` theme, this
+  port can easily stay up to date with any new themes or modifications.
+
+- Supports popular plugins. By using the original `Emacs` themes as source,
+  this theme uses the highlights similar to how they are used in `Emacs`
+
+# Table Of Contents ~
+  Modules...................................................|EfThemes-modules|
+  Setup.....................................................|EfThemes.setup()|
+
+------------------------------------------------------------------------------
+                                                              *EfThemes-modules*
+# Supported Modules ~
+* `plugin name`                               -> `Default`
+
+* `Saghen/blink.cmp`                          -> `{ blink           = true  }`
+* `hrsh7th/nvim-cmp`                          -> `{ cmp             = false }`
+* `ibhagwan/fzf-lua`                          -> `{ fzf             = false }`
+* `lewis6991/gitsigns.nvim`                   -> `{ gitsigns        = false }`
+* `echasnovski/mini.nvim`                     -> `{ mini            = true  }`
+* `TimUntersberger/neogit`                    -> `{ neogit          = false }`
+* `MeanderingProgrammer/render-markdown.nvim` -> `{ render_markdown = false }`
+* `semantic-tokens (native lsp)`              -> `{ semantic_tokens = false }`
+* `folke/snacks.nvim`                         -> `{ snacks          = false }`
+* `nvim-telescope/telescope.nvim`             -> `{ telescope       = false }`
+* `treesitter (native)`                       -> `{ treesitter      = true  }`
+* `folke/which-key.nvim`                      -> `{ which_key       = false }`
+
+## Enable All Modules ~
+
+>lua
+   require("ef-themes").setup({
+     modules = {
+       blink = true,
+       cmp = true,
+       fzf = true,
+       gitsigns = true,
+       mini = true,
+       neogit = true,
+       render_markdown = true,
+       semantic_tokens = true,
+       snacks = true,
+       telescope = true,
+       treesitter = true,
+       which_key = true,
+     }
+   })
+<
+
+
+------------------------------------------------------------------------------
+                                                                      *EfThemes*
+                                   `EfThemes`
+>lua
+  local EfThemes = {
+    list = {
+      -- All the dark themes, as defined by `ef-themes.el`
+      dark = {
+        "ef-autumn",
+        "ef-bio",
+        "ef-cherie",
+        "ef-dark",
+        "ef-deuteranopia-dark",
+        "ef-dream",
+        "ef-duo-dark",
+        "ef-elea-dark",
+        "ef-maris-dark",
+        "ef-melissa-dark",
+        "ef-night",
+        "ef-owl",
+        "ef-rosa",
+        "ef-symbiosis",
+        "ef-trio-dark",
+        "ef-tritanopia-dark",
+        "ef-winter",
+      },
+      -- All the light themes, as defined by `ef-themes.el`
+      light = {
+        "ef-arbutus",
+        "ef-cyprus",
+        "ef-day",
+        "ef-deuteranopia-light",
+        "ef-duo-light",
+        "ef-eagle",
+        "ef-elea-light",
+        "ef-frost",
+        "ef-kassio",
+        "ef-light",
+        "ef-maris-light",
+        "ef-melissa-light",
+        "ef-reverie",
+        "ef-spring",
+        "ef-summer",
+        "ef-trio-light",
+        "ef-tritanopia-light",
+      },
+    },
+  }
+<
+------------------------------------------------------------------------------
+                                                              *EfThemes.setup()*
+                            `EfThemes.setup`({opts})
+Parameters ~
+{opts} `(optional)` Ef-themes.Config Config to use for ef-themes. See |EfThemes.Defaults|
+Usage ~
+>lua
+ require("ef-themes").setup() -- use default config
+ require("ef-themes").setup({}) -- replace {} with your config.
+<
+------------------------------------------------------------------------------
+                                                              *EfThemes.clean()*
+                               `EfThemes.clean`()
+# Cleaning ~
+Since this plugin relies on changes to git or your config to know when
+your compiled colorscheme is invalid, it may create some problems if you
+are no longer tracking this plugin with git.
+This function allows for clearing all the compiled colorschemes, turning
+them invalid.
+
+Usage ~
+>lua
+ require("ef-themes").clean()
+<
+------------------------------------------------------------------------------
+                                                            *EfThemes.is_dark()*
+                          `EfThemes.is_dark`({theme})
+Utility function to determine if an `ef-theme` is dark or not
+
+Parameters ~
+{theme} `(string)` The Ef-theme to check for
+Return ~
+`(boolean)` True if the theme is defined as a dark theme
+
+Usage ~
+>lua
+ local is_dark = require("ef-themes").is_dark(vim.g.colors_name) -- has to be an ef-theme
+ vim.notify(string.format("Using %s theme!", is_dark and "dark" or "light"), vim.log.levels.INFO)
+<
+------------------------------------------------------------------------------
+                                                             *EfThemes.select()*
+                           `EfThemes.select`({opts})
+Select a Ef-theme using |vim.ui.select()|
+Parameters ~
+{opts} { bg: `("dark"|"light"|"any")` }
+
+------------------------------------------------------------------------------
+                                                       *EfThemes.select_light()*
+                           `EfThemes.select_light`()
+Select a dark Ef-theme using |vim.ui.select()|
+
+------------------------------------------------------------------------------
+                                                        *EfThemes.select_dark()*
+                            `EfThemes.select_dark`()
+Select a light Ef-theme using |vim.ui.select()|
+
+------------------------------------------------------------------------------
+                                                        *EfThemes.load_random()*
+                         `EfThemes.load_random`({opts})
+Load a random theme
+Parameters ~
+{opts} `(optional)` { bg: `("light"|"dark"|"any"})`
+
+------------------------------------------------------------------------------
+                                                        *EfThemes.get_palette()*
+                     `EfThemes.get_palette`({name}, {opts})
+Gets the palette for a given ef-theme
+Parameters ~
+{name} `(string)` Name of Ef-theme
+{opts} Ef-themes.Config Config. See |EfThemes.Defaults|
+
+Return ~
+Ef-Theme
+
+
+==============================================================================
+------------------------------------------------------------------------------
+                                                             *EfThemes.Defaults*
+# Defaults
+
+See |EfThemes.setup()| for usage
+
+>lua
+  EfThemes.config.defaults = {
+    light = "ef-spring", -- Ef-theme to select for light backgrounds
+    dark = "ef-winter", -- Ef-theme to select for dark backgrounds
+    transparent = false,
+    styles = {
+      -- Set specific styles for specific highlight groups
+      -- Can be any valid attr-list value. See `:h nvim_set_hl`
+      comments = { italic = true },
+      keywords = { bold = true },
+      functions = {},
+      variables = {},
+    },
+
+    modules = {
+      -- Enable/Disable highlights for a module
+      blink = true,
+      fzf = false,
+      mini = true,
+      semantic_tokens = false,
+      snacks = false,
+      treesitter = true,
+    },
+
+    --- Override any color from the ef-theme
+    ---@param colors Ef-Theme
+    ---@param name string
+    on_colors = function(colors, name) end,
+
+    --- Override specific highlights
+    ---@param highlights table
+    ---@param colors Ef-Theme
+    ---@param name string
+    on_highlights = function(highlights, colors, name) end,
+
+    options = {
+      compile = true, -- Whether to compile a theme
+      compile_path = vim.fn.stdpath("cache") .. "/ef-themes", -- Directory in which to place compiled themes
+    },
+  }
+<
+# Notes ~
+- `light` and `dark` theme are updated if the current dark or light theme 
+  is diffrent from the set values
+
+# Ef-themes.Config ~
+Class ~
+{Ef-themes.Config}
+Fields ~
+{on_colors} `(fun(palette: Ef-Theme, name: string))`
+{on_highlights} `(fun(highlights: table, colors: Ef-Theme, name: string))`
+
+
+==============================================================================
+------------------------------------------------------------------------------
+Ef-Theme ==============================================================================
+Here are all the available colors for the `on_colors` and `on_highlights` function
+
+The |EfThemes.get_palette()| also returns a table of this
+
+Class ~
+{Ef-Theme}
+Fields ~
+{bg_main} `(string)`
+{fg_main} `(string)`
+{bg_dim} `(string)`
+{fg_dim} `(string)`
+{bg_alt} `(string)`
+{fg_alt} `(string)`
+{bg_active} `(string)`
+{bg_inactive} `(string)`
+{red} `(string)`
+{red_warmer} `(string)`
+{red_cooler} `(string)`
+{red_faint} `(string)`
+{green} `(string)`
+{green_warmer} `(string)`
+{green_cooler} `(string)`
+{green_faint} `(string)`
+{yellow} `(string)`
+{yellow_warmer} `(string)`
+{yellow_cooler} `(string)`
+{yellow_faint} `(string)`
+{blue} `(string)`
+{blue_warmer} `(string)`
+{blue_cooler} `(string)`
+{blue_faint} `(string)`
+{magenta} `(string)`
+{magenta_warmer} `(string)`
+{magenta_cooler} `(string)`
+{magenta_faint} `(string)`
+{cyan} `(string)`
+{cyan_warmer} `(string)`
+{cyan_cooler} `(string)`
+{cyan_faint} `(string)`
+{bg_red_intense} `(string)`
+{bg_green_intense} `(string)`
+{bg_yellow_intense} `(string)`
+{bg_blue_intense} `(string)`
+{bg_magenta_intense} `(string)`
+{bg_cyan_intense} `(string)`
+{bg_red_subtle} `(string)`
+{bg_green_subtle} `(string)`
+{bg_yellow_subtle} `(string)`
+{bg_blue_subtle} `(string)`
+{bg_magenta_subtle} `(string)`
+{bg_cyan_subtle} `(string)`
+{bg_added} `(string)`
+{bg_added_faint} `(string)`
+{bg_added_refine} `(string)`
+{fg_added} `(string)`
+{bg_changed} `(string)`
+{bg_changed_faint} `(string)`
+{bg_changed_refine} `(string)`
+{fg_changed} `(string)`
+{bg_removed} `(string)`
+{bg_removed_faint} `(string)`
+{bg_removed_refine} `(string)`
+{fg_removed} `(string)`
+{bg_graph_red_0} `(string)`
+{bg_graph_red_1} `(string)`
+{bg_graph_green_0} `(string)`
+{bg_graph_green_1} `(string)`
+{bg_graph_yellow_0} `(string)`
+{bg_graph_yellow_1} `(string)`
+{bg_graph_blue_0} `(string)`
+{bg_graph_blue_1} `(string)`
+{bg_graph_magenta_0} `(string)`
+{bg_graph_magenta_1} `(string)`
+{bg_graph_cyan_0} `(string)`
+{bg_graph_cyan_1} `(string)`
+{bg_mode_line} `(string)`
+{fg_mode_line} `(string)`
+{bg_completion} `(string)`
+{bg_hover} `(string)`
+{bg_hover_secondary} `(string)`
+{bg_hl_line} `(string)`
+{bg_paren} `(string)`
+{bg_err} `(string)`
+{bg_warning} `(string)`
+{bg_info} `(string)`
+{border} `(string)`
+{cursor} `(string)`
+{fg_intense} `(string)`
+{modeline_err} `(string)`
+{modeline_warning} `(string)`
+{modeline_info} `(string)`
+{underline_err} `(string)`
+{underline_warning} `(string)`
+{underline_info} `(string)`
+{bg_char_0} `(string)`
+{bg_char_1} `(string)`
+{bg_char_2} `(string)`
+{bg_fringe} `(string)`
+{fg_fringe} `(string)`
+{err} `(string)`
+{warning} `(string)`
+{info} `(string)`
+{link} `(string)`
+{link_alt} `(string)`
+{name} `(string)`
+{keybind} `(string)`
+{identifier} `(string)`
+{prompt} `(string)`
+{bg_region} `(string)`
+{fg_region} `(string)`
+{builtin} `(string)`
+{comment} `(string)`
+{constant} `(string)`
+{fnname} `(string)`
+{keyword} `(string)`
+{preprocessor} `(string)`
+{docstring} `(string)`
+{string} `(string)`
+{type} `(string)`
+{variable} `(string)`
+{rx_escape} `(string)`
+{rx_construct} `(string)`
+{accent_0} `(string)`
+{accent_1} `(string)`
+{accent_2} `(string)`
+{accent_3} `(string)`
+{date_common} `(string)`
+{date_deadline} `(string)`
+{date_deadline_subtle} `(string)`
+{date_event} `(string)`
+{date_holiday} `(string)`
+{date_now} `(string)`
+{date_range} `(string)`
+{date_scheduled} `(string)`
+{date_scheduled_subtle} `(string)`
+{date_weekday} `(string)`
+{date_weekend} `(string)`
+{prose_code} `(string)`
+{prose_done} `(string)`
+{prose_macro} `(string)`
+{prose_metadata} `(string)`
+{prose_metadata_value} `(string)`
+{prose_table} `(string)`
+{prose_table_formula} `(string)`
+{prose_tag} `(string)`
+{prose_todo} `(string)`
+{prose_verbatim} `(string)`
+{mail_cite_0} `(string)`
+{mail_cite_1} `(string)`
+{mail_cite_2} `(string)`
+{mail_cite_3} `(string)`
+{mail_part} `(string)`
+{mail_recipient} `(string)`
+{mail_subject} `(string)`
+{mail_other} `(string)`
+{bg_search_match} `(string)`
+{bg_search_current} `(string)`
+{bg_search_lazy} `(string)`
+{bg_search_replace} `(string)`
+{bg_search_rx_group_0} `(string)`
+{bg_search_rx_group_1} `(string)`
+{bg_search_rx_group_2} `(string)`
+{bg_search_rx_group_3} `(string)`
+{bg_space} `(string)`
+{fg_space} `(string)`
+{bg_space_err} `(string)`
+{bg_tab_bar} `(string)`
+{bg_tab_current} `(string)`
+{bg_tab_other} `(string)`
+{bg_term_black} `(string)`
+{fg_term_black} `(string)`
+{bg_term_black_bright} `(string)`
+{fg_term_black_bright} `(string)`
+{bg_term_red} `(string)`
+{fg_term_red} `(string)`
+{bg_term_red_bright} `(string)`
+{fg_term_red_bright} `(string)`
+{bg_term_green} `(string)`
+{fg_term_green} `(string)`
+{bg_term_green_bright} `(string)`
+{fg_term_green_bright} `(string)`
+{bg_term_yellow} `(string)`
+{fg_term_yellow} `(string)`
+{bg_term_yellow_bright} `(string)`
+{fg_term_yellow_bright} `(string)`
+{bg_term_blue} `(string)`
+{fg_term_blue} `(string)`
+{bg_term_blue_bright} `(string)`
+{fg_term_blue_bright} `(string)`
+{bg_term_magenta} `(string)`
+{fg_term_magenta} `(string)`
+{bg_term_magenta_bright} `(string)`
+{fg_term_magenta_bright} `(string)`
+{bg_term_cyan} `(string)`
+{fg_term_cyan} `(string)`
+{bg_term_cyan_bright} `(string)`
+{fg_term_cyan_bright} `(string)`
+{bg_term_white} `(string)`
+{fg_term_white} `(string)`
+{bg_term_white_bright} `(string)`
+{fg_term_white_bright} `(string)`
+{rainbow_0} `(string)`
+{rainbow_1} `(string)`
+{rainbow_2} `(string)`
+{rainbow_3} `(string)`
+{rainbow_4} `(string)`
+{rainbow_5} `(string)`
+{rainbow_6} `(string)`
+{rainbow_7} `(string)`
+{rainbow_8} `(string)`
+
+
+ vim:tw=78:ts=8:noet:ft=help:norl:
