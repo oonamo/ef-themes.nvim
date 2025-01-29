@@ -1,7 +1,7 @@
 
 .PHONY: test
 test:
-	nvim --headless --noplugin -u ./tests/mininit.lua -l ./scripts/minitest.lua
+	nvim --headless --noplugin -u ./tests/mininit.lua -l ./scripts/minitest.lua -c
 
 .PHONY: build
 build:
@@ -10,7 +10,7 @@ build:
 .PHONY: deps
 deps:
 	@mkdir -p deps
-	git clone --filter=blob:none https://github.com/echasnovski/mini.nvim $@
+	git clone --filter=blob:none https://github.com/echasnovski/mini.nvim deps/mini.nvim
 
 .PHONY: clean
 clean:
