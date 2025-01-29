@@ -19,7 +19,7 @@ deps:
 	@mkdir -p deps
 	@mkdir -p deps/mini
 	@mkdir -p deps/mini/lua
-	wget https://raw.githubusercontent.com/echasnovski/mini.nvim/refs/heads/main/lua/mini/test.lua ./deps/lua/mini/
+	wget https://raw.githubusercontent.com/echasnovski/mini.nvim/refs/heads/main/lua/mini/test.lua -P ./deps/lua/mini/
 
 .PHONY: clean
 clean:
