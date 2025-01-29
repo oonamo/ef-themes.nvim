@@ -1,4 +1,3 @@
---- Ef-Theme ==============================================================================
 --- Here are all the available colors for the `on_colors` and `on_highlights` function
 ---
 --- The |EfThemes.get_palette()| also returns a table of this
@@ -208,5 +207,5 @@
 ---@field rainbow_7 string
 ---@field rainbow_8 string
 ---
+---@toc_entry Colors
 ---@tag EfThemes-colors
----@toc Colors
