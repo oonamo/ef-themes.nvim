@@ -1,1 +1,1 @@
-return require("ef-themes.lualine")("ef-maris-dark")
+return require("ef-themes.lib.lualine")("ef-maris-dark")

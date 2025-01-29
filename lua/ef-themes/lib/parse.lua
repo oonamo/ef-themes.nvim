@@ -33,7 +33,8 @@ end
 
 local sep = package.config:sub(1, 1)
 local this_file_path = debug.getinfo(1).source:sub(2, string.len("./parse.lua") * -1) .. sep
-local base_path = this_file_path:sub(1, string.len("/lua/ef-themes/") * -1)
+local base_path = this_file_path:sub(1, string.len("/lua/ef-themes/lib/") * -1)
+print(base_path)
 
 function M.get_all_ef_themes()
   local raw_themes_path = base_path .. "raw_themes" .. sep
@@ -73,22 +74,25 @@ end
 
 function M.write_all_themes()
   local ef_themes, path = M.get_all_ef_themes()
-  local lualine_path = vim.fs.joinpath(base_path, "lua", "lualine", "themes")
+
+  local lualine_folder = vim.fs.joinpath(base_path, "lua", "lualine", "themes")
+  local output_folder = vim.fs.joinpath(base_path, "lua", "ef-themes", "themes")
 
   local function create_lualine_theme(theme)
     print("[lualine]", theme)
-    local theme_file = vim.fs.joinpath(lualine_path, theme .. ".lua")
+    local theme_file = vim.fs.joinpath(lualine_folder, theme .. ".lua")
     print("[write (lualine)]", theme_file)
 
-    local contents = string.format([[return require("ef-themes.lualine")("%s")]], theme) .. "\n"
+    local contents = string.format([[return require("ef-themes.lib.lualine")("%s")]], theme) .. "\n"
     utils.write(theme_file, contents)
   end
 
   for _, ef_theme in ipairs(ef_themes or {}) do
-    M.parse_theme(path .. ef_theme, this_file_path .. "themes" .. sep .. ef_theme:gsub("-?theme%.el", "%.lua"))
+    local theme_name = ef_theme:gsub("-?theme%.el", "")
+    M.parse_theme(path .. ef_theme, vim.fs.joinpath(output_folder, theme_name .. ".lua"))
     M._create_color(ef_theme)
 
-    create_lualine_theme(ef_theme:gsub("-?theme%.el", ""))
+    create_lualine_theme(theme_name)
   end
 end
 

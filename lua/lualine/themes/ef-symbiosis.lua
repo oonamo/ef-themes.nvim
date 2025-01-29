@@ -1,1 +1,1 @@
-return require("ef-themes.lualine")("ef-symbiosis")
+return require("ef-themes.lib.lualine")("ef-symbiosis")

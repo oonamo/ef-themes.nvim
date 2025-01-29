@@ -1,1 +1,1 @@
-return require("ef-themes.lualine")("ef-trio-light")
+return require("ef-themes.lib.lualine")("ef-trio-light")

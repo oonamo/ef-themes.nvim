@@ -1,1 +1,1 @@
-return require("ef-themes.lualine")("ef-elea-light")
+return require("ef-themes.lib.lualine")("ef-elea-light")

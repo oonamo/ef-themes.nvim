@@ -1,1 +1,1 @@
-return require("ef-themes.lualine")("ef-spring")
+return require("ef-themes.lib.lualine")("ef-spring")

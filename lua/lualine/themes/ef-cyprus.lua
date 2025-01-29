@@ -1,1 +1,1 @@
-return require("ef-themes.lualine")("ef-cyprus")
+return require("ef-themes.lib.lualine")("ef-cyprus")

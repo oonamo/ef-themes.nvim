@@ -1,1 +1,1 @@
-return require("ef-themes.lualine")("ef-rosa")
+return require("ef-themes.lib.lualine")("ef-rosa")

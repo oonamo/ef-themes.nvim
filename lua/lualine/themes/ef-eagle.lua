@@ -1,1 +1,1 @@
-return require("ef-themes.lualine")("ef-eagle")
+return require("ef-themes.lib.lualine")("ef-eagle")

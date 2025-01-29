@@ -55,7 +55,7 @@ function M.setup(opts)
 
     local git_path = debug.getinfo(1).source:sub(2, string.len("/lua/ef-themes/init.lua") * -1) .. ".git"
     local git_time = vim.fn.getftime(git_path)
-    local hash = require("ef-themes.compiler").hash(opts) .. (git_time == -1 and git_path or git_time)
+    local hash = require("ef-themes.lib.compiler").hash(opts) .. (git_time == -1 and git_path or git_time)
 
     if previous_hash ~= hash then
       -- HACK: Don't delete the cached files, but rather make them invalid

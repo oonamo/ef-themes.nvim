@@ -1,1 +1,1 @@
-return require("ef-themes.lualine")("ef-kassio")
+return require("ef-themes.lib.lualine")("ef-kassio")

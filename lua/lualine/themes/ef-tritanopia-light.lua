@@ -1,1 +1,1 @@
-return require("ef-themes.lualine")("ef-tritanopia-light")
+return require("ef-themes.lib.lualine")("ef-tritanopia-light")

@@ -1,1 +1,1 @@
-return require("ef-themes.lualine")("ef-frost")
+return require("ef-themes.lib.lualine")("ef-frost")

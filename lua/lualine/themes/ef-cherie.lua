@@ -1,1 +1,1 @@
-return require("ef-themes.lualine")("ef-cherie")
+return require("ef-themes.lib.lualine")("ef-cherie")

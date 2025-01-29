@@ -1,1 +1,1 @@
-return require("ef-themes.lualine")("ef-deuteranopia-light")
+return require("ef-themes.lib.lualine")("ef-deuteranopia-light")

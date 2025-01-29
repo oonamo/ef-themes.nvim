@@ -1,6 +1,5 @@
 local fmt = string.format
 local utils = require("ef-themes.utils")
-local config = require("ef-themes.config")
 
 local M = {}
 
