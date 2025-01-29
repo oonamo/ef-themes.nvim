@@ -43,7 +43,10 @@ M.defaults = {
   },
 }
 
-function M.setup(options) M.options = vim.tbl_deep_extend("force", {}, M.defaults, options or {}) end
+function M.setup(options)
+  M.options = vim.tbl_deep_extend("force", {}, M.defaults, options or {})
+  _G.EfThemes.config = M
+end
 
 ---@param opts? Ef-themes.Config
 ---@return Ef-themes.Config

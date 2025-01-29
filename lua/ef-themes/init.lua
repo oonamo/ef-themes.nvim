@@ -43,6 +43,8 @@ local M = {
 
 ---@alias Ef-Themes.ThemeOpts { bg: string, name: string }
 function M.setup(opts)
+  _G.EfThemes = _G.EfThemes or M
+
   require("ef-themes.config").setup(opts)
   M.__did_setup = true
 
@@ -80,10 +82,14 @@ local lock = false
 function M.load(theme_opts, opts)
   if lock then return end
 
-  local name, bg = theme_opts.name, theme_opts.bg
-
   if not M.__did_setup then M.setup(opts) end
   opts = require("ef-themes.config").extend(opts)
+
+  local name, bg = theme_opts.name, theme_opts.bg
+  if name == "ef-theme" then
+    name = opts[vim.o.bg]
+    theme_opts.name = opts[vim.o.bg]
+  end
 
   if vim.o.bg ~= bg or (name == "ef-theme") then
     if vim.g.colors_name == name then

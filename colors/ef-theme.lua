@@ -1,1 +1,1 @@
-require("ef-themes").load("ef-theme")
+require("ef-themes").load({ name = "ef-theme", bg = vim.o.bg })
