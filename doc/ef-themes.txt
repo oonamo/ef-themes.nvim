@@ -5,6 +5,8 @@ GNU License
 ==============================================================================
 
 Features:
+- Fast loading with compiling on a per-need basis
+
 - 34 Unique themes, ported exactly from emacs
 
 - 8 Extras Available for each theme, for a total of 272 extras
@@ -224,7 +226,13 @@ See |EfThemes.setup()| for usage
     ---@param highlights table
     ---@param colors Ef-Theme
     ---@param name string
-    on_highlights = function(highlights, colors, name) end,
+    on_highlights = function(highlights, colors, name)
+      -- Should add or replace the highlights table, not return
+      -- i.e.
+      --
+      -- `highlights.Normal = { fg = colors.fg_alt, bg = colors.bg_inactive }`
+      -- `highlights.MyObsucrePligin = { fg = colors.yellow_faint }`
+    end,
 
     options = {
       compile = true, -- Whether to compile a theme
@@ -233,8 +241,10 @@ See |EfThemes.setup()| for usage
   }
 <
 # Notes ~
-- `light` and `dark` theme are updated if the current dark or light theme 
+- `light` and `dark` theme are updated if the current dark or light theme
   is diffrent from the set values
+
+- The `colors` field is very large. See |EfThemes-colors| to see them all
 
 # Ef-themes.Config ~
 Class ~
@@ -246,6 +256,7 @@ Fields ~
 
 ==============================================================================
 ------------------------------------------------------------------------------
+                                                               *EfThemes-colors*
 Ef-Theme ==============================================================================
 Here are all the available colors for the `on_colors` and `on_highlights` function
 
@@ -458,5 +469,7 @@ Fields ~
 {rainbow_7} `(string)`
 {rainbow_8} `(string)`
 
+  ..........................................................|EfThemes-modules|
+  ..........................................................|EfThemes.setup()|
 
  vim:tw=78:ts=8:noet:ft=help:norl:
