@@ -12,6 +12,7 @@ local M = {
     "snacks",
     "telescope",
     "treesitter",
+    "which_key",
   },
 }
 
