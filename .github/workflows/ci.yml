@@ -3,6 +3,7 @@ name: CI
 on:
   push:
     branches: [main, master]
+    paths: [ "lua/**" ]
   pull_request:
 
 jobs:
@@ -16,10 +17,29 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           version: latest
           args: --check lua
+
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git pull
+
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+      - name: Install Dependencies
+        shell: bash
+        run: |
+          make deps
+      
+      - name: Run tests
+        run: |
+          make test
+
   build:
     runs-on: ubuntu-latest
     name: Build Extras
-    needs: stylua
+    needs: unit-tests
     steps:
       - uses: actions/checkout@v4
       - run: git pull

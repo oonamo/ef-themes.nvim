@@ -50,7 +50,11 @@ end
 
 ---@param opts? Ef-themes.Config
 ---@return Ef-themes.Config
-function M.extend(opts) return opts and vim.tbl_deep_extend("force", {}, M.options, opts) or M.options end
+function M.extend(opts)
+  local new = opts and vim.tbl_deep_extend("force", {}, M.options, opts) or M.options
+  M.options = new
+  return new
+end
 
 function M.get_default() return vim.deepcopy(M.defaults) end
 
