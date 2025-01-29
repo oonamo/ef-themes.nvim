@@ -285,6 +285,14 @@
 # Features
 - Fast loading with compiling on a per-need basis
 
+- 34 Unique themes, ported from `Emacs`
+
+- 8 Extras Available for each theme, for a total of 272 extras
+
+- Close to source. By using a script (see (`./lua/ef-themes/lib/parser.lua`)) to extract the colors and themes from the original `Emacs` theme, this port can easily stay up to date with any new themes or modifications.
+
+- Supports popular plugins. By using the original `Emacs` themes as source, this theme uses the highlights similar to how they are used in `Emacs`
+
 # Requirements
 - Neovim >= 0.8
 - True color support

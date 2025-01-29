@@ -5,6 +5,8 @@
 --- ==============================================================================
 ---
 --- Features:
+--- - Fast loading with compiling on a per-need basis
+---
 --- - 34 Unique themes, ported exactly from emacs
 ---
 --- - 8 Extras Available for each theme, for a total of 272 extras
