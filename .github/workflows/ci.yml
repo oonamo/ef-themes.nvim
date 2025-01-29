@@ -35,15 +35,38 @@ jobs:
       - uses: rhysd/action-setup-vim@v1
         with:
           neovim: true
-
       - name: Make Build
         run: make build
-
-      - name: Make docs
-        run: make docs
 
       - name: Push Changes
         if: ${{ github.event_name == 'push' }}
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(extras): auto-generate extras"
+
+  docs:
+    runs-on: ubuntu-latest
+    needs: [unit-tests, build]
+    if: ${{ !failure() && github.ref == "refs/heads/main" }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: git pull
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+
+      - name: Install Dependencies
+        shell: bash
+        run: |
+          make deps
+
+      - name: Make Docs
+        shell: bash
+        run: |
+          make docs
+
+      - name: Push Changes
+        if: ${{ github.event_name == 'push' }}
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(extras): auto-generate helpdocs"
