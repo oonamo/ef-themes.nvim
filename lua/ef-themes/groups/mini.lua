@@ -19,7 +19,6 @@ function M.get(c, opts)
 
     MiniCompletionActiveParameter = { underline = true },
 
-    -- TODO: Improve these
     MiniCursorword                = { bg        = c.bg_alt },
     MiniCursorwordCurrent         = { bg        = c.bg_alt },
 
