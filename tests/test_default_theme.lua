@@ -39,13 +39,13 @@ end
 
 T["ef-theme"]["uses default light theme on light"] = function()
   child.o.background = "light"
-  local default_dark_theme = get_light_theme()
-  eq(type(default_dark_theme), "string")
+  local default_light_theme = get_light_theme()
+  eq(type(default_light_theme), "string")
 
   child.cmd("colorscheme ef-theme")
-  note(default_dark_theme)
+  note(default_light_theme)
 
-  eq(child.g.colors_name, default_dark_theme)
+  eq(child.g.colors_name, default_light_theme)
 end
 
 T["ef-theme"]["overrides default dark theme on new dark theme"] = function()
@@ -57,7 +57,7 @@ T["ef-theme"]["overrides default dark theme on new dark theme"] = function()
   eq(child.lua_get("_G.EfThemes.config.options.dark"), new_dark_ef_theme)
 end
 
-T["ef-theme"]["overrides default dark theme on new light theme"] = function()
+T["ef-theme"]["overrides default light theme on new light theme"] = function()
   child.o.background = "light"
 
   local new_light_ef_theme = "ef-day"
@@ -86,7 +86,7 @@ T["ef-theme"]["toggles default themes on background change"] = function()
   eq(child.g.colors_name, current_dark_theme)
 end
 
-T["ef-theme"]["toggles updated defaults on backround change"] = function()
+T["ef-theme"]["toggles updated defaults on background change"] = function()
   local default_dark = get_dark_theme()
   eq(child.g.colors_name, vim.NIL)
 
