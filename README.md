@@ -344,8 +344,8 @@ require("ef-themes").setup({
     fzf = false,
     mini = true,
     semantic_tokens = false,
-    snacks = false,
     treesitter = true,
+    snacks = false,
   },
 
   --- Override any color from the ef-theme
@@ -369,6 +369,25 @@ vim.cmd.colorscheme("ef-theme") -- To use the default colorscheme defined above
 -- Or choose a specific theme
 -- vim.cmd.colorscheme("ef-dream")
 ```
+
+## Available Modules
+<details>
+<summary>Modules</summary>
+
+- blink
+- cmp
+- fzf
+- gitsigns
+- mini
+- neogit
+- render_markdown
+- semantic_tokens
+- snacks
+- telescope
+- treesitter
+- which_key
+
+</details>
 
 
 # Customizing
