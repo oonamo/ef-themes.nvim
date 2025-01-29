@@ -34,7 +34,6 @@ end
 local sep = package.config:sub(1, 1)
 local this_file_path = debug.getinfo(1).source:sub(2, string.len("./parse.lua") * -1) .. sep
 local base_path = this_file_path:sub(1, string.len("/lua/ef-themes/lib/") * -1)
-print(base_path)
 
 function M.get_all_ef_themes()
   local raw_themes_path = base_path .. "raw_themes" .. sep
