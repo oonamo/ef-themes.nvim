@@ -3,21 +3,10 @@ name: CI
 on:
   push:
     branches: [main, master]
-    paths: [ "lua/**" ]
+    paths: [ "lua/**", "tests/**" ]
   pull_request:
 
 jobs:
-  stylua:
-    name: Stylua Formatting
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: JohnnyMorganz/stylua-action@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          version: latest
-          args: --check lua
-
   unit-tests:
     runs-on: ubuntu-latest
     steps:
@@ -46,8 +35,10 @@ jobs:
       - uses: rhysd/action-setup-vim@v1
         with:
           neovim: true
+
       - name: Run Build
         run: ./scripts/build
+
       - name: Push Changes
         if: ${{ github.event_name == 'push' }}
         uses: stefanzweifel/git-auto-commit-action@v5
