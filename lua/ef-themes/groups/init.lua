@@ -6,6 +6,7 @@ local M = {
     "fzf",
     "gitsigns",
     "mini",
+    "neogit",
     "render_markdown",
     "semantic_tokens",
     "snacks",
