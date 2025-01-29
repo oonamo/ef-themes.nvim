@@ -95,40 +95,4 @@ T["setup()"]["respects opts"] = function()
   })
 end
 
--- T["colorscheme"] = new_set()
--- T["colorscheme"]["default colorscheme"] = new_set({
---   hooks = {
---     post_case = function() child.cmd("hi! clear") end,
---   },
--- })
---
--- T["colorscheme"]["default colorscheme"]["did init"] = function()
---   local expect_config = function(field, value) eq(child.lua_get("EfThemes.config." .. field), value) end
---   local eq_default = function(field)
---     eq(child.lua_get("EfThemes.config.defaults." .. field), child.lua_get("EfThemes.config.options." .. field))
---   end
---
---   expect_config("options.light", "ef-spring")
---   expect_config("defaults.light", "ef-spring")
---   eq_default("light")
---
---   expect_config("options.dark", "ef-winter")
---   expect_config("defaults.dark", "ef-winter")
---   eq_default("dark")
--- end
---
--- T["colorscheme"]["default colorscheme"]["respects dark background"] = function()
---   child.cmd("set bg=dark")
---   child.cmd("colorscheme ef-theme")
---
---   eq(child.g.colors_name, "ef-winter")
--- end
---
--- T["colorscheme"]["default colorscheme"]["respects light background"] = function()
---   child.cmd("set bg=light")
---   child.cmd("colorscheme ef-spring")
---
---   eq(child.g.colors_name, "ef-spring")
--- end
-
 return T
