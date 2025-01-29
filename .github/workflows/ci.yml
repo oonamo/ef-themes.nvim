@@ -36,8 +36,11 @@ jobs:
         with:
           neovim: true
 
-      - name: Run Build
-        run: ./scripts/build
+      - name: Make Build
+        run: make build
+
+      - name: Make docs
+        run: make docs
 
       - name: Push Changes
         if: ${{ github.event_name == 'push' }}
