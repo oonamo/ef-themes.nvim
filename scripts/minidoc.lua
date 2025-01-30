@@ -148,7 +148,20 @@ local toc_hook = function(s)
   end
 end
 
-local original_doc_hook = hooks.doc
+H.align_text = function(text, width, direction)
+  if type(text) ~= "string" then return end
+  text = vim.trim(text)
+  width = width or 78
+  direction = direction or "left"
+
+  -- Don't do anything if aligning left or line is a whitespace
+  if direction == "left" or text:find("^%s*$") then return text end
+
+  local n_left = math.max(0, 78 - H.visual_text_width(text))
+  if direction == "center" then n_left = math.floor(0.5 * n_left) end
+
+  return (" "):rep(n_left) .. text
+end
 
 hooks.doc = function(d)
   H.apply_recursively(function(x)

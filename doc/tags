@@ -1,10 +1,11 @@
 EfThemes-colors	ef-themes.txt	/*EfThemes-colors*
+EfThemes-contents	ef-themes.txt	/*EfThemes-contents*
 EfThemes-dark-themes	ef-themes.txt	/*EfThemes-dark-themes*
 EfThemes-features	ef-themes.txt	/*EfThemes-features*
 EfThemes-light-themes	ef-themes.txt	/*EfThemes-light-themes*
 EfThemes-modules	ef-themes.txt	/*EfThemes-modules*
-EfThemes.Defaults	ef-themes.txt	/*EfThemes.Defaults*
 EfThemes.clean()	ef-themes.txt	/*EfThemes.clean()*
+EfThemes.defaults	ef-themes.txt	/*EfThemes.defaults*
 EfThemes.get_palette()	ef-themes.txt	/*EfThemes.get_palette()*
 EfThemes.is_dark()	ef-themes.txt	/*EfThemes.is_dark()*
 EfThemes.load_random()	ef-themes.txt	/*EfThemes.load_random()*

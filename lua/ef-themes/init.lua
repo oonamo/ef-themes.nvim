@@ -4,8 +4,8 @@
 ---
 --- GNU License
 --- ==============================================================================
----
---- Features:
+
+--- FEATURES
 --- - Fast loading with compiling on a per-need basis
 ---
 --- - 34 Unique themes, ported exactly from emacs
@@ -19,9 +19,12 @@
 --- - Supports popular plugins. By using the original `Emacs` themes as source,
 ---   this theme uses the highlights similar to how they are used in `Emacs`
 ---
---- # Table Of Contents ~
 ---@tag EfThemes-features
+
+--- CONTENTS
+---
 ---@toc
+---@tag EfThemes-contents
 
 --- # Supported Modules ~
 ---
@@ -95,7 +98,7 @@ local EfThemes = {
   },
 }
 
----# Dark Themes
+---# Dark Themes ~
 ---
 ---@eval return EfThemes.list.dark
 ---

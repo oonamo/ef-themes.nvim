@@ -1,4 +1,3 @@
-                                                             *EfThemes-features*
 *ef-themes.nvim* Colourful and legible themes for Neovim
 *ef-themes.txt*
 
@@ -6,7 +5,9 @@
 GNU License
 ==============================================================================
 
-Features:
+------------------------------------------------------------------------------
+                                                             *EfThemes-features*
+FEATURES
 - Fast loading with compiling on a per-need basis
 
 - 34 Unique themes, ported exactly from emacs
@@ -20,11 +21,13 @@ Features:
 - Supports popular plugins. By using the original `Emacs` themes as source,
   this theme uses the highlights similar to how they are used in `Emacs`
 
-# Table Of Contents ~
+------------------------------------------------------------------------------
+                                                             *EfThemes-contents*
+CONTENTS
+
   1. Modules                                                |EfThemes-modules|
   2. Setup                                                  |EfThemes.setup()|
   3. Colors                                                  |EfThemes-colors|
-
 ------------------------------------------------------------------------------
                                                               *EfThemes-modules*
 # Supported Modules ~
@@ -68,7 +71,7 @@ Features:
 
 ------------------------------------------------------------------------------
                                                           *EfThemes-dark-themes*
-Dark Themes
+Dark Themes ~
 
 ef-autumn
 ef-bio
@@ -187,8 +190,8 @@ Ef-Theme
 
 ==============================================================================
 ------------------------------------------------------------------------------
-                                                             *EfThemes.Defaults*
-# Defaults
+                                                             *EfThemes.defaults*
+DEFAULTS
 
 See |EfThemes.setup()| for usage
 
