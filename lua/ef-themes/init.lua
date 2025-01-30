@@ -100,7 +100,7 @@ local EfThemes = {
 
 ---# Dark Themes ~
 ---
----@eval return EfThemes.list.dark
+---@eval return require("ef-themes").list.dark
 ---
 ---
 ---@tag EfThemes-dark-themes
@@ -108,7 +108,7 @@ local EfThemes = {
 
 ---# Light Themes ~
 ---
----@eval return EfThemes.list.light
+---@eval return require("ef-themes").list.light
 ---
 ---
 ---@tag EfThemes-light-themes
