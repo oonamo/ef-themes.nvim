@@ -1,7 +1,7 @@
 <h1 align="center">Ef-Themes</h1>
 <p align="center">
     Colourful and legible themes for Neovim,
-    Ported from <a href="https://github.com/protesilaos/ef-themes" target="_blank">Ef (εὖ) themes for GNU Emacs</a>
+    Ported from <a href="https://github.com/protesilaos/ef-themes" target="_blank">Ef (εὖ) themes for GNU Emacs</a> By <a href="https://github.com/protesilaos" target="_blank">protesilaos</a>
 </p>
 
 ![ef-themes-preview](https://github.com/user-attachments/assets/82ddbecf-1ec2-41e3-bf4a-dce0ef78671f)
@@ -289,7 +289,7 @@
 
 - 8 Extras Available for each theme, for a total of 272 extras
 
-- Close to source. By using a script (see (`./lua/ef-themes/lib/parser.lua`)) to extract the colors and themes from the original `Emacs` theme, this port can easily stay up to date with any new themes or modifications.
+- Close to source. By using a script (see (`./lua/ef-themes/lib/parse.lua`)) to extract the colors and themes from the original `Emacs` theme, this port can easily stay up to date with any new themes or modifications.
 
 - Supports popular plugins. By using the original `Emacs` themes as source, this theme uses the highlights similar to how they are used in `Emacs`
 
@@ -325,11 +325,11 @@ Plug 'oonamo/ef-themes.nvim'
 
 # Usage
 ```vim
-colorscheme ef-dream " ef-reverie, ef-owl etc..
+colorscheme ef-theme " or specify a theme like ef-reverie, ef-owl etc..
 ```
 
 ```lua
-vim.cmd.colorscheme("ef-dream")
+vim.cmd.colorscheme("ef-theme") -- or specify a theme like ef-elea-dark
 ```
 
 # Configuration
@@ -337,6 +337,7 @@ vim.cmd.colorscheme("ef-dream")
 require("ef-themes").setup({
   light = "ef-spring", -- Ef-theme to select for light backgrounds
   dark = "ef-winter", -- Ef-theme to select for dark backgrounds
+  transparent = false,
   styles = {
     -- Set specific styles for specific highlight groups
     -- Can be any valid attr-list value. See `:h nvim_set_hl`
@@ -348,12 +349,13 @@ require("ef-themes").setup({
 
   modules = {
     -- Enable/Disable highlights for a module
+    -- See `h: EfThemes-modules` for the list of available modules
     blink = true,
     fzf = false,
     mini = true,
     semantic_tokens = false,
-    treesitter = true,
     snacks = false,
+    treesitter = true,
   },
 
   --- Override any color from the ef-theme
@@ -365,7 +367,13 @@ require("ef-themes").setup({
   ---@param highlights table
   ---@param colors Ef-Theme
   ---@param name string
-  on_highlights = function(highlights, colors, name) end,
+  on_highlights = function(highlights, colors, name)
+    -- Should add or replace the highlights table, not return
+    -- i.e.
+    --
+    -- `highlights.Normal = { fg = colors.fg_alt, bg = colors.bg_inactive }`
+    -- `highlights.MyObsucrePligin = { fg = colors.yellow_faint }`
+  end,
 
   options = {
     compile = true, -- Whether to compile a theme
@@ -401,8 +409,8 @@ vim.cmd.colorscheme("ef-theme") -- To use the default colorscheme defined above
 # Customizing
 ## Get Ef-theme Palette
 ```lua
-local ef_dream = require("ef-themes.themes").get_palette("ef-dream")
-local ef_rosa = require("ef-themes.themes").get_palette("ef-rosa")
+local ef_dream = require("ef-themes").get_palette("ef-dream")
+local ef_rosa = require("ef-themes").get_palette("ef-rosa")
 ```
 
 ## Overwriting Colors
@@ -410,7 +418,7 @@ local ef_rosa = require("ef-themes.themes").get_palette("ef-rosa")
 require("ef-themes").setup({
         on_colors = function(colors, name)
             colors.yellow = colors.yellow_faint
-            colors.bg = "#000000"
+            colors.bg_main = "#000000"
         end,
 })
 ```
@@ -418,8 +426,11 @@ require("ef-themes").setup({
 ```lua
 require("ef-themes").setup({
         on_highlights = function(hls, palette, name)
-            if name == "ef-spring" then
-                hls.FloatBorder = { fg = palette.fg_main, bg = palette.bg_alt }
+            local is_dark = require("ef-themes").is_dark(name)
+            if is_dark then
+                hls.FloatBorder = { fg = palette.fg_main, bg = palette.bg_inactive }
+            else
+                hls.FloatBorder = { fg = palette.fg_main, bg = palette.bg_dim }
             end
         end,
 })
