@@ -48,7 +48,7 @@ function M.substitute(template, name, palette)
   end)
 end
 
-function M.generate_docs()
+function M.generate_readme()
   local readme_file = vim.fn.fnamemodify(debug.getinfo(1).source:sub(2), ":p:h:h:h:h:") .. "/README.md"
   local pattern = "(<%!%-%- extras:start %-%->).*(<%!%-%- extras:end %-%->)"
   -- local pattern = "(<%!%-%- " .. tag .. ":start %-%->).*(<%!%-%- " .. tag .. ":end %-%->)"

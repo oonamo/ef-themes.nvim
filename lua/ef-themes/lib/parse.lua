@@ -132,6 +132,7 @@ function M.build()
 
   M.write_all_extras()
   require("ef-themes.extras").generate_docs()
+  require("ef-themes.extras").generate_readme()
 end
 
 return M
