@@ -6,6 +6,14 @@ GNU License
 ==============================================================================
 
 ------------------------------------------------------------------------------
+                                                             *EfThemes-contents*
+CONTENTS
+
+  1. Features                                              |EfThemes-features|
+  2. Modules                                                |EfThemes-modules|
+  3. Setup                                                  |EfThemes.setup()|
+  4. Colors                                                  |EfThemes-colors|
+------------------------------------------------------------------------------
                                                              *EfThemes-features*
 FEATURES
 - Fast loading with compiling on a per-need basis
@@ -21,13 +29,7 @@ FEATURES
 - Supports popular plugins. By using the original `Emacs` themes as source,
   this theme uses the highlights similar to how they are used in `Emacs`
 
-------------------------------------------------------------------------------
-                                                             *EfThemes-contents*
-CONTENTS
 
-  1. Modules                                                |EfThemes-modules|
-  2. Setup                                                  |EfThemes.setup()|
-  3. Colors                                                  |EfThemes-colors|
 ------------------------------------------------------------------------------
                                                               *EfThemes-modules*
 # Supported Modules ~
@@ -156,8 +158,11 @@ Usage ~
                                                              *EfThemes.select()*
                            `EfThemes.select`({opts})
 Select a Ef-theme using |vim.ui.select()|
+
 Parameters ~
-{opts} { bg: `("dark"|"light"|"any")` }
+{opts} `(table)` Options. Possible Fields:
+  - <bg> `(string)` - Background to choose from. One of "any", "light", or "dark"
+    Default: "any"
 
 ------------------------------------------------------------------------------
                                                        *EfThemes.select_light()*
@@ -174,7 +179,9 @@ Select a light Ef-theme using |vim.ui.select()|
                          `EfThemes.load_random`({opts})
 Load a random theme
 Parameters ~
-{opts} `(optional)` { bg: `("light"|"dark"|"any"})`
+{opts} `(table|nil)` Options. Possibile fields:
+   - <bg> `(string)` - Background to choose from. One of "any", "light", or "dark"
+     Default: "any"
 
 ------------------------------------------------------------------------------
                                                         *EfThemes.get_palette()*

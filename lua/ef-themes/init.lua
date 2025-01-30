@@ -5,6 +5,11 @@
 --- GNU License
 --- ==============================================================================
 
+--- CONTENTS
+---
+---@toc
+---@tag EfThemes-contents
+
 --- FEATURES
 --- - Fast loading with compiling on a per-need basis
 ---
@@ -19,12 +24,8 @@
 --- - Supports popular plugins. By using the original `Emacs` themes as source,
 ---   this theme uses the highlights similar to how they are used in `Emacs`
 ---
+---@toc_entry Features
 ---@tag EfThemes-features
-
---- CONTENTS
----
----@toc
----@tag EfThemes-contents
 
 --- # Supported Modules ~
 ---
@@ -231,7 +232,10 @@ function EfThemes.load(theme_opts, opts)
 end
 
 --- Select a Ef-theme using |vim.ui.select()|
----@param opts { bg: "dark"|"light"|"any" }
+---
+---@param opts table Options. Possible Fields:
+---   - <bg> `(string)` - Background to choose from. One of "any", "light", or "dark"
+---     Default: "any"
 function EfThemes.select(opts)
   opts = opts or { bg = "any" }
   local list
@@ -268,7 +272,9 @@ function EfThemes.select_light() EfThemes.select({ bg = "light" }) end
 function EfThemes.select_dark() EfThemes.select({ bg = "dark" }) end
 
 --- Load a random theme
----@param opts? { bg: "light"|"dark"|"any"}
+---@param opts table|nil Options. Possibile fields:
+---    - <bg> `(string)` - Background to choose from. One of "any", "light", or "dark"
+---      Default: "any"
 function EfThemes.load_random(opts)
   opts = opts or { bg = "any" }
 
