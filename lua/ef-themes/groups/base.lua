@@ -1,7 +1,7 @@
 local M = {}
 
 ---@param c Ef-Theme
----@param opts Ef-themes.Config
+---@param opts Ef-Themes.Config
 function M.get(c, opts)
   -- stylua: ignore
   return {
@@ -12,6 +12,7 @@ function M.get(c, opts)
     -- dosIniLabel              = "@property",
     -- helpCommand              = { bg        = c.terminal_black, fg           = c.blue },
     Bold                        = { bold      = true, fg                = c.fg_main }, -- (preferred) any bold text
+    -- Boolean = {},
     Character                   = { fg        = c.accent_2 }, --  a character constant: 'c', '\n'
     ColorColumn                 = { bg        = c.bg_alt }, -- used for the columns set with 'colorcolumn'
     Comment                     = { fg        = c.comment, style        = opts.styles.comments }, -- any comment

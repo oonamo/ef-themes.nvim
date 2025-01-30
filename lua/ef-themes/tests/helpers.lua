@@ -31,7 +31,7 @@ M.new_child_neovim = function()
     child.bo.readonly = false
   end
 
-  ---@param config? Ef-themes.Config
+  ---@param config? Ef-Themes.Config
   child.setup = function(config) child.lua([[require("ef-themes").setup(...)]], { config or {} }) end
   child.unload = function()
     child.lua("_G.EfThemes = nil")

@@ -13,7 +13,7 @@ local Config = {}
 --- - The `colors` field is very large. See |EfThemes-colors| to see them all
 ---
 --- # Ef-themes.Config ~
----@class Ef-themes.Config
+---@class Ef-Themes.Config
 ---@field on_colors fun(palette: Ef-Theme, name: string)
 ---@field on_highlights fun(highlights: table, colors: Ef-Theme, name: string)
 --minidoc_replace_start EfThemes.config.defaults = {
@@ -65,15 +65,15 @@ Config.defaults = {
 }
 --minidoc_afterlines_end
 
----@param options? Ef-themes.Config
+---@param options? Ef-Themes.Config
 ---@private
 function Config.setup(options)
   Config.options = vim.tbl_deep_extend("force", {}, Config.defaults, options or {})
   _G.EfThemes.config = Config
 end
 
----@param opts? Ef-themes.Config
----@return Ef-themes.Config
+---@param opts? Ef-Themes.Config
+---@return Ef-Themes.Config
 ---
 ---@private
 function Config.extend(opts)
@@ -82,7 +82,7 @@ function Config.extend(opts)
   return new
 end
 
----@return Ef-themes.Config
+---@return Ef-Themes.Config
 ---@private
 function Config.get_default() return vim.deepcopy(Config.defaults) end
 

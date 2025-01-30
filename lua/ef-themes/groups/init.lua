@@ -1,13 +1,14 @@
 local M = {
----@eval return MiniDoc.afterlines_to_code(MiniDoc.current.eval_section)
----@text # Modules ~
---- These are the available modules in |Config.defaults|
+  ---@eval return MiniDoc.afterlines_to_code(MiniDoc.current.eval_section)
+  ---@text # Modules ~
+  --- These are the available modules in |Config.defaults|
   groups = {
     "base",
     "blink",
     "cmp",
     "fzf",
     "gitsigns",
+    "kinds",
     "mini",
     "neogit",
     "render_markdown",
@@ -45,10 +46,18 @@ function M.build(palette, opts, name, theme_opts)
 
   local all_groups = {}
 
-  for k, v in pairs(require("ef-themes.groups.base").get(palette, opts)) do
-    local hl = resolve_hl(v)
-    vim.api.nvim_set_hl(0, k, hl)
-    all_groups[k] = hl
+  local required_groups = {
+    "base",
+    "kinds",
+  }
+
+  for _, group in ipairs(required_groups) do
+    for hl_name, v in pairs(require("ef-themes.groups." .. group).get(palette, opts)) do
+
+      local hl = resolve_hl(v)
+      vim.api.nvim_set_hl(0, hl_name, hl)
+      all_groups[hl_name] = hl
+    end
   end
 
   for modname, use in pairs(opts.modules or {}) do

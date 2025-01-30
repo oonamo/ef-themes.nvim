@@ -111,7 +111,7 @@ local EfThemes = {
 ---@alias Ef-Themes.ThemeOpts { bg: string, name: string }
 
 ---@toc_entry Setup
----@param opts? Ef-themes.Config Config to use for ef-themes. See |EfThemes.Defaults|
+---@param opts? Ef-Themes.Config Config to use for ef-themes. See |EfThemes.Defaults|
 ---@usage >lua
 ---  require("ef-themes").setup() -- use default config
 ---  require("ef-themes").setup({}) -- replace {} with your config.
@@ -175,7 +175,7 @@ local lock = false
 --- Updates the config with the new values
 ---
 ---@param theme_opts Ef-Themes.ThemeOpts
----@param opts? Ef-themes.Config
+---@param opts? Ef-Themes.Config
 ---
 ---@private
 function EfThemes.load(theme_opts, opts)
@@ -289,7 +289,7 @@ end
 
 --- Gets the palette for a given ef-theme
 ---@param name string Name of Ef-theme
----@param opts Ef-themes.Config Config. See |EfThemes.Defaults|
+---@param opts Ef-Themes.Config Config. See |EfThemes.Defaults|
 ---
 ---@return Ef-Theme
 function EfThemes.get_palette(name, opts)
