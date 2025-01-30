@@ -390,6 +390,7 @@ vim.cmd.colorscheme("ef-theme") -- To use the default colorscheme defined above
 <details>
 <summary>Modules</summary>
 
+<!-- groups:start -->
 - blink
 - cmp
 - fzf
@@ -403,6 +404,7 @@ vim.cmd.colorscheme("ef-theme") -- To use the default colorscheme defined above
 - treesitter
 - which_key
 
+<!-- groups:end -->
 </details>
 
 

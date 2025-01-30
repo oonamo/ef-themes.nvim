@@ -131,8 +131,8 @@ function M.build()
   if not ok then print("Error while building themes", err) end
 
   M.write_all_extras()
-  require("ef-themes.extras").generate_docs()
   require("ef-themes.extras").generate_readme()
+  require("ef-themes.groups").generate_readme()
 end
 
 return M
