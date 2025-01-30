@@ -12,7 +12,7 @@ local M = {
     snacks = {          label = "snacks",          url = "https://github.com/folke/snacks.nvim",                         default = false },
     telescope = {       label = "telescope",       url = "https://github.com/nvim-telescope/telescope.nvim" ,            default = false},
     treesitter = {      label = "treesitter (native)",                                                                   default = true },
-    which_key = {       label = "whick-key.nvim",  url = "https://github.com/folke/which-key.nvim",                      default = false },
+    which_key = {       label = "which-key.nvim",  url = "https://github.com/folke/which-key.nvim",                      default = false },
   },
 }
 
