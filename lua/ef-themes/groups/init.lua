@@ -1,24 +1,21 @@
 local M = {
-  ---@eval return MiniDoc.afterlines_to_code(MiniDoc.current.eval_section)
-  ---@text # Modules ~
-  --- These are the available modules in |Config.defaults|
   groups = {
-    "base",
-    "blink",
-    "cmp",
-    "fzf",
-    "gitsigns",
-    "kinds",
-    "mini",
-    "neogit",
-    "render_markdown",
-    "semantic_tokens",
-    "snacks",
-    "telescope",
-    "treesitter",
-    "which_key",
+    blink = { label = "blink.cmp", url = "https://github.com/Saghen/blink.cmp" },
+    cmp = { label = "nvim-cmp", url = "https://github.com/hrsh7th/nvim-cmp" },
+    fzf = { label = "fzf-lua", url = "https://github.com/ibhagwan/fzf-lua" },
+    gitsigns = { label = "gitsigns.nvim", url = "https://github.com/lewis6991/gitsigns.nvim" },
+    mini = { label = "mini.nvim", url = "https://github.com/echasnovski/mini.nvim" },
+    neogit = { label = "Neogit", url = "https://github.com/TimUntersberger/neogit" },
+    render_markdown = {
+      label = "render-markdown",
+      url = "https://github.com/MeanderingProgrammer/render-markdown.nvim",
+    },
+    semantic_tokens = { label = "semantic-tokens (native lsp)" },
+    snacks = { label = "snacks", url = "https://github.com/folke/snacks.nvim" },
+    telescope = { label = "telescope", url = "https://github.com/nvim-telescope/telescope.nvim" },
+    treesitter = { label = "treesitter (native)" },
+    which_key = { label = "whick-key.nvim", url = "https://github.com/folke/which-key.nvim" },
   },
-  --minidoc_afterlines_end
 }
 
 local function resolve_hl(hl)
@@ -53,7 +50,6 @@ function M.build(palette, opts, name, theme_opts)
 
   for _, group in ipairs(required_groups) do
     for hl_name, v in pairs(require("ef-themes.groups." .. group).get(palette, opts)) do
-
       local hl = resolve_hl(v)
       vim.api.nvim_set_hl(0, hl_name, hl)
       all_groups[hl_name] = hl
@@ -62,7 +58,7 @@ function M.build(palette, opts, name, theme_opts)
 
   for modname, use in pairs(opts.modules or {}) do
     if use then
-      if not vim.tbl_contains(M.groups, modname) then
+      if not M.groups[modname] then
         vim.notify(string.format("[ef-themes]: Module '%s' does not exist.", modname), vim.log.levels.ERROR)
       else
         local mod_highlights = require("ef-themes.groups." .. modname).get(palette, opts)
@@ -111,5 +107,7 @@ function M.terminal(palette)
   vim.g.terminal_color_6 = palette.fg_term_cyan
   vim.g.terminal_color_14 = palette.fg_term_cyan_bright
 end
+
+function M.generate_docs() end
 
 return M
