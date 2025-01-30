@@ -142,7 +142,7 @@ function M.generate_readme()
   local readme = Utils.read(readme_file, "*a")
   local old_length = #readme
   readme = readme:gsub(
-    "(<%!%-%- modules:start %-%->).*(<%!%-%- extras:end %-%->)",
+    "(<%!%-%- modules:start %-%->).*(<%!%-%- modules:end %-%->)",
     "%1\n" .. table.concat(readme_modules, "\n") .. "\n%2"
   )
 
