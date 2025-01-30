@@ -50,7 +50,6 @@
 ---@toc_entry Modules
 ---@tag EfThemes-modules
 
----@eval return MiniDoc.afterlines_to_code(MiniDoc.current.eval_section)
 local EfThemes = {
   list = {
     -- All the dark themes, as defined by `ef-themes.el`
@@ -95,7 +94,21 @@ local EfThemes = {
     },
   },
 }
---minidoc_afterlines_end
+
+---# Dark Themes
+---
+---@eval return EfThemes.list.dark
+---
+---
+---@tag EfThemes-dark-themes
+
+
+---# Light Themes ~
+---
+---@eval return EfThemes.list.light
+---
+---
+---@tag EfThemes-light-themes
 
 ---@alias Ef-Themes.ThemeOpts { bg: string, name: string }
 

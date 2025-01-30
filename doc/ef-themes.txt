@@ -21,9 +21,9 @@ Features:
   this theme uses the highlights similar to how they are used in `Emacs`
 
 # Table Of Contents ~
-  Modules...................................................|EfThemes-modules|
-  Setup.....................................................|EfThemes.setup()|
-  Colors.....................................................|EfThemes-colors|
+  1. Modules                                                |EfThemes-modules|
+  2. Setup                                                  |EfThemes.setup()|
+  3. Colors                                                  |EfThemes-colors|
 
 ------------------------------------------------------------------------------
                                                               *EfThemes-modules*
@@ -67,54 +67,49 @@ Features:
 
 
 ------------------------------------------------------------------------------
-                                                                      *EfThemes*
-                                   `EfThemes`
->lua
-  local EfThemes = {
-    list = {
-      -- All the dark themes, as defined by `ef-themes.el`
-      dark = {
-        "ef-autumn",
-        "ef-bio",
-        "ef-cherie",
-        "ef-dark",
-        "ef-deuteranopia-dark",
-        "ef-dream",
-        "ef-duo-dark",
-        "ef-elea-dark",
-        "ef-maris-dark",
-        "ef-melissa-dark",
-        "ef-night",
-        "ef-owl",
-        "ef-rosa",
-        "ef-symbiosis",
-        "ef-trio-dark",
-        "ef-tritanopia-dark",
-        "ef-winter",
-      },
-      -- All the light themes, as defined by `ef-themes.el`
-      light = {
-        "ef-arbutus",
-        "ef-cyprus",
-        "ef-day",
-        "ef-deuteranopia-light",
-        "ef-duo-light",
-        "ef-eagle",
-        "ef-elea-light",
-        "ef-frost",
-        "ef-kassio",
-        "ef-light",
-        "ef-maris-light",
-        "ef-melissa-light",
-        "ef-reverie",
-        "ef-spring",
-        "ef-summer",
-        "ef-trio-light",
-        "ef-tritanopia-light",
-      },
-    },
-  }
-<
+                                                          *EfThemes-dark-themes*
+Dark Themes
+
+ef-autumn
+ef-bio
+ef-cherie
+ef-dark
+ef-deuteranopia-dark
+ef-dream
+ef-duo-dark
+ef-elea-dark
+ef-maris-dark
+ef-melissa-dark
+ef-night
+ef-owl
+ef-rosa
+ef-symbiosis
+ef-trio-dark
+ef-tritanopia-dark
+ef-winter
+
+------------------------------------------------------------------------------
+                                                         *EfThemes-light-themes*
+Light Themes ~
+
+ef-arbutus
+ef-cyprus
+ef-day
+ef-deuteranopia-light
+ef-duo-light
+ef-eagle
+ef-elea-light
+ef-frost
+ef-kassio
+ef-light
+ef-maris-light
+ef-melissa-light
+ef-reverie
+ef-spring
+ef-summer
+ef-trio-light
+ef-tritanopia-light
+
 ------------------------------------------------------------------------------
                                                               *EfThemes.setup()*
                             `EfThemes.setup`({opts})
