@@ -1,14 +1,16 @@
 --- *ef-themes.nvim* Colourful and legible themes for Neovim
 --- *ef-themes.txt*
 ---
+--- Originally by `protesilaos`
+--- * - `Github`: https://github.com/protesilaos/ef-themes
+--- * - `Website`: https://protesilaos.com/
 ---
 --- GNU License
---- ==============================================================================
 
 --- CONTENTS
 ---
 ---@toc
----@tag EfThemes-contents
+---@tag ef-themes-contents
 
 --- FEATURES
 --- - Fast loading with compiling on a per-need basis
@@ -17,7 +19,7 @@
 ---
 --- - 8 Extras Available for each theme, for a total of 272 extras
 ---
---- - Close to source. By using a script (see (`./lua/ef-themes/lib/parser.lua`))
+--- - Close to source. By using a script (see (`./lua/ef-themes/lib/parse.lua`))
 ---   to extract the colors and themes from the original `Emacs` theme, this
 ---   port can easily stay up to date with any new themes or modifications.
 ---
@@ -25,7 +27,7 @@
 ---   this theme uses the highlights similar to how they are used in `Emacs`
 ---
 ---@toc_entry Features
----@tag EfThemes-features
+---@tag ef-themes-features
 
 --- # Supported Modules ~
 ---
@@ -52,7 +54,7 @@
 --- <
 ---
 ---@toc_entry Modules
----@tag EfThemes-modules
+---@tag ef-themes-modules
 
 local EfThemes = {
   list = {
@@ -104,7 +106,7 @@ local EfThemes = {
 ---@eval return require("ef-themes").list.dark
 ---
 ---
----@tag EfThemes-dark-themes
+---@tag ef-themes-dark-themes
 
 
 ---# Light Themes ~
@@ -112,16 +114,25 @@ local EfThemes = {
 ---@eval return require("ef-themes").list.light
 ---
 ---
----@tag EfThemes-light-themes
+---@tag ef-themes-light-themes
 
 ---@alias Ef-Themes.ThemeOpts { bg: string, name: string }
 
+--- Set options
+--- 
+--- # Notes ~
+---   - Exposes the |EfThemes| global variable
+---
 ---@toc_entry Setup
----@param opts? Ef-Themes.Config Config to use for ef-themes. See |EfThemes.Defaults|
 ---@usage >lua
 ---  require("ef-themes").setup() -- use default config
 ---  require("ef-themes").setup({}) -- replace {} with your config.
+---
+---  -- EfThemes global is exposed after setup
+---  EfThemes.setup({ transparent = true }) -- Update config
 --- <
+---@param opts? Ef-Themes.Config Config to use for ef-themes. See |ef-themes-defaults|
+---@tag ef-themes.setup()
 function EfThemes.setup(opts)
   _G.EfThemes = _G.EfThemes or EfThemes
 
@@ -230,6 +241,33 @@ function EfThemes.load(theme_opts, opts)
 
   lock = false
 end
+
+--- API
+---
+--- `ef-themes.nvim` offers an api for using and modifying existing themes
+--- It exposes the `EfThemes` global variable for using the main functions
+--- Fields:
+---   - <list> `({ light: string[], dark: string[]})`: Contains the names of
+---     all light and dark themes
+---   - <config> `({ defaults: table, options: table })`: Contains the default
+---     options in `defaults`, and the active options in `options`
+---
+--- Functions:
+---   - <select> |EfThemes.select()|
+---   - <select_light> |EfThemes.select_light()|
+---   - <select_dark> |EfThemes.select_light()|
+---   - <load_random> |EfThemes.load_random()|
+---   - <get_palette> |EfThemes.get_palette()|
+---
+---@usage >lua
+---  require("ef-themes").setup() -- use default config
+---
+---  -- EfThemes global variable is available after setup
+---  EfThemes.load_random({ bg = "dark" })
+--- <
+---
+---@toc_entry API
+---@tag EfThemes ef-themes-api
 
 --- Select a Ef-theme using |vim.ui.select()|
 ---

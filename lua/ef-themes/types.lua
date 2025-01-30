@@ -208,4 +208,4 @@
 ---@field rainbow_8 string
 ---
 ---@toc_entry Colors
----@tag EfThemes-colors
+---@tag ef-themes-colors

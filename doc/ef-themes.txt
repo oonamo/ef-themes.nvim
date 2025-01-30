@@ -1,20 +1,23 @@
 *ef-themes.nvim* Colourful and legible themes for Neovim
 *ef-themes.txt*
 
+Originally by `protesilaos`
+* - `Github`: https://github.com/protesilaos/ef-themes
+* - `Website`: https://protesilaos.com/
 
 GNU License
-==============================================================================
 
 ------------------------------------------------------------------------------
-                                                             *EfThemes-contents*
+                                                            *ef-themes-contents*
 CONTENTS
 
-  1. Features                                              |EfThemes-features|
-  2. Modules                                                |EfThemes-modules|
-  3. Setup                                                  |EfThemes.setup()|
-  4. Colors                                                  |EfThemes-colors|
+  1. Features                                             |ef-themes-features|
+  2. Modules                                               |ef-themes-modules|
+  3. Setup                                                 |ef-themes.setup()|
+  4. API                                              |EfThemes| |ef-themes-api|
+  5. Colors                                                 |ef-themes-colors|
 ------------------------------------------------------------------------------
-                                                             *EfThemes-features*
+                                                            *ef-themes-features*
 FEATURES
 - Fast loading with compiling on a per-need basis
 
@@ -31,7 +34,7 @@ FEATURES
 
 
 ------------------------------------------------------------------------------
-                                                              *EfThemes-modules*
+                                                             *ef-themes-modules*
 # Supported Modules ~
 
 * `Plugin`                       -> `Default`
@@ -72,7 +75,7 @@ FEATURES
 
 
 ------------------------------------------------------------------------------
-                                                          *EfThemes-dark-themes*
+                                                         *ef-themes-dark-themes*
 Dark Themes ~
 
 ef-autumn
@@ -94,7 +97,7 @@ ef-tritanopia-dark
 ef-winter
 
 ------------------------------------------------------------------------------
-                                                         *EfThemes-light-themes*
+                                                        *ef-themes-light-themes*
 Light Themes ~
 
 ef-arbutus
@@ -116,15 +119,24 @@ ef-trio-light
 ef-tritanopia-light
 
 ------------------------------------------------------------------------------
-                                                              *EfThemes.setup()*
+                                                             *ef-themes.setup()*
                             `EfThemes.setup`({opts})
-Parameters ~
-{opts} `(optional)` Ef-Themes.Config Config to use for ef-themes. See |EfThemes.Defaults|
+Set options
+
+# Notes ~
+  - Exposes the |EfThemes| global variable
+
 Usage ~
 >lua
  require("ef-themes").setup() -- use default config
  require("ef-themes").setup({}) -- replace {} with your config.
+
+ -- EfThemes global is exposed after setup
+ EfThemes.setup({ transparent = true }) -- Update config
 <
+Parameters ~
+{opts} `(optional)` Ef-Themes.Config Config to use for ef-themes. See |ef-themes-defaults|
+
 ------------------------------------------------------------------------------
                                                               *EfThemes.clean()*
                                `EfThemes.clean`()
@@ -154,6 +166,34 @@ Usage ~
  local is_dark = require("ef-themes").is_dark(vim.g.colors_name) -- has to be an ef-theme
  vim.notify(string.format("Using %s theme!", is_dark and "dark" or "light"), vim.log.levels.INFO)
 <
+------------------------------------------------------------------------------
+                                                        *EfThemes* *ef-themes-api*
+API
+
+`ef-themes.nvim` offers an api for using and modifying existing themes
+It exposes the `EfThemes` global variable for using the main functions
+Fields:
+  - <list> `({ light: string[], dark: string[]})`: Contains the names of
+    all light and dark themes
+  - <config> `({ defaults: table, options: table })`: Contains the default
+    options in `defaults`, and the active options in `options`
+
+Functions:
+  - <select> |EfThemes.select()|
+  - <select_light> |EfThemes.select_light()|
+  - <select_dark> |EfThemes.select_light()|
+  - <load_random> |EfThemes.load_random()|
+  - <get_palette> |EfThemes.get_palette()|
+
+Usage ~
+>lua
+ require("ef-themes").setup() -- use default config
+
+ -- EfThemes global variable is available after setup
+ EfThemes.load_random({ bg = "dark" })
+<
+
+
 ------------------------------------------------------------------------------
                                                              *EfThemes.select()*
                            `EfThemes.select`({opts})
@@ -197,10 +237,10 @@ Ef-Theme
 
 ==============================================================================
 ------------------------------------------------------------------------------
-                                                             *EfThemes.defaults*
+                                                            *ef-themes-defaults*
 DEFAULTS
 
-See |EfThemes.setup()| for usage
+See |ef-themes.setup()| for usage
 
 >lua
   EfThemes.config.defaults = {
@@ -265,7 +305,7 @@ Fields ~
 
 ==============================================================================
 ------------------------------------------------------------------------------
-                                                               *EfThemes-colors*
+                                                              *ef-themes-colors*
 Here are all the available colors for the `on_colors` and `on_highlights` function
 
 The |EfThemes.get_palette()| also returns a table of this

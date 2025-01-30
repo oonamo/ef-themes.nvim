@@ -2,9 +2,9 @@ local Config = {}
 
 --- DEFAULTS
 ---
---- See |EfThemes.setup()| for usage
+--- See |ef-themes.setup()| for usage
 ---
----@tag EfThemes.defaults
+---@tag ef-themes-defaults
 ---@eval return MiniDoc.afterlines_to_code(MiniDoc.current.eval_section)
 ---@text # Notes ~
 --- - `light` and `dark` theme are updated if the current dark or light theme
