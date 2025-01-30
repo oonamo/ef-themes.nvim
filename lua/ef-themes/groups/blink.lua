@@ -1,11 +1,11 @@
 local M = {}
 
 ---@param c Ef-Theme
----@param opts Ef-themes.Config
+---@param opts Ef-Themes.Config
 function M.get(c, opts)
   -- stylua: ignore
-  return {
-    BlinkCmpDoc                 = { fg = c.fg_main, bg         = c.bg_dim },
+  local hls = {
+    BlinkCmpDoc                 = { fg = c.fg_main, bg    = c.bg_dim },
     BlinkCmpDocBorder           = { fg = c.border, bg     = c.bg_dim },
     BlinkCmpGhostText           = { fg = c.fg_alt },
     BlinkCmpKindCodeium         = { fg = c.cyan_faint, bg = "NONE" },
@@ -21,6 +21,9 @@ function M.get(c, opts)
     BlinkCmpSignatureHelp       = { fg = c.fg_main, bg    = c.bg_dim },
     BlinkCmpSignatureHelpBorder = { fg = c.border, bg     = c.bg_dim },
   }
+
+  require("ef-themes.groups.kinds").kinds(c, hls, "BlinkCmpKind%s")
+  return hls
 end
 
 return M

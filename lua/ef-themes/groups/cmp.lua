@@ -1,10 +1,10 @@
 local M = {}
 
 ---@param c Ef-Theme
----@param opts Ef-themes.Config
+---@param opts Ef-Themes.Config
 function M.get(c, opts)
   -- stylua: ignore
-  return {
+  local hls = {
     CmpDocumentation       = { fg = c.fg_main, bg    = c.bg_dim },
     CmpDocumentationBorder = { fg = c.border, bg     = c.bg_dim },
     CmpGhostText           = { fg = c.fg_alt },
@@ -19,6 +19,9 @@ function M.get(c, opts)
     CmpItemKindTabNine     = { fg = c.cyan_faint, bg = "NONE" },
     CmpItemMenu            = { fg = c.fg_main, bg    = c.bg_inactive },
   }
+
+  require("ef-themes.groups.kinds").kinds(c, hls, "CmpItemKind%s")
+  return hls
 end
 
 return M
