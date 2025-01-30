@@ -2,10 +2,11 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 --highlight-line \
 --ansi \
 --layout=reverse \
---border=none
---color=bg+:#f9e0e5,bg:#e8f0f0,spinner:#9435b4,hl:#6a65bf \
+--border=none \
+--color=bg+:#ccedff,bg:#e8f0f0,spinner:#9435b4,hl:#1a870f \
 --color=fg:#34494a,header:#007f68,info:#777294,pointer:#9435b4 \
---color=marker:#9435b4,fg+:#f9e0e5,prompt:#6a65bf,hl+:#6a65bf \
+--color=marker:#9435b4,fg+:#1a870f,prompt:#6a65bf,hl+:#1a870f \
+
 
 # On powershell use do `nvim $PROFILE` and paste
 # $ENV:FZF_DEFAULT_OPTS =@"
@@ -13,8 +14,8 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 # --ansi
 # --layout=reverse
 # --border=none
-# --color=bg+:#f9e0e5,bg:#e8f0f0,spinner:#9435b4,hl:#6a65bf
+# --color=bg+:#ccedff,bg:#e8f0f0,spinner:#9435b4,hl:#1a870f
 # --color=fg:#34494a,header:#007f68,info:#777294,pointer:#9435b4
-# --color=marker:#9435b4,fg+:#f9e0e5,prompt:#6a65bf,hl+:#6a65bf
-# "@
+# --color=marker:#9435b4,fg+:#1a870f,prompt:#6a65bf,hl+:#1a870f
+#"@
   
