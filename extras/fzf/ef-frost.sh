@@ -3,7 +3,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 --ansi \
 --layout=reverse \
 --border=none \
---color=bg+:#cceff5,bg:#eaefef,spinner:#7f5ae0,hl:#4244ef \
+--color=bg+:#cceff5,bg:#f7f9f9,spinner:#7f5ae0,hl:#4244ef \
 --color=fg:#232323,header:#3a6dd2,info:#66657f,pointer:#7f5ae0 \
 --color=marker:#7f5ae0,fg+:#232323,prompt:#375cc8,hl+:#4244ef \
 "
@@ -14,7 +14,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 # --ansi
 # --layout=reverse
 # --border=none
-# --color=bg+:#cceff5,bg:#eaefef,spinner:#7f5ae0,hl:#4244ef
+# --color=bg+:#cceff5,bg:#f7f9f9,spinner:#7f5ae0,hl:#4244ef
 # --color=fg:#232323,header:#3a6dd2,info:#66657f,pointer:#7f5ae0
 # --color=marker:#7f5ae0,fg+:#232323,prompt:#375cc8,hl+:#4244ef
 #"@
