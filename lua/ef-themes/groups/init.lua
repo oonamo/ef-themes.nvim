@@ -122,8 +122,12 @@ function M.generate_doc_strings(style)
   if style == "help" then table.insert(ret, "* `Plugin` -> `Default`") end
   table.insert(ret, "")
 
-  for modname, data in pairs(M.groups) do
-    table.insert(ret, format_str(modname, data))
+  local modules = vim.tbl_keys(M.groups)
+  table.sort(modules)
+
+  for _, modname in ipairs(modules) do
+    local info = M.groups[modname]
+    table.insert(ret, format_str(modname, info))
   end
 
   table.insert(ret, "")

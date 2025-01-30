@@ -390,21 +390,23 @@ vim.cmd.colorscheme("ef-theme") -- To use the default colorscheme defined above
 <details>
 <summary>Modules</summary>
 
-<!-- groups:start -->
-- blink
-- cmp
-- fzf
-- gitsigns
-- mini
-- neogit
-- render_markdown
-- semantic_tokens
-- snacks
-- telescope
-- treesitter
-- which_key
+<!-- modules:start -->
 
-<!-- groups:end -->
+- [blink.cmp](https://github.com/Saghen/blink.cmp)
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- [fzf-lua](https://github.com/ibhagwan/fzf-lua)
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [mini.nvim](https://github.com/echasnovski/mini.nvim)
+- [Neogit](https://github.com/TimUntersberger/neogit)
+- [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)
+- semantic-tokens (native lsp)
+- [snacks](https://github.com/folke/snacks.nvim)
+- [telescope](https://github.com/nvim-telescope/telescope.nvim)
+- treesitter (native)
+- [whick-key.nvim](https://github.com/folke/which-key.nvim)
+
+<!-- modules:end -->
+
 </details>
 
 

@@ -31,18 +31,18 @@ Features:
 
 * `Plugin`                       -> `Default`
 
-* `mini.nvim`                    -> `{ mini = true }`
-* `gitsigns.nvim`                -> `{ gitsigns = false }`
-* `whick-key.nvim`               -> `{ which_key = false }`
-* `render-markdown`              -> `{ render_markdown = false }`
-* `treesitter (native)`          -> `{ treesitter = true }`
-* `Neogit`                       -> `{ neogit = false }`
 * `blink.cmp`                    -> `{ blink = true }`
-* `semantic-tokens (native lsp)` -> `{ semantic_tokens = false }`
 * `nvim-cmp`                     -> `{ cmp = false }`
 * `fzf-lua`                      -> `{ fzf = false }`
+* `gitsigns.nvim`                -> `{ gitsigns = false }`
+* `mini.nvim`                    -> `{ mini = true }`
+* `Neogit`                       -> `{ neogit = false }`
+* `render-markdown`              -> `{ render_markdown = false }`
+* `semantic-tokens (native lsp)` -> `{ semantic_tokens = false }`
 * `snacks`                       -> `{ snacks = false }`
 * `telescope`                    -> `{ telescope = false }`
+* `treesitter (native)`          -> `{ treesitter = true }`
+* `whick-key.nvim`               -> `{ which_key = false }`
 
 ## Enable All Modules ~
 
