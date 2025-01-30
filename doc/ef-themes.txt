@@ -50,7 +50,7 @@ FEATURES
 * `snacks`                       -> `{ snacks = false }`
 * `telescope`                    -> `{ telescope = false }`
 * `treesitter (native)`          -> `{ treesitter = true }`
-* `whick-key.nvim`               -> `{ which_key = false }`
+* `which-key.nvim`               -> `{ which_key = false }`
 
 ## Enable All Modules ~
 
