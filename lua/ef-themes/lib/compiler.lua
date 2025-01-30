@@ -15,8 +15,6 @@ local function inspect(t)
 end
 
 M.compile = function(opts, highlights, theme_opts)
-  vim.notify(fmt("[Ef-themes]: Compiling '%s'", theme_opts.name), vim.log.levels.INFO)
-
   local lines = {
     fmt(
       [[

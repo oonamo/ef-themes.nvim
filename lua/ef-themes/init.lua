@@ -256,7 +256,6 @@ function EfThemes.select(opts)
       local bg = opts.bg ~= "any" and opts.bg or (EfThemes.is_dark(choice) and "dark" or "light")
       EfThemes.load({ name = choice, bg = bg })
 
-      vim.notify(choice, vim.log.levels.INFO)
       vim.schedule(function() vim.api.nvim_exec_autocmds("ColorScheme", { pattern = choice }) end)
     end,
   })
@@ -288,7 +287,6 @@ function EfThemes.load_random(opts)
   EfThemes.load({ name = theme_list[idx], bg = is_dark and "dark" or "light" })
   vim.g.colors_name = theme_list[idx]
 
-  vim.notify("Ef-themes: " .. theme_list[idx], vim.log.levels.INFO)
   vim.schedule(function() vim.api.nvim_exec_autocmds("ColorScheme", { pattern = theme_list[idx] }) end)
 end
 
