@@ -108,7 +108,6 @@ local EfThemes = {
 ---
 ---@tag ef-themes-dark-themes
 
-
 ---# Light Themes ~
 ---
 ---@eval return require("ef-themes").list.light
@@ -119,7 +118,7 @@ local EfThemes = {
 ---@alias Ef-Themes.ThemeOpts { bg: string, name: string }
 
 --- Set options
---- 
+---
 --- # Notes ~
 ---   - Exposes the |EfThemes| global variable
 ---

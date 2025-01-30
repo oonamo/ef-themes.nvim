@@ -56,7 +56,10 @@ function M.generate_readme()
   local readme = Utils.read(readme_file, "*a")
   local old_length = #readme
 
-  local lines = {}
+  local lines = {
+    "| Tool | Extra |",
+    "|:--:|:--:|",
+  }
   local names = vim.tbl_keys(M.extras)
   table.sort(names)
 
@@ -65,12 +68,19 @@ function M.generate_readme()
     table.insert(
       lines,
       fmt(
-        "- [%s](%s) ([%s](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/%s))",
-        info.label,
-        info.url,
-        name,
-        name
+      "| [%s](%s) | [extras/%s](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/%s) |",
+      info.label,
+      info.url,
+      name,
+      name
       )
+      -- fmt(
+      --   "- [%s](%s) ([%s](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/%s))",
+      --   info.label,
+      --   info.url,
+      --   name,
+      --   name
+      -- )
     )
   end
 

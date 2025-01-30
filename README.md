@@ -293,6 +293,50 @@
 
 - Supports popular plugins. By using the original `Emacs` themes as source, this theme uses the highlights similar to how they are used in `Emacs`
 
+<details>
+<summary> 📦 Modules</summary>
+
+<!-- modules:start -->
+
+| Plugin | Source |
+|:--:|:--:|
+ | [blink.cmp](https://github.com/Saghen/blink.cmp) | blink |
+ | [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | cmp |
+ | [fzf-lua](https://github.com/ibhagwan/fzf-lua) | fzf |
+ | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | gitsigns |
+ | [mini.nvim](https://github.com/echasnovski/mini.nvim) | mini |
+ | [Neogit](https://github.com/TimUntersberger/neogit) | neogit |
+ | [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim) | render_markdown |
+| semantic-tokens (native lsp) | N/A |
+ | [snacks](https://github.com/folke/snacks.nvim) | snacks |
+ | [telescope](https://github.com/nvim-telescope/telescope.nvim) | telescope |
+| treesitter (native) | N/A |
+ | [which-key.nvim](https://github.com/folke/which-key.nvim) | which_key |
+
+<!-- modules:end -->
+
+</details>
+
+<details>
+<summary> 🎁 Extras</summary>
+
+<!-- extras:start -->
+| Tool | Extra |
+|:--:|:--:|
+| [Fzf](https://github.com/junegunn/fzf) | [extras/fzf](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/fzf) |
+| [Ghostty](https://github.com/ghostty-org/ghostty) | [extras/ghostty](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/ghostty) |
+| [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) | [extras/kitty](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/kitty) |
+| [Lazygit](https://github.com/jesseduffield/lazygit) | [extras/lazygit](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/lazygit) |
+| [Vimium](https://vimium.github.io/) | [extras/vimium](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/vimium) |
+| [WezTerm](https://wezfurlong.org/wezterm/config/files.html) | [extras/wezterm](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/wezterm) |
+| [Windows Terminal](https://aka.ms/terminal-documentation) | [extras/windows_terminal](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/windows_terminal) |
+| [Yazi](https://github.com/sxyazi/yazi) | [extras/yazi](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/yazi) |
+
+<!-- extras:end -->
+
+</details>
+
+
 # Requirements
 - Neovim >= 0.8
 - True color support
@@ -386,35 +430,15 @@ vim.cmd.colorscheme("ef-theme") -- To use the default colorscheme defined above
 -- vim.cmd.colorscheme("ef-dream")
 ```
 
-## Available Modules
-<details>
-<summary>Modules</summary>
-
-<!-- modules:start -->
-
-- [blink.cmp](https://github.com/Saghen/blink.cmp)
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- [fzf-lua](https://github.com/ibhagwan/fzf-lua)
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [mini.nvim](https://github.com/echasnovski/mini.nvim)
-- [Neogit](https://github.com/TimUntersberger/neogit)
-- [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)
-- semantic-tokens (native lsp)
-- [snacks](https://github.com/folke/snacks.nvim)
-- [telescope](https://github.com/nvim-telescope/telescope.nvim)
-- treesitter (native)
-- [whick-key.nvim](https://github.com/folke/which-key.nvim)
-
-<!-- modules:end -->
-
-</details>
-
-
 # Customizing
 ## Get Ef-theme Palette
 ```lua
 local ef_dream = require("ef-themes").get_palette("ef-dream")
 local ef_rosa = require("ef-themes").get_palette("ef-rosa")
+
+-- or after require("ef-themes").setup()
+local ef_dream = EfThemes.get_palette("ef-dream")
+local ef_rosa = EfThemes.get_palette("ef-rosa")
 ```
 
 ## Overwriting Colors
@@ -439,20 +463,6 @@ require("ef-themes").setup({
         end,
 })
 ```
-
-
-# Extras
-<!-- extras:start -->
-- [Fzf](https://github.com/junegunn/fzf) ([fzf](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/fzf))
-- [Ghostty](https://github.com/ghostty-org/ghostty) ([ghostty](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/ghostty))
-- [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) ([kitty](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/kitty))
-- [Lazygit](https://github.com/jesseduffield/lazygit) ([lazygit](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/lazygit))
-- [Vimium](https://vimium.github.io/) ([vimium](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/vimium))
-- [WezTerm](https://wezfurlong.org/wezterm/config/files.html) ([wezterm](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/wezterm))
-- [Windows Terminal](https://aka.ms/terminal-documentation) ([windows_terminal](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/windows_terminal))
-- [Yazi](https://github.com/sxyazi/yazi) ([yazi](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/yazi))
-
-<!-- extras:end -->
 
 # Acknowledgments
 - [protesilaos](https://github.com/protesilaos/ef-themes) (Original Creator)

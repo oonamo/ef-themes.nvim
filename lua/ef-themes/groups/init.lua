@@ -114,13 +114,19 @@ function M.generate_doc_strings(style)
 
   local function format_str(modname, data)
     if style == "help" then return fmt("* `%s` -> `{ %s = %s }`", data.label, modname, vim.inspect(data.default)) end
-    if not data.url then return fmt("- %s", data.label) end
-    return fmt("- [%s](%s)", data.label, data.url or "")
+    if not data.url then return fmt("| %s | %s |", data.label, modname) end
+    return fmt(" | [%s](%s) | %s |", data.label, data.url, modname)
   end
 
   local ret = {}
-  if style == "help" then table.insert(ret, "* `Plugin` -> `Default`") end
-  table.insert(ret, "")
+  if style == "help" then
+    table.insert(ret, "* `Plugin` -> `Default`")
+    table.insert(ret, "")
+  else
+    table.insert(ret, "")
+    table.insert(ret, "| Plugin | Source |")
+    table.insert(ret, "|:--:|:--:|")
+  end
 
   local modules = vim.tbl_keys(M.groups)
   table.sort(modules)
