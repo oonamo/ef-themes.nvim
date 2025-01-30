@@ -48,7 +48,7 @@ function M.get(c, opts)
     ErrorMsg                    = { fg        = c.err }, -- error messages on the command line
     FloatBorder                 = { fg        = c.border, bg            = c.bg_dim },
     FloatTitle                  = { fg        = c.name, bg              = c.bg_dim },
-    FoldColumn                  = { bg        = c.bg_main, fg           = c.comment }, -- 'foldcolumn'
+    FoldColumn                  = { bg        = opts.transparent and "NONE" or c.bg_main, fg           = c.comment }, -- 'foldcolumn'
     Folded                      = { fg        = c.border, bg            = c.bg_alt }, -- line used for closed folds
     Function                    = { fg        = c.fnname, style         = opts.styles.functions },
     Identifier                  = { fg        = c.identifier, style     = opts.styles.variables },
@@ -70,7 +70,7 @@ function M.get(c, opts)
     MoreMsg                     = { fg        = c.blue }, -- |more-prompt|
     MsgArea                     = { fg        = c.fg_main }, -- Area for messages and cmdline
     NonText                     = { fg        = c.fg_dim }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Normal                      = { fg        = c.fg_main, bg           = c.bg_main },
+    Normal                      = { fg        = opts.transparent and "NONE" or c.fg_main, bg           = c.bg_main },
     NormalFloat                 = { bg        = c.bg_dim, fg            = c.fg_main },
     NormalNC                    = { link      = "Normal" }, -- normal text in non-current windows
     NormalSB                    = { fg        = c.fg_alt, bg            = c.bg_alt }, -- normal text in sidebar
@@ -83,7 +83,7 @@ function M.get(c, opts)
     Question                    = { fg        = c.accent_3 }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine                = { bg        = c.bg_region, bold       = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search                      = { bg        = c.bg_search_current, fg = c.fg_intense }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-    SignColumn                  = { bg        = c.bg_main, fg           = c.fg_alt }, -- column where |signs| are displayed
+    SignColumn                  = { bg        = opts.transparent and "NONE" or c.bg_main, fg           = c.fg_alt }, -- column where |signs| are displayed
     Special                     = { fg        = c.blue_faint }, -- (preferred) any special symbol
     SpecialKey                  = { fg        = c.accent_0 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     SpellBad                    = { link      = "DiagnosticUnderlineError" }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
