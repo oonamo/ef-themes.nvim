@@ -1,5 +1,7 @@
+                                                             *EfThemes-features*
 *ef-themes.nvim* Colourful and legible themes for Neovim
 *ef-themes.txt*
+
 
 GNU License
 ==============================================================================
@@ -116,7 +118,7 @@ Features:
                                                               *EfThemes.setup()*
                             `EfThemes.setup`({opts})
 Parameters ~
-{opts} `(optional)` Ef-themes.Config Config to use for ef-themes. See |EfThemes.Defaults|
+{opts} `(optional)` Ef-Themes.Config Config to use for ef-themes. See |EfThemes.Defaults|
 Usage ~
 >lua
  require("ef-themes").setup() -- use default config
@@ -181,7 +183,7 @@ Parameters ~
 Gets the palette for a given ef-theme
 Parameters ~
 {name} `(string)` Name of Ef-theme
-{opts} Ef-themes.Config Config. See |EfThemes.Defaults|
+{opts} Ef-Themes.Config Config. See |EfThemes.Defaults|
 
 Return ~
 Ef-Theme
@@ -249,7 +251,7 @@ See |EfThemes.setup()| for usage
 
 # Ef-themes.Config ~
 Class ~
-{Ef-themes.Config}
+{Ef-Themes.Config}
 Fields ~
 {on_colors} `(fun(palette: Ef-Theme, name: string))`
 {on_highlights} `(fun(highlights: table, colors: Ef-Theme, name: string))`
