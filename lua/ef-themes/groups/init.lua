@@ -1,20 +1,18 @@
 local M = {
+  -- stylua: ignore
   groups = {
-    blink = { label = "blink.cmp", url = "https://github.com/Saghen/blink.cmp" },
-    cmp = { label = "nvim-cmp", url = "https://github.com/hrsh7th/nvim-cmp" },
-    fzf = { label = "fzf-lua", url = "https://github.com/ibhagwan/fzf-lua" },
-    gitsigns = { label = "gitsigns.nvim", url = "https://github.com/lewis6991/gitsigns.nvim" },
-    mini = { label = "mini.nvim", url = "https://github.com/echasnovski/mini.nvim" },
-    neogit = { label = "Neogit", url = "https://github.com/TimUntersberger/neogit" },
-    render_markdown = {
-      label = "render-markdown",
-      url = "https://github.com/MeanderingProgrammer/render-markdown.nvim",
-    },
-    semantic_tokens = { label = "semantic-tokens (native lsp)" },
-    snacks = { label = "snacks", url = "https://github.com/folke/snacks.nvim" },
-    telescope = { label = "telescope", url = "https://github.com/nvim-telescope/telescope.nvim" },
-    treesitter = { label = "treesitter (native)" },
-    which_key = { label = "whick-key.nvim", url = "https://github.com/folke/which-key.nvim" },
+    blink = {           label = "blink.cmp",       url = "https://github.com/Saghen/blink.cmp",                          default = true },
+    cmp = {             label = "nvim-cmp",        url = "https://github.com/hrsh7th/nvim-cmp",                          default = false },
+    fzf = {             label = "fzf-lua",         url = "https://github.com/ibhagwan/fzf-lua",                          default = false },
+    gitsigns = {        label = "gitsigns.nvim",   url = "https://github.com/lewis6991/gitsigns.nvim",                   default = false },
+    mini = {            label = "mini.nvim",       url = "https://github.com/echasnovski/mini.nvim",                     default = true },
+    neogit = {          label = "Neogit",          url = "https://github.com/TimUntersberger/neogit",                    default = false },
+    render_markdown = { label = "render-markdown", url = "https://github.com/MeanderingProgrammer/render-markdown.nvim", default = false },
+    semantic_tokens = { label = "semantic-tokens (native lsp)",                                                          default = false },
+    snacks = {          label = "snacks",          url = "https://github.com/folke/snacks.nvim",                         default = false },
+    telescope = {       label = "telescope",       url = "https://github.com/nvim-telescope/telescope.nvim" ,            default = false},
+    treesitter = {      label = "treesitter (native)",                                                                   default = true },
+    which_key = {       label = "whick-key.nvim",  url = "https://github.com/folke/which-key.nvim",                      default = false },
   },
 }
 
@@ -108,6 +106,50 @@ function M.terminal(palette)
   vim.g.terminal_color_14 = palette.fg_term_cyan_bright
 end
 
-function M.generate_docs() end
+---@param style "help"|"readme"
+---@return string[]
+function M.generate_doc_strings(style)
+  style = style or "help"
+  local fmt = string.format
+
+  local function format_str(modname, data)
+    if style == "help" then return fmt("* `%s` -> `{ %s = %s }`", data.label, modname, vim.inspect(data.default)) end
+    if not data.url then return fmt("- %s", data.label) end
+    return fmt("- [%s](%s)", data.label, data.url or "")
+  end
+
+  local ret = {}
+  if style == "help" then table.insert(ret, "* `Plugin` -> `Default`") end
+  table.insert(ret, "")
+
+  for modname, data in pairs(M.groups) do
+    table.insert(ret, format_str(modname, data))
+  end
+
+  table.insert(ret, "")
+
+  if style == "help" then return require("mini.align").align_strings(ret, {
+    split_pattern = "->",
+  }) end
+  return ret
+end
+
+function M.generate_readme()
+  local readme_modules = M.generate_doc_strings("readme")
+  local Utils = require("ef-themes.utils")
+  local readme_file = vim.fn.fnamemodify(debug.getinfo(1).source:sub(2), ":p:h:h:h:h:") .. "/README.md"
+
+  local readme = Utils.read(readme_file, "*a")
+  local old_length = #readme
+  readme = readme:gsub(
+    "(<%!%-%- modules:start %-%->).*(<%!%-%- extras:end %-%->)",
+    "%1\n" .. table.concat(readme_modules, "\n") .. "\n%2"
+  )
+
+  print("old_length", old_length, "new_length", #readme)
+  assert(#readme >= old_length, "The file did not correctly add the extras")
+
+  Utils.write(readme_file, readme, "w+")
+end
 
 return M

@@ -24,22 +24,9 @@
 ---@toc
 
 --- # Supported Modules ~
---- * `plugin name`                               -> `Default`
 ---
---- * `Saghen/blink.cmp`                          -> `{ blink           = true  }`
---- * `hrsh7th/nvim-cmp`                          -> `{ cmp             = false }`
---- * `ibhagwan/fzf-lua`                          -> `{ fzf             = false }`
---- * `lewis6991/gitsigns.nvim`                   -> `{ gitsigns        = false }`
---- * `echasnovski/mini.nvim`                     -> `{ mini            = true  }`
---- * `TimUntersberger/neogit`                    -> `{ neogit          = false }`
---- * `MeanderingProgrammer/render-markdown.nvim` -> `{ render_markdown = false }`
---- * `semantic-tokens (native lsp)`              -> `{ semantic_tokens = false }`
---- * `folke/snacks.nvim`                         -> `{ snacks          = false }`
---- * `nvim-telescope/telescope.nvim`             -> `{ telescope       = false }`
---- * `treesitter (native)`                       -> `{ treesitter      = true  }`
---- * `folke/which-key.nvim`                      -> `{ which_key       = false }`
----
---- ## Enable All Modules ~
+---@eval return require("ef-themes.groups").generate_doc_strings()
+---@text ## Enable All Modules ~
 ---
 --- >lua
 ---    require("ef-themes").setup({

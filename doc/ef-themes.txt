@@ -28,20 +28,21 @@ Features:
 ------------------------------------------------------------------------------
                                                               *EfThemes-modules*
 # Supported Modules ~
-* `plugin name`                               -> `Default`
 
-* `Saghen/blink.cmp`                          -> `{ blink           = true  }`
-* `hrsh7th/nvim-cmp`                          -> `{ cmp             = false }`
-* `ibhagwan/fzf-lua`                          -> `{ fzf             = false }`
-* `lewis6991/gitsigns.nvim`                   -> `{ gitsigns        = false }`
-* `echasnovski/mini.nvim`                     -> `{ mini            = true  }`
-* `TimUntersberger/neogit`                    -> `{ neogit          = false }`
-* `MeanderingProgrammer/render-markdown.nvim` -> `{ render_markdown = false }`
-* `semantic-tokens (native lsp)`              -> `{ semantic_tokens = false }`
-* `folke/snacks.nvim`                         -> `{ snacks          = false }`
-* `nvim-telescope/telescope.nvim`             -> `{ telescope       = false }`
-* `treesitter (native)`                       -> `{ treesitter      = true  }`
-* `folke/which-key.nvim`                      -> `{ which_key       = false }`
+* `Plugin`                       -> `Default`
+
+* `mini.nvim`                    -> `{ mini = true }`
+* `gitsigns.nvim`                -> `{ gitsigns = false }`
+* `whick-key.nvim`               -> `{ which_key = false }`
+* `render-markdown`              -> `{ render_markdown = false }`
+* `treesitter (native)`          -> `{ treesitter = true }`
+* `Neogit`                       -> `{ neogit = false }`
+* `blink.cmp`                    -> `{ blink = true }`
+* `semantic-tokens (native lsp)` -> `{ semantic_tokens = false }`
+* `nvim-cmp`                     -> `{ cmp = false }`
+* `fzf-lua`                      -> `{ fzf = false }`
+* `snacks`                       -> `{ snacks = false }`
+* `telescope`                    -> `{ telescope = false }`
 
 ## Enable All Modules ~
 
