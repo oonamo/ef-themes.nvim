@@ -6,7 +6,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 --color=bg+:#0f3c2f,bg:#222522,spinner:#af9fff,hl:#00c089 \
 --color=fg:#cfdfd5,header:#3fb83f,info:#808f80,pointer:#af9fff \
 --color=marker:#af9fff,fg+:#00c089,prompt:#6ab4cf,hl+:#00c089 \
-
+"
 
 # On powershell use do `nvim $PROFILE` and paste
 # $ENV:FZF_DEFAULT_OPTS =@"
