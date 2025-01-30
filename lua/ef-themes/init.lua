@@ -1,6 +1,7 @@
 --- *ef-themes.nvim* Colourful and legible themes for Neovim
 --- *ef-themes.txt*
 ---
+---
 --- GNU License
 --- ==============================================================================
 ---
@@ -19,6 +20,7 @@
 ---   this theme uses the highlights similar to how they are used in `Emacs`
 ---
 --- # Table Of Contents ~
+---@tag EfThemes-features
 ---@toc
 
 --- # Supported Modules ~
