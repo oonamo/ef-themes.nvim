@@ -403,7 +403,7 @@ vim.cmd.colorscheme("ef-theme") -- To use the default colorscheme defined above
 - [snacks](https://github.com/folke/snacks.nvim)
 - [telescope](https://github.com/nvim-telescope/telescope.nvim)
 - treesitter (native)
-- [whick-key.nvim](https://github.com/folke/which-key.nvim)
+- [which-key.nvim](https://github.com/folke/which-key.nvim)
 
 <!-- modules:end -->
 
