@@ -307,10 +307,10 @@
  | [mini.nvim](https://github.com/echasnovski/mini.nvim) | mini |
  | [Neogit](https://github.com/TimUntersberger/neogit) | neogit |
  | [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim) | render_markdown |
-| semantic-tokens (native lsp) | N/A |
+| semantic-tokens (native lsp) | semantic_tokens |
  | [snacks](https://github.com/folke/snacks.nvim) | snacks |
  | [telescope](https://github.com/nvim-telescope/telescope.nvim) | telescope |
-| treesitter (native) | N/A |
+| treesitter (native) | treesitter |
  | [which-key.nvim](https://github.com/folke/which-key.nvim) | which_key |
 
 <!-- modules:end -->
