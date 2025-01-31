@@ -1,20 +1,23 @@
 local Palette = {}
 
+function Palette.__resolve_individual(palette, key)
+  if key:sub(1, 1) == "#" then return key end
+
+  if palette[key] then return Palette.__resolve_individual(palette, palette[key]) end
+
+  local key_name = key:gsub("%-", "_")
+  if palette[key_name] then return Palette.__resolve_individual(palette, palette[key_name]) end
+
+  return "NONE"
+end
+
 function Palette._resolve_palette(palette)
+  local resolved = {}
   for k, v in pairs(palette) do
-    if v:sub(1, 1) ~= "#" then
-      local key_name = v:gsub("-", "_")
-      if palette[v] then
-        palette[k] = palette[v]
-      elseif palette[key_name] then
-        palette[k] = palette[key_name]
-      elseif key_name == "unspecified" then
-        palette[k] = "NONE"
-      end
-    end
+    resolved[k] = Palette.__resolve_individual(palette, v)
   end
 
-  return palette
+  return resolved
 end
 
 ---@param name string
