@@ -103,8 +103,13 @@ T["setup()"]["respects opts"] = function()
   })
 end
 
-T["setup()"]["respects `on_colors`"] = function()
-  child.unload()
+T["on_colors()"] = new_set({
+  hooks = {
+    pre_case = function() child.unload() end,
+  },
+})
+
+T["on_colors()"]["respects `on_colors`"] = function()
   child.lua([[
   require("ef-themes").setup({
     on_colors = function(colors, name)
@@ -123,8 +128,31 @@ T["setup()"]["respects `on_colors`"] = function()
   validate_hl_group("Normal", "guifg=#ffffff guibg=#000000")
 end
 
-T["setup()"]["respects `on_highlights`"] = function()
-  child.unload()
+T["on_colors()"]["resolves references"] = function()
+  child.lua([[
+  require("ef-themes").setup({
+    on_colors = function(colors, name)
+      colors.fg_main = "yellow_faint"
+      colors.bg_main = "bg_alt"
+    end
+  })
+  ]])
+
+  local theme = "ef-owl"
+  child.cmd("colorscheme " .. theme)
+  eq(child.g.colors_name, theme)
+
+  local fmt = string.format
+
+  local palette = child.lua_get(fmt("EfThemes.get_palette('%s')", theme)) --[[@as Ef-Theme]]
+  local fg_should_be = palette.yellow_faint
+  local bg_should_be = palette.bg_alt
+  validate_hl_group("Normal", fmt("guifg=%s guibg=%s", fg_should_be, bg_should_be))
+end
+
+T["on_highlights()"] = new_set()
+
+T["on_highlights()"]["respects `on_highlights`"] = function()
   child.lua([[
   require("ef-themes").setup({
     on_highlights = function(highlights, colors, name)
