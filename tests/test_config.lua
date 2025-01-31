@@ -12,6 +12,13 @@ local eq_default = function(field)
   eq(child.lua_get("EfThemes.config.defaults." .. field), child.lua_get("EfThemes.config.options." .. field))
 end
 
+local validate_hl_group = function(group_name, target)
+  helpers.match(
+    child.cmd_capture('highlight ' .. group_name):gsub(' +', ' '),
+    group_name .. ' xxx .*' .. vim.pesc(target)
+  )
+end
+
 local T = new_set({
   hooks = {
     pre_case = function()
@@ -28,6 +35,7 @@ T["setup()"]["did init"] = function()
   eq(child.g.colors_name, vim.NIL)
   eq(child.o.background, "dark")
 end
+
 T["setup()"]["sets global variables"] = function()
   eq(child.lua_get([[type(_G.EfThemes)]]), "table")
   eq(child.lua_get([[type(_G.EfThemes.config)]]), "table")
@@ -93,6 +101,28 @@ T["setup()"]["respects opts"] = function()
     snacks = false,
     treesitter = true,
   })
+end
+
+T["setup()"]["respects `on_colors`"] = function()
+  child.unload()
+  child.lua([[
+  require("ef-themes").setup({
+    on_colors = function(colors, name)
+      vim.g._called_on_colors = true
+
+      colors.bg_main = "#000000"
+      colors.fg_main = "#ffffff"
+    end
+  })
+  ]])
+
+  child.cmd("colorscheme ef-theme")
+
+  eq(child.g._called_on_colors, true)
+
+  validate_hl_group("Normal", "guifg=#ffffff guibg=#000000")
+
+
 end
 
 return T
