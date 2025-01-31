@@ -287,19 +287,18 @@ function EfThemes.select(opts)
   else
     list = EfThemes.list[opts.bg]
   end
-  if list then return vim.notify("opts.bg must be either 'dark', 'light', or 'any'", vim.log.levels.ERROR) end
+  if not list then return vim.notify("opts.bg must be either 'dark', 'light', or 'any'", vim.log.levels.ERROR) end
 
   vim.ui.select(list, {
     prompt = string.format("Select %sEf theme:", opts.bg ~= "any" and opts.bg .. " " or ""),
-    function(choice)
-      if not choice then return end
+  }, function(choice)
+    if not choice then return end
 
-      local bg = opts.bg ~= "any" and opts.bg or (EfThemes.is_dark(choice) and "dark" or "light")
-      EfThemes.load({ name = choice, bg = bg })
+    local bg = opts.bg ~= "any" and opts.bg or (EfThemes.is_dark(choice) and "dark" or "light")
+    EfThemes.load({ name = choice, bg = bg })
 
-      vim.schedule(function() vim.api.nvim_exec_autocmds("ColorScheme", { pattern = choice }) end)
-    end,
-  })
+    vim.schedule(function() vim.api.nvim_exec_autocmds("ColorScheme", { pattern = choice }) end)
+  end)
 end
 
 --- Select a dark Ef-theme using |vim.ui.select()|
