@@ -15,7 +15,7 @@ local Config = {}
 --- # Ef-themes.Config ~
 ---@class Ef-Themes.Config
 ---@field on_colors fun(palette: Ef-Theme, name: string)
----@field on_highlights fun(highlights: table, colors: Ef-Theme, name: string)
+---@field on_highlights fun(highlights: table, colors: Ef-Theme, name: string): table
 --minidoc_replace_start EfThemes.config.defaults = {
 Config.defaults = {
   --minidoc_replace_end
@@ -50,12 +50,13 @@ Config.defaults = {
   ---@param highlights table
   ---@param colors Ef-Theme
   ---@param name string
+  ---@return table
   on_highlights = function(highlights, colors, name)
-    -- Should add or replace the highlights table, not return
-    -- i.e.
-    --
-    -- `highlights.Normal = { fg = colors.fg_alt, bg = colors.bg_inactive }`
-    -- `highlights.MyObsucrePligin = { fg = colors.yellow_faint }`
+    -- Returns a table of highlights
+    -- return {
+    --   Normal = { fg = colors.fg_alt, bg = colors.bg_inactive }
+    --   ObscurePlugin = { fg = colors.yellow_faint }
+    -- }
   end,
 
   options = {

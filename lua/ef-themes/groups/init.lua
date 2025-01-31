@@ -71,7 +71,13 @@ function M.build(palette, opts, name, theme_opts)
 
   M.terminal(palette)
 
-  opts.on_highlights(all_groups, palette, name)
+  local extra_hls = opts.on_highlights(all_groups, palette, name)
+  for k, v in pairs(extra_hls or {}) do
+    local hl = resolve_hl(v)
+    vim.api.nvim_set_hl(0, k, hl)
+    all_groups[k] = hl
+  end
+
   if opts.options.compile then require("ef-themes.lib.compiler").compile(opts, all_groups, theme_opts) end
 end
 

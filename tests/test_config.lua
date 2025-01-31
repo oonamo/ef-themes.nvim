@@ -14,8 +14,8 @@ end
 
 local validate_hl_group = function(group_name, target)
   helpers.match(
-    child.cmd_capture('highlight ' .. group_name):gsub(' +', ' '),
-    group_name .. ' xxx .*' .. vim.pesc(target)
+    child.cmd_capture("highlight " .. group_name):gsub(" +", " "),
+    group_name .. " xxx .*" .. vim.pesc(target)
   )
 end
 
@@ -121,8 +121,26 @@ T["setup()"]["respects `on_colors`"] = function()
   eq(child.g._called_on_colors, true)
 
   validate_hl_group("Normal", "guifg=#ffffff guibg=#000000")
+end
 
+T["setup()"]["respects `on_highlights`"] = function()
+  child.unload()
+  child.lua([[
+  require("ef-themes").setup({
+    on_highlights = function(highlights, colors, name)
+      vim.g._called_on_highlights = true
+      vim.g.__all_groups = highlights
+      return {
+        MyGroup = { fg = "#ffffff", bg = "#000000" }
+      }
+    end
+  })
+  ]])
 
+  child.cmd("colorscheme ef-theme")
+  eq(child.g._called_on_highlights, true)
+
+  validate_hl_group("MyGroup", "guifg=#ffffff guibg=#000000")
 end
 
 return T
