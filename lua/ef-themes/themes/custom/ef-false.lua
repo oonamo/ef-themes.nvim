@@ -5,6 +5,9 @@ tint.palette.bg_active = "bg-main"
 
 tint.palette.fg_main = "#eeffff"
 
+tint.palette.fg_intense = tint.palette.fg_main
+tint.palette.fg_dim = "gray50"
+
 tint.palette.fg_mode_line = "#ffffff"
 tint.palette.bg_mode_line = "#232635"
 
@@ -27,5 +30,23 @@ tint.palette.type = "#c792ea"
 tint.palette.variable = "#ffcb6b"
 tint.palette.docstring = "#8d92af"
 tint.palette.constant = "#f78c6c"
+
+local old = tint.gen_on_highlights
+
+---@diagnostic disable-next-line: duplicate-set-field
+tint.gen_on_highlights = function(opts)
+  return function(...)
+    local ret = {
+      StatusLineNC = {
+        fg = "#676e95",
+        bg = "#282c39",
+      },
+    }
+
+    local old_hls = old(opts)(...)
+
+    return vim.tbl_deep_extend("force", old_hls or {}, ret or {})
+  end
+end
 
 return tint
