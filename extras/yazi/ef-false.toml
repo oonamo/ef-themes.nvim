@@ -2,7 +2,7 @@
 # NOTE: can combined with tmTheme (sublime colorshceme file) for preview code highlight
 # syntect_theme = "path/to/tmTheme"
 
-cwd = { fg = "#70819f", italic = true }
+cwd = { fg = "gray50", italic = true }
 
 # Hovered
 hovered         = { bg = "#303a6f" }
@@ -20,7 +20,7 @@ marker_selected = { fg = "#2fafff", bg = "#2fafff" }
 
 # Tab
 tab_active   = { fg = "#eeffff", bg = "#2c3045" }
-tab_inactive = { fg = "#70819f", bg = "#242837" }
+tab_inactive = { fg = "gray50", bg = "#242837" }
 tab_width    = 1
 
 # Count
@@ -34,21 +34,21 @@ border_style  = { fg = "#61647a" }
 
 [mode]
 normal_main = { fg = "black", bg = "#2fafff", bold = true }
-normal_alt  = { fg = "#2fafff", bg = "#70819f" }
+normal_alt  = { fg = "#2fafff", bg = "gray50" }
 
 select_main = { fg = "black", bg = "#feacd0", bold = true }
-select_alt  = { fg = "#feacd0", bg = "#70819f" }
+select_alt  = { fg = "#feacd0", bg = "gray50" }
 
 unset_main  = { fg = "black", bg = "#b6a0ff", bold = true }
-unset_alt   = { fg = "#b6a0ff", bg = "#70819f" }
+unset_alt   = { fg = "#b6a0ff", bg = "gray50" }
 
 [status]
 separator_open    = ""
 separator_close   = ""
-# separator_style = { fg = "#70819f", bg = "#70819f" }
+# separator_style = { fg = "gray50", bg = "gray50" }
 
 # Progress
-progress_label  = { fg = "#70819f", bold = true }
+progress_label  = { fg = "gray50", bold = true }
 progress_normal = { fg = "#292d3e" }
 progress_error  = { fg = "#ff5f59" }
 
