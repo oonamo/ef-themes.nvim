@@ -1,19 +1,19 @@
-palette = 0=NONE
+palette = 0=black
 palette = 1=#aa184f
 palette = 2=#007000
 palette = 3=#906200
 palette = 4=#5f55df
 palette = 5=#a23ea4
 palette = 6=#3f69af
-palette = 7=NONE
-palette = 8=NONE
+palette = 7=gray65
+palette = 8=gray35
 palette = 9=#b20f00
 palette = 10=#557000
 palette = 11=#b44405
 palette = 12=#265fbf
 palette = 13=#6448ca
 palette = 14=#0f7688
-palette = 15=NONE
+palette = 15=white
 
 background = #ffead8
 foreground = #393330

@@ -10,8 +10,8 @@ split = "#3a4a66"
 compose_cursor = "#c48502"
 scrollbar_thumb = "#002255"
 
-ansi = ["NONE", "#ef656a", "#1fa526", "#c48502", "#379cf6", "#d570af", "#4fb0cf", "NONE"]
-brights = ["NONE", "#f47360", "#50a22f", "#e6832f", "#6a88ff", "#af8aff", "#3dc0b0", "NONE"]
+ansi = ["black", "#ef656a", "#1fa526", "#c48502", "#379cf6", "#d570af", "#4fb0cf", "gray65"]
+brights = ["gray35", "#f47360", "#50a22f", "#e6832f", "#6a88ff", "#af8aff", "#3dc0b0", "white"]
 
 [colors.tab_bar]
 inactive_tab_edge = "#444e59"

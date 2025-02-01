@@ -33,13 +33,13 @@ border_symbol = "│"
 border_style  = { fg = "#61647a" }
 
 [mode]
-normal_main = { fg = "NONE", bg = "#2fafff", bold = true }
+normal_main = { fg = "black", bg = "#2fafff", bold = true }
 normal_alt  = { fg = "#2fafff", bg = "#70819f" }
 
-select_main = { fg = "NONE", bg = "#feacd0", bold = true }
+select_main = { fg = "black", bg = "#feacd0", bold = true }
 select_alt  = { fg = "#feacd0", bg = "#70819f" }
 
-unset_main  = { fg = "NONE", bg = "#b6a0ff", bold = true }
+unset_main  = { fg = "black", bg = "#b6a0ff", bold = true }
 unset_alt   = { fg = "#b6a0ff", bg = "#70819f" }
 
 [status]
@@ -57,7 +57,7 @@ perm_type  = { fg = "#2fafff" }
 perm_read  = { fg = "#d0bc00" }
 perm_write = { fg = "#ff5f59" }
 perm_exec  = { fg = "#44bc44" }
-perm_sep   = { fg = "NONE" }
+perm_sep   = { fg = "black" }
 
 [pick]
 border   = { fg = "#61647a" }
