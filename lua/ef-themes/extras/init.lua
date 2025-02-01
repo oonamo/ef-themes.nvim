@@ -37,7 +37,6 @@ local M = {
 }
 
 local Utils = require("ef-themes.utils")
-local fmt = string.format
 
 function M.substitute(template, name, palette)
   return template:gsub("($%b{})", function(v)
@@ -46,54 +45,6 @@ function M.substitute(template, name, palette)
     assert(palette[subbed], string.format("'%s' does not exist in ef-theme", subbed))
     return palette[subbed]
   end)
-end
-
-function M.generate_readme()
-  local readme_file = vim.fn.fnamemodify(debug.getinfo(1).source:sub(2), ":p:h:h:h:h:") .. "/README.md"
-  local pattern = "(<%!%-%- extras:start %-%->).*(<%!%-%- extras:end %-%->)"
-  -- local pattern = "(<%!%-%- " .. tag .. ":start %-%->).*(<%!%-%- " .. tag .. ":end %-%->)"
-
-  local readme = Utils.read(readme_file, "*a")
-  local old_length = #readme
-
-  local lines = {
-    "| Tool | Extra |",
-    "|:--:|:--:|",
-  }
-  local names = vim.tbl_keys(M.extras)
-  table.sort(names)
-
-  for _, name in ipairs(names) do
-    local info = M.extras[name]
-    table.insert(
-      lines,
-      fmt(
-      "| [%s](%s) | [extras/%s](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/%s) |",
-      info.label,
-      info.url,
-      name,
-      name
-      )
-      -- fmt(
-      --   "- [%s](%s) ([%s](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/%s))",
-      --   info.label,
-      --   info.url,
-      --   name,
-      --   name
-      -- )
-    )
-  end
-
-  table.insert(lines, "")
-  readme = readme:gsub(
-    "(<%!%-%- extras:start %-%->).*(<%!%-%- extras:end %-%->)",
-    "%1\n" .. table.concat(lines, "\n") .. "\n%2"
-  )
-  print("old_length", old_length, "new_length", #readme)
-
-  assert(#readme >= old_length, "The file did not correctly add the extras")
-
-  Utils.write(readme_file, readme, "w+")
 end
 
 -- Reference: https://github.com/miikanissi/modus-themes.nvim/blob/9f0343bcb3be4dd5545624db135f2b1c369e7ce4/lua/modus-themes/extras/init.lua#L57

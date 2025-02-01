@@ -124,28 +124,12 @@ function M.write_all_extras()
   end
 end
 
--- HACK: DO NOT CALL RUN_LOCAL
---       IF YOU RUN IT BE CALLING IT INSIDE THE BUFFER
---       IT WILL CREATE INFINITE RECURSION
--- stylua: ignore
----@diagnostic disable-next-line: unused-local
-local function run_local()
-  -- NOTE: Select this line and do :so
-  dofile(vim.api.nvim_buf_get_name(0))
-end
-
--- NOTE: Uncomment these if testing locally, then run the function contents of 'run_local'
--- M.write_all_themes()
--- M.write_all_extras()
--- require("ef-themes.extras").generate_docs()
-
 function M.build()
   local ok, err = pcall(M.write_all_themes)
   if not ok then print("Error while building themes", err) end
 
   M.write_all_extras()
-  require("ef-themes.extras").generate_readme()
-  require("ef-themes.groups").generate_readme()
+  require("ef-themes.lib.docgen").gen_readme()
 end
 
 return M

@@ -31,7 +31,7 @@
 
 --- # Supported Modules ~
 ---
----@eval return require("ef-themes.groups").generate_doc_strings()
+---@eval return require("ef-themes.lib.docgen").gen_modules()
 ---@text ## Enable All Modules ~
 ---
 --- >lua
