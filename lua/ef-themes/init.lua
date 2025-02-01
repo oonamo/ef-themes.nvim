@@ -103,14 +103,14 @@ local EfThemes = {
 
 ---# Dark Themes ~
 ---
----@eval return require("ef-themes").list.dark
+---@eval return require("ef-themes.lib.docgen").gen_colornames(true)
 ---
 ---
 ---@tag ef-themes-dark-themes
 
 ---# Light Themes ~
 ---
----@eval return require("ef-themes").list.light
+---@eval return require("ef-themes.lib.docgen").gen_colornames(false)
 ---
 ---
 ---@tag ef-themes-light-themes
