@@ -41,6 +41,10 @@ tint.gen_on_highlights = function(opts)
         fg = "#676e95",
         bg = "#282c39",
       },
+      markdownH1 = { fg = "#82aaff", bold = true },
+      markdownH2 = { fg = "#c792ea", bold = true },
+      markdownH3 = { fg = "#bb80b3", bold = true },
+      markdownH4 = { fg = "#a1bfff", bold = true },
     }
 
     local old_hls = old(opts)(...)

@@ -8,20 +8,31 @@ function M.gen_on_highlights(opts)
   return function(_, colors)
     return {
       Title = { fg = colors.rainbow_1, bold = true },
+      LspSignatureActiveParameter = {
+        fg = colors.yellow_cooler,
+        bg = "#3a1d0f",
+      },
+
+      markdownH1 = { fg = colors.fg_main, bold = true },
+      markdownH2 = { fg = colors.cyan_cooler, bold = true },
+      markdownH3 = { fg = colors.blue_faint, bold = true },
+      markdownH4 = { fg = colors.magenta, bold = true },
+      markdownH5 = { fg = colors.green_faint, bold = true },
+      markdownH6 = { fg = colors.red_faint, bold = true },
     }
   end
 end
 
 ---@type Ef-Theme
 M.palette = {
-  bg_main = "#292d3e",
-  fg_main = "#eeffff",
-  bg_dim = "#1a202b",
-  fg_dim = "#70819f",
+  bg_main = "#0d0e1c",
+  fg_main = "#ffffff",
+  bg_dim = "#1d2235",
+  fg_dim = "#989898",
   bg_alt = "#242e39",
   fg_alt = "#c6daff",
-  bg_active = "#444e59",
-  bg_inactive = "#11141f",
+  bg_active = "#4a4f69",
+  bg_inactive = "#2b3045",
   red = "#ff5f59",
   red_warmer = "#ff6b55",
   red_cooler = "#ff7f86",
@@ -150,7 +161,7 @@ M.palette = {
   prose_metadata = "fg-dim",
   prose_metadata_value = "fg-alt",
   prose_table = "fg-alt",
-  prose_table_formula = "info",
+  prose_table_formula = "magenta-warmer",
   prose_tag = "fg-alt",
   prose_todo = "red",
   prose_verbatim = "magenta-warmer",
