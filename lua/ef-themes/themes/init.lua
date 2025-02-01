@@ -24,7 +24,14 @@ end
 ---@param opts Ef-Themes.Config
 ---@return Ef-Theme
 function Palette.get_palette(name, opts)
-  local palette = require("ef-themes.themes." .. name)
+  opts = opts or {}
+
+  local ok, palette = pcall(require, "ef-themes.themes." .. name)
+  if not ok then
+    ok, palette = require("ef-themes.themes.custom").get(name, opts)
+  end
+
+  if not ok then error(string.format("Palette theme '%s' does not exist", name)) end
 
   if opts then opts.on_colors(palette, name) end
 

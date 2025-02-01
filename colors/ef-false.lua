@@ -1,0 +1,1 @@
+require("ef-themes").load({ name = "ef-false", bg = "dark" })

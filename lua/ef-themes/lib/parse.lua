@@ -37,8 +37,9 @@ local base_path = this_file_path:sub(1, string.len("/lua/ef-themes/lib/") * -1)
 
 function M.get_all_ef_themes()
   local raw_themes_path = base_path .. "raw_themes" .. sep
-  local themes = vim.fn.readdir(raw_themes_path)
-  if not themes then return error("") end
+  local ok, themes = pcall(vim.fn.readdir, raw_themes_path)
+
+  if not ok then return print("raw themes do not exist!") end
 
   local ef_themes = {}
   for _, theme in ipairs(themes) do
@@ -57,14 +58,13 @@ function M._is_dark(name)
   return false
 end
 
-function M._create_color(name)
+function M._create_color(name, colors_is_dark)
   local sub_path = base_path
-  -- local sub_path = string.sub(this_file_path, 1, string.len("/lua/ef-themes/") * -1)
-  local path = sub_path .. "colors" .. sep .. name:gsub("-?theme%.el", "%.lua")
+  local path = sub_path .. "colors" .. sep .. name:gsub("-?theme%.el", "") .. ".lua"
   local out = io.open(path, "w")
   if not out then error("could not create theme " .. name) end
   local theme_name = name:gsub("-?theme%.el", "")
-  local is_dark = M._is_dark(theme_name)
+  local is_dark = colors_is_dark ~= nil and colors_is_dark or M._is_dark(theme_name)
   out:write(
     string.format([[require("ef-themes").load({ name = "%s", bg = "%s" })]], theme_name, is_dark and "dark" or "light")
   )
@@ -93,6 +93,11 @@ function M.write_all_themes()
 
     create_lualine_theme(theme_name)
   end
+
+  for theme_name, custom_ef_theme in pairs(require("ef-themes.themes.custom").list) do
+    M._create_color(theme_name, custom_ef_theme.bg == "dark")
+    create_lualine_theme(theme_name)
+  end
 end
 
 function M.write_all_extras()
@@ -105,6 +110,14 @@ function M.write_all_extras()
     require("ef-themes.extras").generate(theme, palette)
   end
   for _, theme in ipairs(list.light) do
+    print("[Generating]", theme)
+    local palette = require("ef-themes.themes").get_palette(theme, default_config)
+    require("ef-themes.extras").generate(theme, palette)
+  end
+
+  local custom_list = require("ef-themes.themes.custom").list
+
+  for theme, _ in pairs(custom_list) do
     print("[Generating]", theme)
     local palette = require("ef-themes.themes").get_palette(theme, default_config)
     require("ef-themes.extras").generate(theme, palette)
