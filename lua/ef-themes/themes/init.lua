@@ -8,7 +8,7 @@ function Palette.__resolve_individual(palette, key)
   local key_name = key:gsub("%-", "_")
   if palette[key_name] then return Palette.__resolve_individual(palette, palette[key_name]) end
 
-  return "NONE"
+  return key == "unresolved" and "NONE" or key
 end
 
 function Palette._resolve_palette(palette)
