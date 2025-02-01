@@ -5,7 +5,11 @@ function M.gen_on_colors(opts)
 end
 
 function M.gen_on_highlights(opts)
-  return function() end
+  return function(_, colors)
+    return {
+      Title = { fg = colors.rainbow_1, bold = true },
+    }
+  end
 end
 
 ---@type Ef-Theme
