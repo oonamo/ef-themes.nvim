@@ -96,8 +96,12 @@ Dark Themes ~
 `ef-tritanopia-dark`
 `ef-winter`
 `ef-tint` (custom)
+  * Adapted from `modus-vivendi-tinted`, by `Protesilaos Stavrou`
+      
 `ef-false` (custom)
-
+  * Adapted from a modification of `modus-vivendi-tinted` by `Protesilaos Stavrou`,
+    by `Rahul M. Juliato`. `https://github.com/LionyxML/lemacs/blob/main/lemacs-init.org#modus`
+      
 ------------------------------------------------------------------------------
                                                         *ef-themes-light-themes*
 Light Themes ~
