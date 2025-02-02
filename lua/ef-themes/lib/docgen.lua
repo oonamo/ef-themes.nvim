@@ -18,8 +18,10 @@ function M.gen_colornames(do_dark)
     local formatted_name = string.format("`%s` (custom)", name)
     if val.bg == "dark" and do_dark then
       table.insert(ret, formatted_name)
+      if val.info then table.insert(ret, { val.info }) end
     elseif val.bg == "light" and not do_dark then
       table.insert(ret, formatted_name)
+      if val.info then table.insert(ret, { val.info }) end
     end
   end
 

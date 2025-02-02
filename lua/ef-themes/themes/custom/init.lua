@@ -1,7 +1,18 @@
 local M = {
   list = {
-    ["ef-tint"] = { bg = "dark" },
-    ["ef-false"] = { bg = "dark" },
+    ["ef-tint"] = {
+      bg = "dark",
+      info = [[
+  * Adapted from `modus-vivendi-tinted`, by `Protesilaos Stavrou`
+      ]],
+    },
+    ["ef-false"] = {
+      bg = "dark",
+      info = [[
+  * Adapted from a modification of `modus-vivendi-tinted` by `Protesilaos Stavrou`,
+    by `Rahul M. Juliato`. `https://github.com/LionyxML/lemacs/blob/main/lemacs-init.org#modus`
+      ]],
+    },
   },
 }
 
@@ -18,9 +29,7 @@ function M._hijack(theme, opts)
 
   opts.on_highlights = function(...)
     local ret = new_on_highlights(...)
-    if original_on_highlights then
-      ret = vim.tbl_deep_extend("force", ret or {}, original_on_highlights(...) or {})
-    end
+    if original_on_highlights then ret = vim.tbl_deep_extend("force", ret or {}, original_on_highlights(...) or {}) end
 
     return ret
   end
