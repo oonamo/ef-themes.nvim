@@ -37,8 +37,8 @@ function M.get(c, opts)
 
     MiniCompletionActiveParameter = { underline = true },
 
-    MiniCursorword                = { bg        = c.bg_alt },
-    MiniCursorwordCurrent         = { bg        = c.bg_alt },
+    MiniCursorword                = { underline = true },
+    MiniCursorwordCurrent         = { underline = true },
 
     MiniDepsChangeAdded           = { link      = "diffAdded" },
     MiniDepsChangeRemoved         = { link      = "diffRemoved" },
