@@ -334,7 +334,7 @@ end
 
 --- Gets the palette for a given ef-theme
 ---@param name string Name of Ef-theme
----@param opts Ef-Themes.Config Config. See |ef-themes-defaults|
+---@param opts? Ef-Themes.Config Config. See |ef-themes-defaults|
 ---
 ---@return Ef-Theme
 function EfThemes.get_palette(name, opts)
