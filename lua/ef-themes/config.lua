@@ -30,6 +30,7 @@ Config.defaults = {
     functions = {},
     variables = {},
 
+    diagnostic = "default", -- Can be "full"
     pickers = "default", -- Can be "borderless"
   },
 
