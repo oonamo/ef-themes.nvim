@@ -1,0 +1,158 @@
+--- Startup times for process: Primary/TUI ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.004  000.004: --- NVIM STARTING ---
+000.066  000.062: event init
+000.169  000.103: early init
+009.808  009.639: locale set
+009.842  000.035: init first window
+010.368  000.526: inits 1
+010.461  000.093: window checked
+010.470  000.008: parsing arguments
+011.368  000.270  000.270: require('vim.shared')
+011.854  000.155  000.155: require('vim.inspect')
+012.121  000.254  000.254: require('vim._options')
+012.126  000.751  000.342: require('vim._editor')
+012.129  001.113  000.092: require('vim._init_packages')
+012.137  000.554: init lua interpreter
+017.279  005.142: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.003  000.003: --- NVIM STARTING ---
+000.051  000.048: event init
+000.158  000.107: early init
+010.386  010.228: locale set
+010.447  000.061: init first window
+010.916  000.468: inits 1
+010.974  000.058: window checked
+010.984  000.011: parsing arguments
+012.048  000.304  000.304: require('vim.shared')
+012.556  000.175  000.175: require('vim.inspect')
+012.844  000.274  000.274: require('vim._options')
+012.848  000.791  000.343: require('vim._editor')
+012.851  001.217  000.122: require('vim._init_packages')
+012.861  000.660: init lua interpreter
+013.089  000.227: expanding arguments
+013.109  000.020: inits 2
+013.566  000.457: init highlight
+013.568  000.002: waiting for UI
+013.652  000.084: done waiting for UI
+013.658  000.005: clear screen
+013.932  000.034  000.034: require('vim.keymap')
+020.155  006.494  006.460: require('vim._defaults')
+020.164  000.012: init default mappings & autocommands
+021.587  000.071  000.071: sourcing C:\Users\onam7\scoop\apps\neovim\current\share\nvim\runtime\ftplugin.vim
+021.897  000.046  000.046: sourcing C:\Users\onam7\scoop\apps\neovim\current\share\nvim\runtime\indent.vim
+022.360  000.222  000.222: require('vim.fs')
+022.428  000.354  000.131: sourcing ./tests/mininit.lua
+022.442  001.808: sourcing vimrc file(s)
+023.936  000.247  000.247: sourcing C:\Users\onam7\scoop\apps\neovim\current\share\nvim\runtime\filetype.lua
+024.882  000.097  000.097: sourcing C:\Users\onam7\scoop\apps\neovim\current\share\nvim\runtime\syntax\synload.vim
+025.166  000.662  000.566: sourcing C:\Users\onam7\scoop\apps\neovim\current\share/nvim/runtime/syntax/syntax.vim
+025.206  001.854: inits 3
+029.081  003.874: reading ShaDa
+029.153  000.072: opening buffers
+029.157  000.004: BufEnter autocommands
+029.161  000.004: editing files in windows
+030.217  000.427  000.427: require('ef-themes')
+030.414  000.190  000.190: require('ef-themes.utils')
+030.604  000.184  000.184: require('ef-themes.config')
+030.971  000.202  000.202: require('ef-themes.lib.compiler')
+038.708  000.207  000.207: require('ef-themes.themes')
+038.980  000.265  000.265: require('ef-themes.themes.ef-dream')
+039.368  000.269  000.269: require('ef-themes.groups')
+039.723  000.342  000.342: require('ef-themes.groups.base')
+040.282  000.251  000.251: require('ef-themes.groups.kinds')
+040.681  000.314  000.314: require('ef-themes.groups.treesitter')
+040.990  000.177  000.177: require('ef-themes.groups.blink')
+041.388  000.273  000.273: require('ef-themes.groups.mini')
+042.595  012.851  009.750: sourcing C:\Users\onam7\projects\nvim\ef-themes\colors\ef-dream.lua
+042.622  000.610: --- NVIM STARTED ---
+
+--- Startup times for process: Primary/TUI ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.003  000.003: --- NVIM STARTING ---
+000.054  000.051: event init
+000.240  000.187: early init
+011.211  010.971: locale set
+011.245  000.035: init first window
+011.769  000.524: inits 1
+011.902  000.132: window checked
+011.922  000.021: parsing arguments
+013.429  000.393  000.393: require('vim.shared')
+013.929  000.177  000.177: require('vim.inspect')
+014.213  000.269  000.269: require('vim._options')
+014.217  000.781  000.336: require('vim._editor')
+014.220  001.385  000.211: require('vim._init_packages')
+014.229  000.921: init lua interpreter
+018.922  004.693: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.004  000.004: --- NVIM STARTING ---
+000.065  000.061: event init
+000.199  000.134: early init
+009.909  009.710: locale set
+009.945  000.036: init first window
+010.341  000.396: inits 1
+010.393  000.052: window checked
+010.402  000.008: parsing arguments
+011.308  000.276  000.276: require('vim.shared')
+011.788  000.158  000.158: require('vim.inspect')
+012.067  000.266  000.266: require('vim._options')
+012.072  000.757  000.333: require('vim._editor')
+012.074  001.129  000.096: require('vim._init_packages')
+012.083  000.552: init lua interpreter
+012.273  000.191: expanding arguments
+012.292  000.019: inits 2
+012.760  000.468: init highlight
+012.763  000.003: waiting for UI
+012.851  000.088: done waiting for UI
+012.856  000.005: clear screen
+013.126  000.033  000.033: require('vim.keymap')
+018.876  006.017  005.984: require('vim._defaults')
+018.883  000.010: init default mappings & autocommands
+020.126  000.065  000.065: sourcing C:\Users\onam7\scoop\apps\neovim\current\share\nvim\runtime\ftplugin.vim
+020.422  000.051  000.051: sourcing C:\Users\onam7\scoop\apps\neovim\current\share\nvim\runtime\indent.vim
+020.877  000.213  000.213: require('vim.fs')
+020.965  000.357  000.143: sourcing ./tests/mininit.lua
+020.980  001.624: sourcing vimrc file(s)
+022.393  000.240  000.240: sourcing C:\Users\onam7\scoop\apps\neovim\current\share\nvim\runtime\filetype.lua
+023.246  000.093  000.093: sourcing C:\Users\onam7\scoop\apps\neovim\current\share\nvim\runtime\syntax\synload.vim
+023.487  000.589  000.496: sourcing C:\Users\onam7\scoop\apps\neovim\current\share/nvim/runtime/syntax/syntax.vim
+023.526  001.717: inits 3
+027.415  003.889: reading ShaDa
+027.481  000.067: opening buffers
+027.485  000.004: BufEnter autocommands
+027.489  000.004: editing files in windows
+028.581  000.443  000.443: require('ef-themes')
+028.771  000.183  000.183: require('ef-themes.utils')
+028.970  000.192  000.192: require('ef-themes.config')
+029.267  000.200  000.200: require('ef-themes.lib.compiler')
+036.941  000.223  000.223: require('ef-themes.themes')
+037.222  000.273  000.273: require('ef-themes.themes.ef-dream')
+037.617  000.265  000.265: require('ef-themes.groups')
+037.978  000.346  000.346: require('ef-themes.groups.base')
+038.509  000.264  000.264: require('ef-themes.groups.kinds')
+038.927  000.323  000.323: require('ef-themes.groups.mini')
+039.557  000.235  000.235: require('ef-themes.groups.treesitter')
+039.794  000.165  000.165: require('ef-themes.groups.blink')
+040.839  012.745  009.633: sourcing C:\Users\onam7\projects\nvim\ef-themes\colors\ef-dream.lua
+040.865  000.631: --- NVIM STARTED ---
+
