@@ -95,8 +95,8 @@ Dark Themes ~
 `ef-trio-dark`
 `ef-tritanopia-dark`
 `ef-winter`
-`ef-tint`
-`ef-false`
+`ef-tint` (custom)
+`ef-false` (custom)
 
 ------------------------------------------------------------------------------
                                                         *ef-themes-light-themes*
