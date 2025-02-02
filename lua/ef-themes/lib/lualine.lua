@@ -16,8 +16,8 @@ return function(name)
   }
 
   ef_theme.insert = {
-    a = { bg = c.rainbow_1, fg = c.bg_dim, gui = "bold" },
-    b = { bg = c.bg_dim, fg = c.rainbow_1 },
+    a = { bg = c.modeline_info, fg = c.bg_dim, gui = "bold" },
+    b = { bg = c.bg_dim, fg = c.modeline_info },
   }
 
   ef_theme.terminal = {
@@ -31,13 +31,13 @@ return function(name)
   }
 
   ef_theme.visual = {
-    a = { bg = c.rainbow_3, fg = c.bg_dim, gui = "bold" },
-    b = { bg = c.bg_dim, fg = c.rainbow_3 },
+    a = { bg = c.warning, fg = c.bg_dim, gui = "bold" },
+    b = { bg = c.bg_dim, fg = c.warning },
   }
 
   ef_theme.replace = {
-    a = { bg = c.red, fg = c.bg_dim, gui = "bold" },
-    b = { bg = c.bg_dim, fg = c.red },
+    a = { bg = c.err, fg = c.bg_dim, gui = "bold" },
+    b = { bg = c.bg_dim, fg = c.err },
   }
 
   ef_theme.inactive = {
