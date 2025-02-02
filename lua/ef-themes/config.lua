@@ -29,6 +29,8 @@ Config.defaults = {
     keywords = { bold = true },
     functions = {},
     variables = {},
+
+    pickers = "default", -- Can be "borderless"
   },
 
   modules = {

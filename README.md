@@ -389,6 +389,8 @@ require("ef-themes").setup({
     keywords = { bold = true },
     functions = {},
     variables = {},
+
+    pickers = "default", -- Can be "borderless"
   },
 
   modules = {

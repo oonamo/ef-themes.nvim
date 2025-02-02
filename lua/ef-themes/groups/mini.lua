@@ -4,8 +4,26 @@ local M = {}
 ---@param opts Ef-Themes.Config
 function M.get(c, opts)
   local is_dark = require("ef-themes").is_dark(c)
+  local picker = {}
+  if opts.styles.pickers == "borderless" then
+    picker = {
+      MiniPickBorder = { bg = c.bg_dim, fg = c.bg_dim },
+      MiniPickBorderBusy = { bg = c.bg_dim, fg = c.bg_dim },
+      MiniPickBorderText = { fg = c.name, bg = c.bg_dim, bold = true },
+      MiniPickHeader = { fg = c.bg_inactive, bg = c.name },
+      MiniPickIconDirectory = { link = "Directory" },
+      MiniPickIconFile = { link = "MiniPickNormal" },
+      MiniPickMatchCurrent = { bg = c.bg_completion },
+      MiniPickMatchMarked = { bg = c.bg_info, bold = true },
+      MiniPickMatchRanges = { fg = c.accent_0, bold = true },
+      MiniPickNormal = { link = "NormalFloat" },
+      MiniPickPreviewLine = { link = "CursorLine" },
+      MiniPickPreviewRegion = { link = "IncSearch" },
+      MiniPickPrompt = { fg = c.fg_main, bg = c.bg_dim },
+    }
+  end
   -- stylua: ignore
-  return {
+  return vim.tbl_deep_extend("keep", picker, {
     MiniAnimateCursor             = { reverse   = true, nocombine          = true },
     MiniAnimateNormalFloat        = { link      = "NormalFloat" },
 
