@@ -257,6 +257,7 @@ See |ef-themes.setup()| for usage
       functions = {},
       variables = {},
 
+      diagnostic = "default", -- Can be "full"
       pickers = "default", -- Can be "borderless"
     },
 
