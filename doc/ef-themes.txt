@@ -95,8 +95,8 @@ Dark Themes ~
 `ef-trio-dark`
 `ef-tritanopia-dark`
 `ef-winter`
-`ef-false`
 `ef-tint`
+`ef-false`
 
 ------------------------------------------------------------------------------
                                                         *ef-themes-light-themes*
@@ -256,6 +256,8 @@ See |ef-themes.setup()| for usage
       keywords = { bold = true },
       functions = {},
       variables = {},
+
+      pickers = "default", -- Can be "borderless"
     },
 
     modules = {
