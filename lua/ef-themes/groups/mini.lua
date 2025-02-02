@@ -86,11 +86,11 @@ function M.get(c, opts)
     MiniIndentscopePrefix         = { nocombine = true }, -- Make it invisible
     MiniIndentscopeSymbol         = { fg        = c.blue_warmer, nocombine = true },
 
-    MiniJump                      = { bg        = c.magenta_warmer, fg     = "#ffffff" },
-    MiniJump2dDim                 = { bg        = c.bg_dim, fg             = c.fg_dim },
-    MiniJump2dSpot                = { fg        = c.fg_main, bg            = c.bg_char_0, bold      = true, nocombine = true },
-    MiniJump2dSpotAhead           = { fg        = c.fg_main, bg            = c.bg_char_1, nocombine = true },
-    MiniJump2dSpotUnique          = { fg        = c.fg_main, bg            = c.bg_char_2, bold      = true, undercurl = true },
+    MiniJump                      = { sp        = c.magenta_warmer, bg = c.bg_magenta_subtle, undercurl = true },
+    MiniJump2dDim                 = { fg             = c.fg_dim },
+    MiniJump2dSpot                = { fg = c.accent_0, underline = true, bold      = true, nocombine = true },
+    MiniJump2dSpotAhead           = { fg = c.accent_1, nocombine = true },
+    MiniJump2dSpotUnique          = { fg = c.red_faint, bg = c.bg_red_subtle, bold      = true, undercurl = true, sp = c.red },
 
     MiniMapNormal                 = { link      = "NormalFloat" },
     MiniMapSymbolCount            = { link      = "Special" },
@@ -154,7 +154,7 @@ function M.get(c, opts)
     MiniTestPass                  = { fg        = c.green, bold            = true },
 
     MiniTrailspace                = { bg        = c.red },
-  }
+  })
 end
 
 return M
