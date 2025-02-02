@@ -2,15 +2,15 @@
 # NOTE: can combined with tmTheme (sublime colorshceme file) for preview code highlight
 # syntect_theme = "path/to/tmTheme"
 
-cwd = { fg = "#70819f", italic = true }
+cwd = { fg = "#989898", italic = true }
 
 # Hovered
 hovered         = { bg = "#303a6f" }
 preview_hovered = { bg = "#303a6f" }
 
 # Find
-find_keyword  = { fg = "#1a202b", bg = "#3b2f04", bold = true }
-find_position = { fg = "#1a202b", bg = "#2277ae", bold = true }
+find_keyword  = { fg = "#1d2235", bg = "#3b2f04", bold = true }
+find_position = { fg = "#1d2235", bg = "#2277ae", bold = true }
 
 # Marker
 marker_copied   = { fg = "#44bc44", bg = "#44bc44" }
@@ -19,14 +19,14 @@ marker_marked   = { fg = "#feacd0", bg = "#feacd0" }
 marker_selected = { fg = "#2fafff", bg = "#2fafff" }
 
 # Tab
-tab_active   = { fg = "#eeffff", bg = "#2c3045" }
-tab_inactive = { fg = "#70819f", bg = "#4a4f6a" }
+tab_active   = { fg = "#ffffff", bg = "#2c3045" }
+tab_inactive = { fg = "#989898", bg = "#4a4f6a" }
 tab_width    = 1
 
 # Count
-count_copied   = { fg = "#eeffff", bg = "#88ca9f" }
-count_cut      = { fg = "#eeffff", bg = "#ff6b55" }
-count_selected = { fg = "#eeffff", bg = "#2fafff" }
+count_copied   = { fg = "#ffffff", bg = "#88ca9f" }
+count_cut      = { fg = "#ffffff", bg = "#ff6b55" }
+count_selected = { fg = "#ffffff", bg = "#2fafff" }
 
 # Border
 border_symbol = "│"
@@ -34,22 +34,22 @@ border_style  = { fg = "#61647a" }
 
 [mode]
 normal_main = { fg = "black", bg = "#2fafff", bold = true }
-normal_alt  = { fg = "#2fafff", bg = "#70819f" }
+normal_alt  = { fg = "#2fafff", bg = "#989898" }
 
 select_main = { fg = "black", bg = "#feacd0", bold = true }
-select_alt  = { fg = "#feacd0", bg = "#70819f" }
+select_alt  = { fg = "#feacd0", bg = "#989898" }
 
 unset_main  = { fg = "black", bg = "#b6a0ff", bold = true }
-unset_alt   = { fg = "#b6a0ff", bg = "#70819f" }
+unset_alt   = { fg = "#b6a0ff", bg = "#989898" }
 
 [status]
 separator_open    = ""
 separator_close   = ""
-# separator_style = { fg = "#70819f", bg = "#70819f" }
+# separator_style = { fg = "#989898", bg = "#989898" }
 
 # Progress
-progress_label  = { fg = "#70819f", bold = true }
-progress_normal = { fg = "#292d3e" }
+progress_label  = { fg = "#989898", bold = true }
+progress_normal = { fg = "#0d0e1c" }
 progress_error  = { fg = "#ff5f59" }
 
 # Permissions
@@ -61,7 +61,7 @@ perm_sep   = { fg = "black" }
 
 [pick]
 border   = { fg = "#61647a" }
-active   = { fg = "#eeffff",  bg = "#303a6f" }
+active   = { fg = "#ffffff",  bg = "#303a6f" }
 inactive = { fg = "#c6daff" }
 
 # Input
@@ -74,8 +74,8 @@ selected = { bg = "#303a6f" }
 # Completion
 [completion]
 border   = { fg = "#82b0ec" }
-active   = { fg = "#eeffff", bg = "#303a6f" }
-inactive = { fg = "#eeffff" }
+active   = { fg = "#ffffff", bg = "#303a6f" }
+inactive = { fg = "#ffffff" }
 
 icon_file    = ""
 icon_folder  = ""
@@ -85,12 +85,12 @@ icon_command = ""
 [tasks]
 border  = { fg = "#61647a" }
 title   = { fg = "#61647a" }
-hovered = { fg = "#eeffff", bg="#303a6f" }
+hovered = { fg = "#ffffff", bg="#303a6f" }
 
 # Which
 [which]
 cols            = 3
-mask            = { bg = "#1a202b" }
+mask            = { bg = "#1d2235" }
 cand            = { fg = "#00d3d0" }
 rest            = { fg = "#2fafff" }
 desc            = { fg = "#feacd0" }
@@ -127,7 +127,7 @@ icon_info = ""
 on      = { fg = "#44bc44" }
 run     = { fg = "#feacd0" }
 hovered = { bg = "#303a6f" }
-footer  = { fg = "#eeffff", bg = "#292d3e" }
+footer  = { fg = "#ffffff", bg = "#0d0e1c" }
 
 [filetype]
 

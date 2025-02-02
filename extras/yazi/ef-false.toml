@@ -9,8 +9,8 @@ hovered         = { bg = "#303a6f" }
 preview_hovered = { bg = "#303a6f" }
 
 # Find
-find_keyword  = { fg = "#1a202b", bg = "#3b2f04", bold = true }
-find_position = { fg = "#1a202b", bg = "#2277ae", bold = true }
+find_keyword  = { fg = "#1d2235", bg = "#3b2f04", bold = true }
+find_position = { fg = "#1d2235", bg = "#2277ae", bold = true }
 
 # Marker
 marker_copied   = { fg = "#44bc44", bg = "#44bc44" }
@@ -90,7 +90,7 @@ hovered = { fg = "#eeffff", bg="#303a6f" }
 # Which
 [which]
 cols            = 3
-mask            = { bg = "#1a202b" }
+mask            = { bg = "#1d2235" }
 cand            = { fg = "#00d3d0" }
 rest            = { fg = "#2fafff" }
 desc            = { fg = "#feacd0" }

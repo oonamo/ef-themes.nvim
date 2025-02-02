@@ -1,11 +1,11 @@
 [colors]
-foreground = "#eeffff"
-background = "#292d3e"
+foreground = "#ffffff"
+background = "#0d0e1c"
 cursor_bg = "#ff66ff"
 cursor_border = "#ff66ff"
-cursor_fg = "#292d3e"
+cursor_fg = "#0d0e1c"
 selection_bg = "#555a66"
-selection_fg = "#eeffff"
+selection_fg = "#ffffff"
 split = "#61647a"
 compose_cursor = "#d0bc00"
 scrollbar_thumb = "#303a6f"
@@ -15,7 +15,7 @@ brights = ["gray35", "#ff6b55", "#70b900", "#fec43f", "#79a8ff", "#b6a0ff", "#6a
 
 [colors.tab_bar]
 inactive_tab_edge = "#4a4f6a"
-background = "#292d3e"
+background = "#0d0e1c"
 
 [colors.tab_bar.active_tab]
 fg_color = "#0d0e1c"
@@ -33,12 +33,12 @@ intensity = "Bold"
 
 [colors.tab_bar.new_tab_hover]
 fg_color = "#44bc44"
-bg_color = "#292d3e"
+bg_color = "#0d0e1c"
 intensity = "Bold"
 
 [colors.tab_bar.new_tab]
 fg_color = "#2fafff"
-bg_color = "#292d3e"
+bg_color = "#0d0e1c"
 
 [metadata]
 aliases = []
