@@ -15,7 +15,7 @@ function M.gen_colornames(do_dark)
   end
 
   for name, val in pairs(custom_themes) do
-    local formatted_name = string.format("`%s`", name)
+    local formatted_name = string.format("`%s` (custom)", name)
     if val.bg == "dark" and do_dark then
       table.insert(ret, formatted_name)
     elseif val.bg == "light" and not do_dark then
