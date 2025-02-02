@@ -42,13 +42,13 @@ function M.get(c, opts)
     MiniDiffSignDelete            = { fg        = c.fg_removed },
 
     MiniFilesBorder               = { link      = "FloatBorder" },
-    MiniFilesBorderModified       = { link      = "DiagnosticFloatingWarn" },
+    -- MiniFilesBorderModified       = { fg = c.warning, bg = c.accent_3 },
     MiniFilesCursorLine           = { link      = "CursorLine" },
     MiniFilesDirectory            = { link      = "Directory" },
-    MiniFilesFile                 = { fg        = c.fg_dim },
+    MiniFilesFile                 = { fg        = c.fg_main },
     MiniFilesNormal               = { link      = "NormalFloat" },
     MiniFilesTitle                = { link      = "FloatTitle" },
-    MiniFilesTitleFocused         = { fg        = c.border, bg             = c.bg_dim, bold         = true },
+    MiniFilesTitleFocused         = { fg        = c.name, bg             = c.bg_dim, bold         = true },
 
     MiniHipatternsFixme           = { fg        = c.fg_term_black, bg      = c.err, bold            = true },
     MiniHipatternsHack            = { fg        = c.fg_term_black, bg      = c.warning, bold        = true },
