@@ -1,5 +1,37 @@
 # Changelog
 
+## [1.1.0](https://github.com/oonamo/ef-themes.nvim/compare/v1.0.0...v1.1.0) (2025-02-03)
+
+
+### Features
+
+* **base:** add 'full' diagnostic style ([ca44659](https://github.com/oonamo/ef-themes.nvim/commit/ca446590e858c5d1d0f604320db1b55e53eda2e3))
+* **benchmark:** create benchmark scripts ([e5c0f35](https://github.com/oonamo/ef-themes.nvim/commit/e5c0f35b124a23bc7428fa9e96fee2f4fa1a16be))
+* **benchmarking:** Add `ps1` and `lua` scripts for benchmarking ([5f9330e](https://github.com/oonamo/ef-themes.nvim/commit/5f9330e8a7a6af9ba80a6596f6c68c7e6f1cb045))
+* **core:** Add `custom themes`. ([59c0d9c](https://github.com/oonamo/ef-themes.nvim/commit/59c0d9cdb1a08a4ffe2684d0f466391e955e4e3e))
+* **custom:** add information to custom color schemes ([811848f](https://github.com/oonamo/ef-themes.nvim/commit/811848f614a9d22d059988f6f675db1c7dc15d6f))
+* **dev:** fix dev highlights with mini.hipatterns ([fe9d1fa](https://github.com/oonamo/ef-themes.nvim/commit/fe9d1fad02f98fec22a591e5a29c5e82707d7287))
+* **dev:** fix dev highlights with mini.hipatterns ([1fffa56](https://github.com/oonamo/ef-themes.nvim/commit/1fffa56d9ef3f5c6783673ff9b2f9903033c97d9))
+* **dev:** improve dev tooling with mini.hipatterns highlighting ([d177d84](https://github.com/oonamo/ef-themes.nvim/commit/d177d84a75ef0b3335b9efa0ed67c91f47b52912))
+* **dev:** improve dev tooling with mini.hipatterns highlighting ([9aa2909](https://github.com/oonamo/ef-themes.nvim/commit/9aa2909334e595492923f12181e56733604113f4))
+* **styles:** add "borderless" style for pickers ([ffa1689](https://github.com/oonamo/ef-themes.nvim/commit/ffa16895a3f739091fd9e9595a9deb92ea880944))
+
+
+### Bug Fixes
+
+* **api:** call setup with opts on `clean` if setup not called ([0e121a8](https://github.com/oonamo/ef-themes.nvim/commit/0e121a8fcfce3ed5c44c5b5412d76fbf78bf4f8c))
+* **base:** fix issue with transparent background using incorrect key ([166177e](https://github.com/oonamo/ef-themes.nvim/commit/166177e7c03e2e435fd1e4ee4ff5d047d0d7b852))
+* **ef-tint:** Fix terminal colors ([aebc0dc](https://github.com/oonamo/ef-themes.nvim/commit/aebc0dc451ef6adde13a38f2be6f0fb0690cecf2))
+* **lualine:** fix incorrect path to lualine lib ([ae16d61](https://github.com/oonamo/ef-themes.nvim/commit/ae16d615e20ebc8c928d320f62ba64880973be52))
+* **palette:** don't default to `NONE` if the key does not exist ([7cfc358](https://github.com/oonamo/ef-themes.nvim/commit/7cfc3580791d0305b7fce681c411d80db5eb2706))
+* **palette:** fix typo: `unresolved` -&gt; `unspecified` ([ea905f8](https://github.com/oonamo/ef-themes.nvim/commit/ea905f8875ccb6efb624016ca6f959333fd9abda))
+* **scripts:** fix benchmark scripts to use milliseconds ([efedfed](https://github.com/oonamo/ef-themes.nvim/commit/efedfedeb3203864a738689d90d48235329a0899))
+
+
+### Performance Improvements
+
+* **benchmarks:** Make benchmarks slightly more accurate, and use 'ms' ([01963f9](https://github.com/oonamo/ef-themes.nvim/commit/01963f91c9d132ab3f245fbf8e37f833e84d4f8e))
+
 ## 1.0.0 (2025-01-31)
 
 
