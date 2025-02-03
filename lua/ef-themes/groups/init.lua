@@ -1,18 +1,19 @@
 local M = {
   -- stylua: ignore
   groups = {
-    blink = {           label = "blink.cmp",       url = "https://github.com/Saghen/blink.cmp",                          default = true },
-    cmp = {             label = "nvim-cmp",        url = "https://github.com/hrsh7th/nvim-cmp",                          default = false },
-    fzf = {             label = "fzf-lua",         url = "https://github.com/ibhagwan/fzf-lua",                          default = false },
-    gitsigns = {        label = "gitsigns.nvim",   url = "https://github.com/lewis6991/gitsigns.nvim",                   default = false },
-    mini = {            label = "mini.nvim",       url = "https://github.com/echasnovski/mini.nvim",                     default = true },
-    neogit = {          label = "Neogit",          url = "https://github.com/TimUntersberger/neogit",                    default = false },
-    render_markdown = { label = "render-markdown", url = "https://github.com/MeanderingProgrammer/render-markdown.nvim", default = false },
-    semantic_tokens = { label = "semantic-tokens (native lsp)",                                                          default = false },
-    snacks = {          label = "snacks",          url = "https://github.com/folke/snacks.nvim",                         default = false },
-    telescope = {       label = "telescope",       url = "https://github.com/nvim-telescope/telescope.nvim" ,            default = false},
-    treesitter = {      label = "treesitter (native)",                                                                   default = true },
-    which_key = {       label = "which-key.nvim",  url = "https://github.com/folke/which-key.nvim",                      default = false },
+    blink =          {             label = "blink.cmp",       url = "https://github.com/Saghen/blink.cmp",                          default = true },
+    cmp =            {             label = "nvim-cmp",        url = "https://github.com/hrsh7th/nvim-cmp",                          default = false },
+    fzf =            {             label = "fzf-lua",         url = "https://github.com/ibhagwan/fzf-lua",                          default = false },
+    gitsigns =       {             label = "gitsigns.nvim",   url = "https://github.com/lewis6991/gitsigns.nvim",                   default = false },
+    mini =           {             label = "mini.nvim",       url = "https://github.com/echasnovski/mini.nvim",                     default = true },
+    neogit =         {             label = "Neogit",          url = "https://github.com/TimUntersberger/neogit",                    default = false },
+    render_markdown ={             label= "render-markdown",  url = "https://github.com/MeanderingProgrammer/render-markdown.nvim", default = false },
+    semantic_tokens ={             label= "semantic-tokens (native lsp)",                                                          default = false },
+    snacks =         {             label = "snacks",          url = "https://github.com/folke/snacks.nvim",                         default = false },
+    telescope =      {             label = "telescope",       url = "https://github.com/nvim-telescope/telescope.nvim" ,            default = false},
+    treesitter =     {             label = "treesitter (native)",                                                                   default = true },
+    which_key =      {             label = "which-key.nvim",  url = "https://github.com/folke/which-key.nvim",                      default = false },
+    orgmode =        {             label= "nvim-orgmode",     url = "https://github.com/nvim-orgmode/orgmode" }
   },
 }
 
