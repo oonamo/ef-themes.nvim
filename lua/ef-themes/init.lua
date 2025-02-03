@@ -135,6 +135,8 @@ local EfThemes = {
 function EfThemes.setup(opts)
   _G.EfThemes = _G.EfThemes or EfThemes
 
+  local utils = require("ef-themes.utils")
+
   require("ef-themes.config").setup(opts)
   EfThemes.__did_setup = true
 
@@ -143,7 +145,7 @@ function EfThemes.setup(opts)
   if opts.options.compile then
     local sep = package.config:sub(1, 1)
     local cache_path = string.format("%s%s%s", opts.options.compile_path, sep, "cache")
-    local previous_hash = require("ef-themes.utils").read(cache_path)
+    local previous_hash = utils.read(cache_path)
 
     local git_path = debug.getinfo(1).source:sub(2, string.len("/lua/ef-themes/init.lua") * -1) .. ".git"
     local git_time = vim.fn.getftime(git_path)
@@ -151,8 +153,8 @@ function EfThemes.setup(opts)
 
     if previous_hash ~= hash then
       -- HACK: Don't delete the cached files, but rather make them invalid
-      require("ef-themes.utils").for_file_in_dir_write(opts.options.compile_path, "()")
-      require("ef-themes.utils").write_byte(cache_path, hash)
+      utils.for_file_in_dir_write(opts.options.compile_path, "()")
+      utils.write_byte(cache_path, hash)
     end
   end
 end

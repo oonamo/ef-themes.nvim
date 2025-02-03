@@ -21,7 +21,7 @@ local function bench(f, n, after_each, ...)
     local start_time = vim.loop.hrtime()
     output = f(...)
     local end_time = vim.loop.hrtime()
-    table.insert(durations, 0.000000001 * (end_time - start_time))
+    table.insert(durations, (1.0e-6 * (end_time - start_time)))
     if vim.is_callable(after_each) then after_each() end
   end
 
