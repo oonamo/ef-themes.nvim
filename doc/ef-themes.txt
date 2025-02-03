@@ -235,7 +235,7 @@ Parameters ~
 Gets the palette for a given ef-theme
 Parameters ~
 {name} `(string)` Name of Ef-theme
-{opts} Ef-Themes.Config Config. See |ef-themes-defaults|
+{opts} `(optional)` Ef-Themes.Config Config. See |ef-themes-defaults|
 
 Return ~
 Ef-Theme
