@@ -145,7 +145,7 @@ Parameters ~
 
 ------------------------------------------------------------------------------
                                                               *EfThemes.clean()*
-                               `EfThemes.clean`()
+                            `EfThemes.clean`({opts})
 # Cleaning ~
 Since this plugin relies on changes to git or your config to know when
 your compiled colorscheme is invalid, it may create some problems if you
