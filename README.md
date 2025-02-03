@@ -306,6 +306,7 @@
  | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | gitsigns |
  | [mini.nvim](https://github.com/echasnovski/mini.nvim) | mini |
  | [Neogit](https://github.com/TimUntersberger/neogit) | neogit |
+ | [nvim-orgmode](https://github.com/nvim-orgmode/orgmode) | orgmode |
  | [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim) | render_markdown |
 | semantic-tokens (native lsp) | semantic_tokens |
  | [snacks](https://github.com/folke/snacks.nvim) | snacks |
