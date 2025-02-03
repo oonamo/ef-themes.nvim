@@ -167,8 +167,9 @@ end
 ---@usage >lua
 ---  require("ef-themes").clean()
 --- <
-function EfThemes.clean()
-  local opts = require("ef-themes.config").extend()
+function EfThemes.clean(opts)
+  if not EfThemes.__did_setup then EfThemes.setup(opts) end
+  opts = require("ef-themes.config").extend()
 
   -- HACK: Don't delete the cached files, but rather make them invalid
   require("ef-themes.utils").for_file_in_dir_write(opts.options.compile_path, "()")
