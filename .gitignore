@@ -3,4 +3,4 @@ debug
 assets/
 deps/
 doc/tags
-bench/
+bench/*.time
