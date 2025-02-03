@@ -3,3 +3,4 @@ debug
 assets/
 deps/
 doc/tags
+bench/
