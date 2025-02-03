@@ -1,3 +1,12 @@
+ifeq ($(OS),Windows_NT)
+	SH = pwsh -NoProfile -NonInteractive -c
+	BENCH_SCRIPT= ./scripts/bench.ps1
+else
+	SH = sh -c
+	BENCH_SCRIPT= ./scripts/bench.sh
+endif
+
+
 .PHONY: test
 test:
 	nvim --headless --noplugin -u ./tests/mininit.lua -l ./scripts/minitest.lua -c
@@ -8,7 +17,10 @@ docs:
 
 .PHONY: benchmark
 benchmark:
+	@echo "Benching: $(BENCH_SCRIPT)"
 	make clear
+	$(SH) $(BENCH_SCRIPT)
+	nvim --headless --noplugin -u ./tests/mininit.lua -l ./scripts/bench.lua
 
 .PHONY: build
 build:
