@@ -45,6 +45,7 @@ FEATURES
 * `gitsigns.nvim`                -> `{ gitsigns = false }`
 * `mini.nvim`                    -> `{ mini = true }`
 * `Neogit`                       -> `{ neogit = false }`
+* `nvim-orgmode`                 -> `{ orgmode = nil }`
 * `render-markdown`              -> `{ render_markdown = false }`
 * `semantic-tokens (native lsp)` -> `{ semantic_tokens = false }`
 * `snacks`                       -> `{ snacks = false }`
