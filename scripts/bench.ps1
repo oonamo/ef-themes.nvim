@@ -49,14 +49,17 @@ function Write-TotalTime {
 for ($i = 0; $i -lt 5; $i++) {
   make clear >$null 2>&1
   $str = $i.ToString()
-  nvim --noplugin -u ./tests/mininit.lua -c "colorscheme ef-dream" +qa! --startuptime "./bench/compile$str.time"
-  Write-TotalTime "./bench/compile$str.time"
+  $file = "./bench/not_compiled$str.time"
+
+  nvim --noplugin -u ./tests/mininit.lua -c "colorscheme ef-dream" +qa! --startuptime $file
+  Write-TotalTime $file
 }
 
 # Compiled times
 for ($i = 0; $i -lt 5; $i++) {
   $str = $i.ToString()
+  $file = "./bench/compiled$str.time"
 
-  nvim --noplugin -u ./tests/mininit.lua -c "colorscheme ef-dream" +qa! --startuptime "./bench/call$str.time"
-  Write-TotalTime "./bench/call$str.time"
+  nvim --noplugin -u ./tests/mininit.lua -c "colorscheme ef-dream" +qa! --startuptime $file
+  Write-TotalTime $file
 }
