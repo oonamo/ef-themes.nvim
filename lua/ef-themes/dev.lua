@@ -45,17 +45,23 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 vim.api.nvim_create_autocmd("ColorScheme", {
   group = augroup,
   callback = function()
+    M.cache = {}
     local colorscheme = EfThemes.config.options[vim.o.bg]
     M.globals.palette = EfThemes.get_palette(colorscheme)
-    M.cache = {}
+
+    if not vim.api.nvim_buf_get_name(0):find("lua[\\/]ef%-themes") then
+      if has_hipatterns then
+        for _, buf in ipairs(require("mini.hipatterns").get_enabled_buffers()) do
+          hi.update(buf)
+        end
+      end
+    end
   end,
 })
 
 ---@param name string
 ---@param buf number
-function M.hl_group(name, buf)
-  return vim.api.nvim_buf_get_name(buf):find("kinds") and "LspKind" .. name or name
-end
+function M.hl_group(name, buf) return vim.api.nvim_buf_get_name(buf):find("kinds") and "LspKind" .. name or name end
 
 function Dev.hipatterns()
   if not has_hipatterns then return end
