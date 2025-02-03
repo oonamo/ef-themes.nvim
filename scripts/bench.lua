@@ -17,10 +17,11 @@ assert(package.loaded["ef-themes"] == nil)
 local function bench(f, n, after_each, ...)
   n = n or 1
   local durations, output = {}, nil
+  local hrtime = vim.uv.hrtime
   for _ = 1, n do
-    local start_time = vim.loop.hrtime()
-    output = f(...)
-    local end_time = vim.loop.hrtime()
+    local start_time = hrtime()
+    f()
+    local end_time = hrtime()
     table.insert(durations, (1.0e-6 * (end_time - start_time)))
     if vim.is_callable(after_each) then after_each() end
   end
