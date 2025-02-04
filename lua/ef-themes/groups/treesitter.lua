@@ -70,7 +70,7 @@ function M.get(c, opts)
      ["@markup.link.label.symbol"]     = { link          = "Identifier" },
      ["@markup.link.url"]              = { fg            = c.fg_alt },
      ["@markup.list"]                  = { fg            = c.blue_faint }, -- For special punctutation that does not fall in the categories before.
-     ["@markup.list.checked"]          = { fg            = c.green_cooler }, -- For brackets and parens.
+     ["@markup.list.checked"]          = { fg            = c.prose_done }, -- For brackets and parens.
      ["@markup.list.markdown"]         = { fg            = c.yellow_cooler, bold                                  =  true },
      ["@markup.list.unchecked"]        = { fg            = c.blue }, -- For brackets and parens.
      ["@markup.math"]                  = { link          = "Special" },
@@ -90,7 +90,7 @@ function M.get(c, opts)
      ["@punctuation.special"]          = { fg            = c.accent_2 }, -- For special symbols (e.g. `{}` in string interpolation)
      ["@punctuation.special.markdown"] = { fg            = c.accent_3 }, -- For special symbols (e.g. `{}` in string interpolation)
      ["@string"]                       = { link          = "String" },
-     ["@string.documentation"]         = { fg            = c.yellow },
+     ["@string.documentation"]         = { fg            = c.docstring },
      ["@string.escape"]                = { fg            = c.rx_escape }, -- For escape characters within a string.
      ["@string.regexp"]                = { fg            = c.blue_cooler }, -- For regexes.
      ["@tag"]                          = { link          = "Label" },
