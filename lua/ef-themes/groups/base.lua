@@ -70,7 +70,7 @@ function M.get(c, opts)
     MoreMsg                     = { fg        = c.blue }, -- |more-prompt|
     MsgArea                     = { fg        = c.fg_main }, -- Area for messages and cmdline
     NonText                     = { fg        = c.fg_dim }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Normal                      = { fg        = opts.transparent and "NONE" or c.fg_main, bg =  c.bg_main },
+    Normal                      = { fg        = c.fg_main, bg =  opts.transparent and "NONE" or c.bg_main },
     NormalFloat                 = { bg        = c.bg_dim, fg                                 =  c.fg_main },
     NormalNC                    = { link      = "Normal" }, -- normal text in non-current windows
     NormalSB                    = { fg        = c.fg_alt, bg                                 =  c.bg_alt }, -- normal text in sidebar
