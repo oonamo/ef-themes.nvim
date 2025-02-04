@@ -98,7 +98,7 @@ function M.get(c, opts)
      ["@tag.delimiter"]                = { link          = "Delimiter" },
      ["@tag.javascript"]               = { fg            = c.red },
      ["@tag.tsx"]                      = { fg            = c.red },
-     ["@type.builtin"]                 = { fg            = c.builtin, bold                                        =  true },
+     ["@type.builtin"]                 = { fg            = c.builtin, style = opts.styles.types },
      ["@type.definition"]              = { link          = "Typedef" },
      ["@type.qualifier"]               = { link          = "@keyword" },
      ["@variable"]                     = { link          = "Variable" },

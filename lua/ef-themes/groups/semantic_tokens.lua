@@ -9,6 +9,7 @@ function M.get(c, opts)
     -- ["@lsp.typemod.typeAlias.defaultLibrary"] = { fg        = Util.blend_bg(c.blue1, 0.8) },
     ["@lsp.type.boolean"]                        = { link      = "@boolean" },
     ["@lsp.type.builtinType"]                    = { link      = "@type.builtin" },
+    ["@lsp.type.class"] = { fg = c.type, style = opts.styles.classes },
     ["@lsp.type.comment"]                        = { link      = "@comment" },
     ["@lsp.type.decorator"]                      = { link      = "@attribute" },
     ["@lsp.type.deriveHelper"]                   = { link      = "@attribute" },

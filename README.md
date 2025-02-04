@@ -390,6 +390,8 @@ require("ef-themes").setup({
     keywords = { bold = true },
     functions = {},
     variables = {},
+    classes = { bold = true },
+    types = { bold = true },
 
     diagnostic = "default", -- Can be "full"
     pickers = "default", -- Can be "borderless"
@@ -397,7 +399,7 @@ require("ef-themes").setup({
 
   modules = {
     -- Enable/Disable highlights for a module
-    -- See `h: EfThemes-modules` for the list of available modules
+    -- See `h: ef-themes-modules` for the list of available modules
     blink = true,
     fzf = false,
     mini = true,

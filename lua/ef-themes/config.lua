@@ -29,6 +29,8 @@ Config.defaults = {
     keywords = { bold = true },
     functions = {},
     variables = {},
+    classes = { bold = true },
+    types = { bold = true },
 
     diagnostic = "default", -- Can be "full"
     pickers = "default", -- Can be "borderless"

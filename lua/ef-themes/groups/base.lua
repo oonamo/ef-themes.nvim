@@ -100,7 +100,7 @@ function M.get(c, opts)
     TabLineSel                  = { fg        = c.fg_alt, bg                                 =  c.bg_tab_current }, -- tab pages line, active tab page label
     Title                       = { fg        = c.rainbow_0 }, -- titles for output from ":set all", ":autocmd" etc.
     Todo                        = { fg        = c.prose_todo, bg                             =  c.yellow_warmer }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    Type                        = { fg        = c.type }, -- (preferred) int, long, char, etc.
+    Type                        = { fg        = c.type, style = opts.styles.types }, -- (preferred) int, long, char, etc.
     Underlined                  = { underline = true }, -- (preferred) text that stands out, HTML links
     Variable                    = { fg        = c.fg_main },
     VertSplit                   = { fg        = c.border },

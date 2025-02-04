@@ -103,6 +103,34 @@ T["setup()"]["respects opts"] = function()
   })
 end
 
+T["setup()"]["respects `style`"] = function()
+  child.unload()
+  child.setup({
+    styles = {
+      comments = { bold = true, italic = true },
+      keywords = { bold = true, italic = true },
+      functions = { bold = true, italic = true },
+      variables = { bold = true, italic = true },
+      classes = { bold = true, italic = true  },
+      types = { bold = true, italic = true },
+    },
+    modules = {
+      semantic_tokens = true,
+    }
+  })
+
+  child.o.background = "dark"
+  child.cmd("colorscheme ef-winter")
+
+  local palette = child.lua_get("EfThemes.get_palette('ef-winter')")
+
+  validate_hl_group("Keyword", string.format("cterm=bold,italic gui=bold,italic guifg=%s", palette.keyword))
+  validate_hl_group("Identifier", string.format("cterm=bold,italic gui=bold,italic guifg=%s", palette.identifier))
+  validate_hl_group("Comment", string.format("cterm=bold,italic gui=bold,italic guifg=%s", palette.comment))
+  validate_hl_group("@lsp.type.class", string.format("cterm=bold,italic gui=bold,italic guifg=%s", palette.type))
+  validate_hl_group("Type", string.format("cterm=bold,italic gui=bold,italic guifg=%s", palette.type))
+end
+
 T["on_colors()"] = new_set({
   hooks = {
     pre_case = function() child.unload() end,
