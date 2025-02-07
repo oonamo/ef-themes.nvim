@@ -29,10 +29,20 @@ reload = vim.schedule_wrap(reload)
 
 function Dev.reset() reload() end
 
+function Dev.reset_hipatterns()
+  if has_hipatterns then
+    for _, buf in ipairs(require("mini.hipatterns").get_enabled_buffers()) do
+      hi.update(buf)
+    end
+  end
+end
+
 function Dev.setup()
   Dev.reset()
   Dev.hipatterns()
 end
+
+function Dev.setup_hipatterns() Dev.hipatterns() end
 
 local augroup = vim.api.nvim_create_augroup("ef-theme.dev", { clear = true })
 
@@ -114,7 +124,5 @@ function Dev.hipatterns()
     },
   })
 end
-
-Dev.setup()
 
 return Dev
