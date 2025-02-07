@@ -106,11 +106,18 @@ function Dev.hipatterns()
 
     hl_color = {
       pattern = {
-        "%f[%w]()c%.[%w_%.]+()%f[%W]",
-        "%f[%w]()colors%.[%w_%.]+()%f[%W]",
+        "%f[%w]()c%.[%w_%.%d]+()%f[%W]",
+        "%f[%w]()colors%.[%w_%.%d]+()%f[%W]",
+        "%${[%w_]+}", -- matches ${bg_main}
+        "%f[%w]()var%(%-%-[%w-%d]+%)()",
       },
       group = function(_, match)
         local colors_name = string.match(match, "c%.(.*)")
+        if not colors_name then colors_name = string.match(match, "%${([%w_]+)}") end
+        if not colors_name then
+          colors_name = string.match(match, "var%(%-%-([%w-]+)%)")
+          colors_name = colors_name and colors_name:gsub("-", "_") or ""
+        end
         local color = M.globals.palette[colors_name]
         return type(color) == "string" and require("mini.hipatterns").compute_hex_color_group(color, "fg")
       end,
