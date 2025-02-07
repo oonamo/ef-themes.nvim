@@ -19,12 +19,9 @@ local function reload()
 
   M.globals.palette = EfThemes.get_palette(colorscheme)
 
-  if has_hipatterns then
-    for _, buf in ipairs(require("mini.hipatterns").get_enabled_buffers()) do
-      hi.update(buf)
-    end
-  end
+  Dev.reset_hipatterns()
 end
+
 reload = vim.schedule_wrap(reload)
 
 function Dev.reset() reload() end
@@ -38,11 +35,24 @@ function Dev.reset_hipatterns()
 end
 
 function Dev.setup()
+  M.globals.opts = require("ef-themes.config").extend()
   Dev.reset()
   Dev.hipatterns()
 end
 
-function Dev.setup_hipatterns() Dev.hipatterns() end
+function Dev.setup_hipatterns()
+  vim.schedule(function()
+    M.cache = {}
+    local colorscheme = require("ef-themes.config").options[vim.o.bg]
+    vim.cmd.colorscheme(colorscheme)
+
+    M.globals.palette = require("ef-themes").get_palette(colorscheme)
+
+    Dev.reset_hipatterns()
+  end)
+
+  Dev.hipatterns()
+end
 
 local augroup = vim.api.nvim_create_augroup("ef-theme.dev", { clear = true })
 
@@ -58,14 +68,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     M.cache = {}
     local colorscheme = EfThemes.config.options[vim.o.bg]
     M.globals.palette = EfThemes.get_palette(colorscheme)
-
-    if not vim.api.nvim_buf_get_name(0):find("lua[\\/]ef%-themes") then
-      if has_hipatterns then
-        for _, buf in ipairs(require("mini.hipatterns").get_enabled_buffers()) do
-          hi.update(buf)
-        end
-      end
-    end
   end,
 })
 
@@ -76,7 +78,6 @@ function M.hl_group(name, buf) return vim.api.nvim_buf_get_name(buf):find("kinds
 function Dev.hipatterns()
   if not has_hipatterns then return end
   local opts = hi.config
-
   opts.highlighters = opts.highlighters or {}
 
   opts.highlighters = vim.tbl_deep_extend("keep", opts.highlighters, {
@@ -130,6 +131,8 @@ function Dev.hipatterns()
       end,
     },
   })
+
+  hi.setup(opts)
 end
 
 return Dev
