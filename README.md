@@ -318,7 +318,7 @@
 
 </details>
 
-<details>
+<details open>
 <summary> 🎁 Extras</summary>
 
 <!-- extras:start -->
@@ -461,12 +461,19 @@ require("ef-themes").setup({
 ```lua
 require("ef-themes").setup({
         on_highlights = function(hls, palette, name)
+            local overrides = {
+                NormalFloat = { fg = palette.fg_main, bg = "NONE" },
+                MyObscurePluginHighlight = { fg = hls.DiffAdd.fg }
+            }
+
             local is_dark = require("ef-themes").is_dark(name)
             if is_dark then
-                hls.FloatBorder = { fg = palette.fg_main, bg = palette.bg_inactive }
+                overrides.FloatBorder = { fg = palette.fg_main, bg = palette.bg_inactive }
             else
-                hls.FloatBorder = { fg = palette.fg_main, bg = palette.bg_dim }
+                overrides.FloatBorder = { fg = palette.fg_main, bg = palette.bg_dim }
             end
+
+            return overrides
         end,
 })
 ```
