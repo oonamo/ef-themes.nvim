@@ -5,7 +5,7 @@ function M.template()
 # vim:ft=kitty
 
 ## name: ${_name}
-## license: MIT
+## license: GNU
 ## author: Onam Hernandez
 
 
