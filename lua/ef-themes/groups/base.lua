@@ -82,7 +82,7 @@ function M.get(c, opts)
     PreProc                     = { fg        = c.preprocessor }, -- (preferred) generic Preprocessor
     Question                    = { fg        = c.accent_3 }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine                = { bg        = c.bg_region, bold                            =  true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    Search                      = { bg        = c.bg_search_current, fg                      =  c.fg_intense }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    Search                      = { bg        = c.bg_search_lazy, fg                      =  c.fg_intense }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     SignColumn                  = { bg        = opts.transparent and "NONE" or c.bg_main, fg =  c.fg_alt }, -- column where |signs| are displayed
     Special                     = { fg        = c.blue_faint }, -- (preferred) any special symbol
     SpecialKey                  = { fg        = c.accent_0 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
