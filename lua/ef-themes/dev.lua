@@ -80,6 +80,22 @@ function Dev.hipatterns()
   local opts = hi.config
   opts.highlighters = opts.highlighters or {}
 
+  local patterns = {
+    "%f[%w]()c%.[%w_%.%d]+()%f[%W]",
+    "%f[%w]()colors%.[%w_%.%d]+()%f[%W]",
+    "%${[%w_]+}", -- matches ${bg_main}
+    "%f[%w]()var%(%-%-[%w-%d]+%)()",
+  }
+  local match_patterns = {
+    "c%.(.*)",
+    "%${([%w_]+)}",
+    function(match)
+      local name = string.match(match, "var%(%-%-([%w-]+)%)")
+      if name then return name:gsub("-", "_") end
+    end,
+    "colors%.(.*)",
+  }
+
   opts.highlighters = vim.tbl_deep_extend("keep", opts.highlighters, {
     hex_color = hi.gen_highlighter.hex_color({ priority = 2000 }),
 
@@ -113,11 +129,15 @@ function Dev.hipatterns()
         "%f[%w]()var%(%-%-[%w-%d]+%)()",
       },
       group = function(_, match)
-        local colors_name = string.match(match, "c%.(.*)")
-        if not colors_name then colors_name = string.match(match, "%${([%w_]+)}") end
-        if not colors_name then
-          colors_name = string.match(match, "var%(%-%-([%w-]+)%)")
-          colors_name = colors_name and colors_name:gsub("-", "_") or ""
+        local colors_name
+        for _, v in ipairs(match_patterns) do
+          if vim.is_callable(v) then
+            colors_name = v(match)
+          else
+            colors_name = string.match(match, v)
+          end
+
+          if colors_name then break end
         end
         local color = M.globals.palette[colors_name]
         return type(color) == "string" and require("mini.hipatterns").compute_hex_color_group(color, "fg")
