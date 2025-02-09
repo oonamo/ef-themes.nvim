@@ -5,6 +5,7 @@ REPO_NAME="ef-themes"
 BRANCH="main"
 
 HASH_FILE="ef_themes_hash"
+LOCK_FILE="ef_themes_commit_lock.txt"
 
 latest_commit_hash=$(curl -s "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/commits/$BRANCH" | jq -r ".sha")
 
@@ -20,16 +21,55 @@ clone_and_write_hash() {
     cd ..
 }
 
-if [ -f "$HASH_FILE" ]; then
-
+if  [ -f "$HASH_FILE" ] && [ ! -f "$LOCK_FILE" ];  then
   previous_commit_hash=$(cat "$HASH_FILE")
 
   if [ "$latest_commit_hash" != "$previous_commit_hash" ]; then
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     echo "Updating Ef-themes"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
     clone_and_write_hash
   else
+    echo "----------------------------------------"
     echo "Ef-themes is up to date"
+    echo "----------------------------------------"
+  fi
+elif [ -f "$LOCK_FILE" ]; then
+  locked_commit=$(cat "$LOCK_FILE")
+  echo "Locking build to $locked_commit"
+  if [ -d "raw_themes" ]; then
+    echo "----------------------------------------"
+    echo "Raw themes exist, checking version match"
+    echo "----------------------------------------"
+
+    cd ./raw_themes
+    current_commit=$(git rev-parse HEAD)
+
+    if [ "$current_commit" != "$locked_commit" ]; then
+      echo "****************************************"
+      echo "Found version mismatch, stashing changes and checking out locked version"
+      echo "****************************************"
+      git stash > /dev/null 2>&1
+      git pull origin main
+      git reset --hard origin/main
+      git checkout "$locked_commit"
+    else
+      echo "----------------------------------------"
+      echo "Raw themes is up to date"
+      echo "----------------------------------------"
+    fi
+
+    cd ..
+  else
+    echo "----------------------------------------"
+    echo "Cloning raw_themes"
+    # TODO: is their a better way to avoid the need of cloning the whole repo?
+    git clone https://github.com/protesilaos/ef-themes.git ./raw_themes
+    cd ./raw_themes
+    git checkout "$locked_commit"
+    cd ..
+    echo "----------------------------------------"
   fi
 else
   echo "Initing hash"
