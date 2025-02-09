@@ -203,20 +203,16 @@ function EfThemes.load(theme_opts, opts)
   if not EfThemes.__did_setup then EfThemes.setup(opts) end
   opts = require("ef-themes.config").extend(opts)
 
-  local name, bg = theme_opts.name, theme_opts.bg
-  if name == "ef-theme" then
-    name = opts[vim.o.bg]
+  if theme_opts.name == "ef-theme" then
     theme_opts.name = opts[vim.o.bg]
   end
 
-  if vim.o.bg ~= bg or (name == "ef-theme") then
-    if vim.g.colors_name == name then
-      name = opts[vim.o.bg]
-      bg = vim.o.bg
+  if vim.o.bg ~= theme_opts.bg or (theme_opts.name == "ef-theme") then
+    if vim.g.colors_name == theme_opts.name then
       theme_opts.name = opts[vim.o.bg]
       theme_opts.bg = vim.o.bg
     else
-      vim.o.background = bg
+      vim.o.background = theme_opts.bg
     end
   end
 
@@ -224,7 +220,7 @@ function EfThemes.load(theme_opts, opts)
   lock = true
 
   if opts.options.compile then
-    local compiled_file = vim.fs.joinpath(opts.options.compile_path, name .. ".lua")
+    local compiled_file = vim.fs.joinpath(opts.options.compile_path, theme_opts.name .. ".lua")
     local f, _ = loadfile(compiled_file)
     if f then
       f()
@@ -233,12 +229,12 @@ function EfThemes.load(theme_opts, opts)
   end
 
   if not loaded then
-    local palette = require("ef-themes.themes").get_palette(name, opts)
-    require("ef-themes.groups").build(palette, opts, name, theme_opts)
+    local palette = require("ef-themes.themes").get_palette(theme_opts.name, opts)
+    require("ef-themes.groups").build(palette, opts, theme_opts.name, theme_opts)
   end
 
   require("ef-themes.config").extend({
-    [vim.o.bg] = name,
+    [vim.o.bg] = theme_opts.name,
   })
 
   lock = false
