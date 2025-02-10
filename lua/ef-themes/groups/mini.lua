@@ -140,9 +140,9 @@ function M.get(c, opts)
 
     MiniSurround                  = { bg        = c.yellow_cooler, fg      = c.fg_term_black },
 
-    MiniTablineCurrent            = { fg        = c.fg_main, bg            = c.bg_tab_current },
+    MiniTablineCurrent            = { fg        = c.fg_alt, bg            = c.bg_tab_current },
     MiniTablineFill               = { bg        = c.bg_tab_bar },
-    MiniTablineHidden             = { fg        = c.fg_main, bg            = c.bg_tab_other },
+    MiniTablineHidden             = { fg        = c.fg_main, bg            = c.bg_dim },
     MiniTablineModifiedCurrent    = { fg        = c.warning, bg            = c.bg_warning },
     MiniTablineModifiedHidden     = { bg        = c.bg_mode_line, fg       = c.bg_err },
     MiniTablineModifiedVisible    = { fg        = c.fg_alt, bg             = c.bg_warning },
