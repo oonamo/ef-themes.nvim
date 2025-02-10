@@ -186,7 +186,11 @@ end
 ---  local is_dark = require("ef-themes").is_dark(vim.g.colors_name) -- has to be an ef-theme
 ---  vim.notify(string.format("Using %s theme!", is_dark and "dark" or "light"), vim.log.levels.INFO)
 --- <
-function EfThemes.is_dark(theme) return vim.tbl_contains(EfThemes.list.dark, theme) end
+function EfThemes.is_dark(theme)
+  if vim.tbl_contains(EfThemes.list.dark, theme) then return true end
+  if (require("ef-themes.themes.custom").list[theme] or {}).bg == "dark" then return true end
+  return false
+end
 
 local lock = false
 
@@ -203,9 +207,7 @@ function EfThemes.load(theme_opts, opts)
   if not EfThemes.__did_setup then EfThemes.setup(opts) end
   opts = require("ef-themes.config").extend(opts)
 
-  if theme_opts.name == "ef-theme" then
-    theme_opts.name = opts[vim.o.bg]
-  end
+  if theme_opts.name == "ef-theme" then theme_opts.name = opts[vim.o.bg] end
 
   if vim.o.bg ~= theme_opts.bg or (theme_opts.name == "ef-theme") then
     if vim.g.colors_name == theme_opts.name then
