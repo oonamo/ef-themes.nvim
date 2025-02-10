@@ -2,6 +2,10 @@ local M = {}
 
 function M.template()
   return [[
+* {
+  color-scheme: only ${_style} !important;
+}
+
 :root {
   /* Palette */
   --accent-0: ${accent_0};
@@ -267,6 +271,10 @@ function M.template()
   --icon-color-information: var(--blue) !important;
   --icon-color-success: var(--info) !important;
   --icon-color-warning: var(--warning) !important;
+  --tab-selected-textcolor: var(--fg-main) !important;
+  --tab-selected-color-scheme: only ${_style} !important;
+
+  --toolbar-color-scheme: only ${_style} !important;
 }
 
 tab.tabbrowser-tab {
