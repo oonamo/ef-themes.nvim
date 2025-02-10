@@ -1,0 +1,420 @@
+:root {
+  /* Palette */
+  --accent-0: #12b4ff;
+  --accent-1: #7fce5f;
+  --accent-2: #2fd0db;
+  --accent-3: #ff7788;
+  --bg-active: #4a5664;
+  --bg-added-faint: #163530;
+  --bg-added-refine: #136244;
+  --bg-added: #20493f;
+  --bg-alt: #2a3644;
+  --bg-blue-intense: #2f5f9f;
+  --bg-blue-subtle: #284477;
+  --bg-changed-faint: #40332f;
+  --bg-changed-refine: #61621f;
+  --bg-changed: #51512f;
+  --bg-char-0: #0050af;
+  --bg-char-1: #7f1f7f;
+  --bg-char-2: #6f6600;
+  --bg-completion: #204358;
+  --bg-cyan-intense: #0280b9;
+  --bg-cyan-subtle: #204c68;
+  --bg-dim: #1d2c39;
+  --bg-err: #551327;
+  --bg-fringe: NONE;
+  --bg-graph-blue-0: #2fafef;
+  --bg-graph-blue-1: #1f2f8f;
+  --bg-graph-cyan-0: #47dfea;
+  --bg-graph-cyan-1: #00808f;
+  --bg-graph-green-0: #0fed00;
+  --bg-graph-green-1: #007800;
+  --bg-graph-magenta-0: #bf94fe;
+  --bg-graph-magenta-1: #5f509f;
+  --bg-graph-red-0: #b52c2c;
+  --bg-graph-red-1: #702020;
+  --bg-graph-yellow-0: #f1e00a;
+  --bg-graph-yellow-1: #b08940;
+  --bg-green-intense: #107840;
+  --bg-green-subtle: #1f523a;
+  --bg-hl-line: #243242;
+  --bg-hover-secondary: #49516a;
+  --bg-hover: #684d54;
+  --bg-inactive: #1a2331;
+  --bg-info: #104324;
+  --bg-magenta-intense: #b05fcf;
+  --bg-magenta-subtle: #52336b;
+  --bg-main: #131c2b;
+  --bg-mode-line: #2f527b;
+  --bg-paren: #6c5d54;
+  --bg-red-intense: #bd1f30;
+  --bg-red-subtle: #6f293a;
+  --bg-region: #183c65;
+  --bg-removed-faint: #4a202d;
+  --bg-removed-refine: #772a35;
+  --bg-removed: #5e242f;
+  --bg-search-current: #847020;
+  --bg-search-lazy: #2f5f9f;
+  --bg-search-match: #403f22;
+  --bg-search-replace: #bd1f30;
+  --bg-search-rx-group-0: #b05fcf;
+  --bg-search-rx-group-1: #107840;
+  --bg-search-rx-group-2: #6f293a;
+  --bg-search-rx-group-3: #204c68;
+  --bg-space-err: #847020;
+  --bg-space: NONE;
+  --bg-tab-bar: #2a3644;
+  --bg-tab-current: #131c2b;
+  --bg-tab-other: #4a5664;
+  --bg-term-black-bright: gray35;
+  --bg-term-black: black;
+  --bg-term-blue-bright: #70a0ff;
+  --bg-term-blue: #57b0ff;
+  --bg-term-cyan-bright: #65d5a8;
+  --bg-term-cyan: #2fd0db;
+  --bg-term-green-bright: #7fce5f;
+  --bg-term-green: #41bf4f;
+  --bg-term-magenta-bright: #cf90ff;
+  --bg-term-magenta: #f59acf;
+  --bg-term-red-bright: #ff7788;
+  --bg-term-red: #ff6f6f;
+  --bg-term-white-bright: white;
+  --bg-term-white: gray65;
+  --bg-term-yellow-bright: #f0c060;
+  --bg-term-yellow: #d0d24f;
+  --bg-warning: #403f22;
+  --bg-yellow-intense: #847020;
+  --bg-yellow-subtle: #604233;
+  --blue-cooler: #12b4ff;
+  --blue-faint: #9acfff;
+  --blue-warmer: #70a0ff;
+  --blue: #57b0ff;
+  --border: #595a63;
+  --builtin: #d4aaf0;
+  --comment: #eaa4a4;
+  --constant: #12b4ff;
+  --cursor: #8fdfff;
+  --cyan-cooler: #65d5a8;
+  --cyan-faint: #99bfcf;
+  --cyan-warmer: #7fcfdf;
+  --cyan: #2fd0db;
+  --date-common: #65d5a8;
+  --date-deadline-subtle: #eaa4a4;
+  --date-deadline: #ff6f6f;
+  --date-event: #90a0dc;
+  --date-holiday: #70a0ff;
+  --date-now: #eaedef;
+  --date-range: #90a0dc;
+  --date-scheduled-subtle: #cac89f;
+  --date-scheduled: #cab27f;
+  --date-weekday: #7fcfdf;
+  --date-weekend: #eaa4a4;
+  --docstring: #99bfcf;
+  --err: #ff7a5f;
+  --fg-added: #a0e0a0;
+  --fg-alt: #90a0dc;
+  --fg-changed: #dada90;
+  --fg-dim: #969faf;
+  --fg-fringe: NONE;
+  --fg-intense: #ffffff;
+  --fg-main: #eaedef;
+  --fg-mode-line: #ecf0ff;
+  --fg-region: NONE;
+  --fg-removed: #ffbfbf;
+  --fg-space: #595a63;
+  --fg-term-black-bright: gray35;
+  --fg-term-black: black;
+  --fg-term-blue-bright: #70a0ff;
+  --fg-term-blue: #57b0ff;
+  --fg-term-cyan-bright: #65d5a8;
+  --fg-term-cyan: #2fd0db;
+  --fg-term-green-bright: #7fce5f;
+  --fg-term-green: #41bf4f;
+  --fg-term-magenta-bright: #cf90ff;
+  --fg-term-magenta: #f59acf;
+  --fg-term-red-bright: #ff7788;
+  --fg-term-red: #ff6f6f;
+  --fg-term-white-bright: white;
+  --fg-term-white: gray65;
+  --fg-term-yellow-bright: #f0c060;
+  --fg-term-yellow: #d0d24f;
+  --fnname: #7fce5f;
+  --green-cooler: #30c489;
+  --green-faint: #a9c99f;
+  --green-warmer: #7fce5f;
+  --green: #41bf4f;
+  --identifier: #d4aaf0;
+  --info: #30c489;
+  --keybind: #12b4ff;
+  --keyword: #70a0ff;
+  --link-alt: #cf90ff;
+  --link: #57b0ff;
+  --magenta-cooler: #cf90ff;
+  --magenta-faint: #d4aaf0;
+  --magenta-warmer: #fa90ea;
+  --magenta: #f59acf;
+  --mail-cite-0: #65d5a8;
+  --mail-cite-1: #f59acf;
+  --mail-cite-2: #9acfff;
+  --mail-cite-3: #cab27f;
+  --mail-other: #57b0ff;
+  --mail-part: #2fd0db;
+  --mail-recipient: #70a0ff;
+  --mail-subject: #7fce5f;
+  --modeline-err: #ffbfbf;
+  --modeline-info: #7fefff;
+  --modeline-warning: #dfd443;
+  --name: #57b0ff;
+  --preprocessor: #cf90ff;
+  --prompt: #70a0ff;
+  --prose-code: #2fd0db;
+  --prose-done: #30c489;
+  --prose-macro: #cf90ff;
+  --prose-metadata-value: #90a0dc;
+  --prose-metadata: #969faf;
+  --prose-table-formula: #f0c060;
+  --prose-table: #90a0dc;
+  --prose-tag: #99bfcf;
+  --prose-todo: #ff7788;
+  --prose-verbatim: #7fce5f;
+  --rainbow-0: #30c489;
+  --rainbow-1: #70a0ff;
+  --rainbow-2: #7fce5f;
+  --rainbow-3: #2fd0db;
+  --rainbow-4: #cf90ff;
+  --rainbow-5: #12b4ff;
+  --rainbow-6: #f59acf;
+  --rainbow-7: #65d5a8;
+  --rainbow-8: #cab27f;
+  --red-cooler: #ff7788;
+  --red-faint: #eaa4a4;
+  --red-warmer: #ff7a5f;
+  --red: #ff6f6f;
+  --rx-construct: #ff6f6f;
+  --rx-escape: #d0d24f;
+  --string: #65d5a8;
+  --type: #41bf4f;
+  --underline-err: #df2f2f;
+  --underline-info: #22b022;
+  --underline-warning: #c0b000;
+  --variable: #2fd0db;
+  --warning: #f0c060;
+  --yellow-cooler: #cab27f;
+  --yellow-faint: #cac89f;
+  --yellow-warmer: #f0c060;
+  --yellow: #d0d24f;
+  
+  /* Variables */
+  --lwt-frame: var(--bg-dim) !important;
+  --lwt-accent-color: var(--bg-active) !important;
+  --lwt-text-color: var(--fg-main) !important;
+
+  --toolbar-field-color: var(--fg-main) !important;
+
+  --toolbar-field-focus-color: var(--fg-main) !important;
+  --toolbar-field-focus-background-color: var(--bg-dim) !important;
+  --toolbar-field-focus-border-color: var(--border) !important;
+
+  --toolbar-field-background-color: var(--bg-dim) !important;
+  --lwt-toolbar-field-highlight: var(--fg-main) !important;
+  --lwt-toolbar-field-highlight-text: var(--fg-alt) !important;
+  --urlbar-popup-url-color: var(--link-alt) !important;
+
+
+  /* NOTE: Remove this for 'gentler' background */
+  --urlbarView-highlight-background: var(--bg-completion) !important;
+
+  --lwt-tab-text: var(--fg-main) !important;
+
+  --lwt-selected-tab-background-color: var(--bg-tab-current) !important;
+
+  --toolbar-bgcolor: var(--bg-dim) !important;
+  --toolbar-color: var(--fg-main) !important;
+  --toolbarseparator-color: var(--fg-dim) !important;
+  --toolbarbutton-hover-background: var(--bg-hover) !important;
+  --toolbarbutton-active-background: var(--bg-hover-secondary) !important;
+  --toolbarbutton-icon-fill: var(--fg-dim) !important;
+  --toolbarbutton-icon-fill-attenion: var(--warning) !important;
+  --toolbarbutton-icon-fill-attenion-text: var(--fg-intense) !important;
+
+  --lwt-sidebar-background-color: var(--lwt-frame) !important;
+  --sidebar-background-color: var(--lwt-sidebar-background-color) !important;
+
+  --urlbar-box-bgcolor: var(--bg-dim) !important;
+  --urlbar-box-text-color: var(--fg-dim) !important;
+  --urlbar-box-hover-bgcolor: var(--bg-active) !important;
+  --urlbar-box-hover-text-color: var(--fg-main) !important;
+  --urlbar-box-focus-bgcolor: var(--bg-dim) !important;
+  
+
+  --background-color-critical: var(--bg-err) !important;
+  --background-color-information: var(--bg-blue-subtle) !important;
+  --background-color-success: var(--bg-info) !important;
+  --background-color-warning: var(--bg-warning) !important;
+  
+  --button-background-color-destructive: var(--red-faint) !important;
+  --button-background-color-destructive-active: var(--red) !important;
+  --button-background-color-destructive-disabled: var(--red-cooler) !important;
+
+  --button-background-color-primary: var(--bg-alt) !important;
+  --button-background-color-primary-active: var(--rainbow-0) !important;
+  
+  --icon-color-critical: var(--err) !important;
+  --icon-color-information: var(--blue) !important;
+  --icon-color-success: var(--info) !important;
+  --icon-color-warning: var(--warning) !important;
+}
+
+tab.tabbrowser-tab {
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 1px var(--border) !important;
+  padding: 0 0 !important;
+}
+
+tab.tabbrowser-tab:hover {
+  background: var(--bg-active) !important;
+}
+
+.titlebar-spacer { display: none !important; }
+
+.tabbrowser-tab .tab-content {
+  box-shadow: 0 0 3px var(--border) !important;
+  background-color: var(--bg-dim);
+  border: 1px solid var(--border);
+}
+
+.tab-content:hover {
+  background-color: var(--bg-active) !important;
+}
+
+.tabbrowser-tab[selected] .tab-content:hover {
+  background-color: var(--bg-tab-bar) !important;
+}
+
+.tabbrowser-tab[selected] .tab-content {
+  background-color: var(--bg-tab-current);
+  box-shadow: 0 0 0 1px var(--border)
+  border: 1px solid var(--border);
+}
+
+#navigator-toolbox:not(:-moz-lwtheme) {
+  background: var(--bg-main) !important;
+}
+
+
+#nav-bar {
+  box-shadow: 0 0 3px var(--border) !important;
+  background: var(--bg-main) !important;
+  box-sizing: border-box;
+}
+
+.urlbar-input-container {
+  border: 1px solid var(--border) !important;
+}
+
+
+/* NOTE: REMOVE IF YOU DISLIKE THE SEARCH BAR HIGHLIGHTING */
+.urlbar-tail-prefix {
+  color: var(--accent-0) !important;
+}
+
+/*
+* HACK: This provides a feeling similar to the highlighting from `ef-themes.nvim`
+*/
+.urlbarView-row:not([type='top_site']):not([type='bookmark']):not([type='autofill_origin']):not([type='history'])
+.urlbarView-row-inner
+.urlbarView-no-wrap
+.urlbarView-title:not(strong) {
+  color: var(--accent-0);
+  font-weight: bold;
+}
+
+.urlbarView-row:is([type='top_site'], [type='bookmark'])
+.urlbarView-row-inner
+.urlbarView-no-wrap
+.urlbarView-title {
+  color: var(--fg-main);
+  font-weight: normal;
+}
+
+.urlbarView-row:not([type='top_site']):not([type='bookmark']):not([type='autofill_origin']):not([type='history'])
+.urlbarView-row-inner
+.urlbarView-no-wrap
+.urlbarView-title strong {
+  color: var(--fg-main);
+  font-style: normal;
+  font-weight: normal;
+}
+
+.urlbarView-row:is([type='autofill_origin'], [type='history'])
+.urlbarView-row-inner
+.urlbarView-no-wrap
+.urlbarView-title
+strong {
+  color: var(--accent-0);
+  font-weight: bold;
+}
+
+.urlbarView-row:is([type='autofill_origin'], [type='history'])
+.urlbarView-row-inner
+.urlbarView-no-wrap
+.urlbarView-title:not(strong) {
+  color: var(--fg-main);
+  font-style: normal;
+  font-weight: normal;
+}
+/* NOTE: END SEARCH HIGHLIGHT STYLE */
+
+.urlbarView-url {
+  color: var(--link-alt) !important;
+}
+
+
+#urlbar-background { 
+  border: transparent !important; 
+  background: var(--bg-main) !important;
+}
+
+#urlbar-results > .urlbarView-results[type="autofill_origin"] {
+  background: var(--bg-alt) !important;
+}
+
+.browser-toolbox-background {
+  background: var(--bg-dim) !important;
+  border: 1px solid var(--border) !important;
+}
+
+#PersonalToolbar { 
+  background: var(--bg-main) !important; 
+}
+
+.urlbarView {
+  box-sizing: border-box !important;
+  padding: 6px !important;
+  border-radius: 8px !important;
+
+  border: 1px solid var(--border) !important;
+
+  font-size: 15px !important;
+  line-height: 19.5px !important;
+
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  caret-color: var(--cursor) !important;
+  margin-inline: 0 !important;
+  width: inherit !important;
+}
+
+.titlebar-spacer { display: none !important; }
+
+#forward-button[disabled='true'] {
+  stroke: var(--fg-dim) !important;
+  opacity: 0.4 !important;
+  fill: var(--fg-dim) !important;
+}
+
+#forward-button {
+  fill: var(--fg-dim) !important;
+}
+
