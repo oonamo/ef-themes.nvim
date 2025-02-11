@@ -287,7 +287,7 @@
 
 - 34 Unique themes, ported from `Emacs`
 
-- 8+ Extras Available for each theme, for a total of 272+ extras
+- 8 Extras Available for each theme, for a total of 272 extras
 
 - Close to source. By using a script (see (`./lua/ef-themes/lib/parse.lua`)) to extract the colors and themes from the original `Emacs` theme, this port can easily stay up to date with any new themes or modifications.
 
@@ -324,7 +324,6 @@
 <!-- extras:start -->
 | Tool | Extra |
 |:--:|:--:|
-| [Firefox](https://www.userchrome.org/how-create-userchrome-css.html) | [extras/firefox](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/firefox) |
 | [Fzf](https://github.com/junegunn/fzf) | [extras/fzf](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/fzf) |
 | [Ghostty](https://github.com/ghostty-org/ghostty) | [extras/ghostty](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/ghostty) |
 | [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) | [extras/kitty](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/kitty) |
