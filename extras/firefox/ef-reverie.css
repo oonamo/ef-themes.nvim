@@ -1,7 +1,3 @@
-* {
-  color-scheme: only light !important;
-}
-
 :root {
   /* Palette */
   --accent-0: #87591f;
@@ -267,10 +263,6 @@
   --icon-color-information: var(--blue) !important;
   --icon-color-success: var(--info) !important;
   --icon-color-warning: var(--warning) !important;
-  --tab-selected-textcolor: var(--fg-main) !important;
-  --tab-selected-color-scheme: only light !important;
-
-  --toolbar-color-scheme: only light !important;
 }
 
 tab.tabbrowser-tab {
