@@ -38,11 +38,10 @@ local M = {
 
 local Utils = require("ef-themes.utils")
 
-function M.substitute(template, palette, name, style)
+function M.substitute(template, name, palette)
   return template:gsub("($%b{})", function(v)
     local subbed = v:sub(3, -2)
     if subbed == "_name" then return name end
-    if subbed == "_style" then return style end
     assert(palette[subbed], string.format("'%s' does not exist in ef-theme", subbed))
     return palette[subbed]
   end)
@@ -50,11 +49,10 @@ end
 
 -- Reference: https://github.com/miikanissi/modus-themes.nvim/blob/9f0343bcb3be4dd5545624db135f2b1c369e7ce4/lua/modus-themes/extras/init.lua#L57
 function M.generate(name, palette)
-  local is_dark = require("ef-themes").is_dark
   for k, v in pairs(M.extras) do
     print("[Generating Extra]", v.label)
     local template = require("ef-themes.extras." .. k).template()
-    local parsed = M.substitute(template, palette, name, is_dark(name) and "dark" or "light")
+    local parsed = M.substitute(template, name, palette)
 
     local write_path = string.format("extras/%s/%s.%s", k, name, v.ext)
     if v.ext == "" then write_path = write_path:sub(1, -2) end
