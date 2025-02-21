@@ -3,7 +3,7 @@ local M = {}
 ---@param c Ef-Theme
 ---@param opts Ef-Themes.Config
 function M.get(c, opts)
-  local is_dark = require("ef-themes").is_dark(c)
+  local is_dark = vim.o.bg == "dark"
   local picker = {}
   if opts.styles.pickers == "borderless" then
     picker = {
@@ -22,6 +22,8 @@ function M.get(c, opts)
       MiniPickPrompt = { fg = c.fg_main, bg = c.bg_dim },
     }
   end
+
+  local statusline_fg = is_dark and c.fg_term_black or c.bg_main
   -- stylua: ignore
   return vim.tbl_deep_extend("keep", picker, {
     MiniAnimateCursor             = { reverse   = true, nocombine          = true },
@@ -60,18 +62,18 @@ function M.get(c, opts)
     MiniDiffSignDelete            = { fg        = c.fg_removed },
 
     MiniFilesBorder               = { link      = "FloatBorder" },
-    -- MiniFilesBorderModified       = { fg = c.warning, bg = c.accent_3 },
+    -- MiniFilesBorderModified    = { fg        = c.warning, bg            = c.accent_3 },
     MiniFilesCursorLine           = { link      = "CursorLine" },
     MiniFilesDirectory            = { link      = "Directory" },
     MiniFilesFile                 = { fg        = c.fg_main },
     MiniFilesNormal               = { link      = "NormalFloat" },
     MiniFilesTitle                = { link      = "FloatTitle" },
-    MiniFilesTitleFocused         = { fg        = c.name, bg             = c.bg_dim, bold         = true },
+    MiniFilesTitleFocused         = { fg        = c.name, bg               = c.bg_dim, bold                 = true },
 
-    MiniHipatternsFixme           = { fg        = c.fg_term_black, bg      = c.err, bold            = true },
-    MiniHipatternsHack            = { fg        = c.fg_term_black, bg      = c.warning, bold        = true },
-    MiniHipatternsNote            = { fg        = c.fg_term_black, bg      = c.blue, bold           = true },
-    MiniHipatternsTodo            = { fg        = c.fg_term_black, bg      = c.info, bold           = true },
+    MiniHipatternsFixme           = { fg        = c.fg_term_black, bg      = c.err, bold                    = true },
+    MiniHipatternsHack            = { fg        = c.fg_term_black, bg      = c.warning, bold                = true },
+    MiniHipatternsNote            = { fg        = c.fg_term_black, bg      = c.blue, bold                   = true },
+    MiniHipatternsTodo            = { fg        = c.fg_term_black, bg      = c.info, bold                   = true },
 
     MiniIconsAzure                = { fg        = c.blue_warmer },
     MiniIconsBlue                 = { fg        = is_dark and c.blue_faint or c.blue_cooler },
@@ -86,11 +88,11 @@ function M.get(c, opts)
     MiniIndentscopePrefix         = { nocombine = true }, -- Make it invisible
     MiniIndentscopeSymbol         = { fg        = c.blue_warmer, nocombine = true },
 
-    MiniJump                      = { sp        = c.magenta_warmer, bg = c.bg_magenta_subtle, undercurl = true },
-    MiniJump2dDim                 = { fg             = c.fg_dim },
-    MiniJump2dSpot                = { fg = c.accent_0, underline = true, bold      = true, nocombine = true },
-    MiniJump2dSpotAhead           = { fg = c.accent_1, nocombine = true },
-    MiniJump2dSpotUnique          = { fg = c.red_faint, bg = c.bg_red_subtle, bold      = true, undercurl = true, sp = c.red },
+    MiniJump                      = { sp        = c.magenta_warmer, bg     = c.bg_magenta_subtle, undercurl = true },
+    MiniJump2dDim                 = { fg        = c.fg_dim },
+    MiniJump2dSpot                = { fg        = c.accent_0, underline    = true, bold                     = true, nocombine = true },
+    MiniJump2dSpotAhead           = { fg        = c.accent_1, nocombine    = true },
+    MiniJump2dSpotUnique          = { fg        = c.red_faint, bg          = c.bg_red_subtle, bold          = true, undercurl = true, sp = c.red },
 
     MiniMapNormal                 = { link      = "NormalFloat" },
     MiniMapSymbolCount            = { link      = "Special" },
@@ -105,7 +107,7 @@ function M.get(c, opts)
 
     MiniPickBorder                = { link      = "FloatBorder" },
     MiniPickBorderBusy            = { link      = "DiagnosticFloatingWarn" },
-    MiniPickBorderText            = { fg        = c.prompt, bg             = c.bg_dim, bold         = true },
+    MiniPickBorderText            = { fg        = c.prompt, bg             = c.bg_dim, bold                 = true },
     MiniPickHeader                = { fg        = c.name, bold             = true },
     MiniPickIconDirectory         = { link      = "Directory" },
     MiniPickIconFile              = { link      = "MiniPickNormal" },
@@ -130,17 +132,17 @@ function M.get(c, opts)
     MiniStatuslineDevinfo         = { fg        = c.fg_mode_line, bg       = c.bg_mode_line },
     MiniStatuslineFileinfo        = { fg        = c.fg_mode_line, bg       = c.bg_mode_line },
     MiniStatuslineFilename        = { fg        = c.fg_mode_line, bg       = c.bg_dim },
-    MiniStatuslineInactive        = { fg        = c.fg_mode_line, bg       = c.bg_mode_line },
-    MiniStatuslineModeCommand     = { fg        = c.fg_term_black, bg      = c.yellow, bold         = true },
-    MiniStatuslineModeInsert      = { fg        = c.fg_term_black, bg      = c.green, bold          = true },
-    MiniStatuslineModeNormal      = { fg        = c.fg_term_black, bg      = c.blue, bold           = true },
-    MiniStatuslineModeOther       = { fg        = c.fg_term_black, bg      = c.cyan, bold           = true },
-    MiniStatuslineModeReplace     = { fg        = c.fg_term_black, bg      = c.red, bold            = true },
-    MiniStatuslineModeVisual      = { fg        = c.fg_term_black, bg      = c.magenta, bold        = true },
+    MiniStatuslineInactive        = "StatusLineNC",
+    MiniStatuslineModeNormal      = { fg        = statusline_fg, bg        = c.rainbow_0, bold              = true },
+    MiniStatuslineModeInsert      = { fg        = statusline_fg, bg        = c.modeline_info, bold          = true },
+    MiniStatuslineModeCommand     = { fg        = statusline_fg, bg        = c.rainbow_2, bold              = true },
+    MiniStatuslineModeOther       = { fg        = statusline_fg, bg        = c.cyan, bold                   = true },
+    MiniStatuslineModeReplace     = { fg        = statusline_fg, bg        = c.err, bold                    = true },
+    MiniStatuslineModeVisual      = { fg        = statusline_fg, bg        = c.warning, bold                = true },
 
     MiniSurround                  = { bg        = c.yellow_cooler, fg      = c.fg_term_black },
 
-    MiniTablineCurrent            = { fg        = c.fg_alt, bg            = c.bg_tab_current },
+    MiniTablineCurrent            = { fg        = c.fg_alt, bg             = c.bg_tab_current },
     MiniTablineFill               = { bg        = c.bg_tab_bar },
     MiniTablineHidden             = { fg        = c.fg_main, bg            = c.bg_dim },
     MiniTablineModifiedCurrent    = { fg        = c.warning, bg            = c.bg_warning },
