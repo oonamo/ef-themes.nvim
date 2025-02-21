@@ -142,7 +142,7 @@ Usage ~
  EfThemes.setup({ transparent = true }) -- Update config
 <
 Parameters ~
-{opts} `(optional)` Ef-Themes.Config Config to use for ef-themes. See |ef-themes-defaults|
+{opts} `(optional)` `(Ef)`-Themes.Config Config to use for ef-themes. See |ef-themes-defaults|
 
 ------------------------------------------------------------------------------
                                                               *EfThemes.clean()*
@@ -236,10 +236,10 @@ Parameters ~
 Gets the palette for a given ef-theme
 Parameters ~
 {name} `(string)` Name of Ef-theme
-{opts} `(optional)` Ef-Themes.Config Config. See |ef-themes-defaults|
+{opts} `(optional)` `(Ef)`-Themes.Config Config. See |ef-themes-defaults|
 
 Return ~
-Ef-Theme
+`(Ef)`-Theme
 
 
 ==============================================================================
