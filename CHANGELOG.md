@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.2.0](https://github.com/oonamo/ef-themes.nvim/compare/v1.1.0...v1.2.0) (2025-02-21)
+
+
+### Features
+
+* **dev:** allow for calling `hipatterns` dev feature without reloading ([a147b3f](https://github.com/oonamo/ef-themes.nvim/commit/a147b3f458c66148252a2976b653cac63b29d1da))
+* **dev:** allow using CSS highlights and for templated strings `hipatterns` ([3e2f112](https://github.com/oonamo/ef-themes.nvim/commit/3e2f112710706506d02ee7dc310e74949ef42193))
+* **extras:** add firefox extras ([9d1600b](https://github.com/oonamo/ef-themes.nvim/commit/9d1600b5ad80b1962471790d624534b08b58f70b))
+* **mini.statusline:** improve styling and use colors closer to lualine ([967fd36](https://github.com/oonamo/ef-themes.nvim/commit/967fd360fa46e30f8da3eb301bce256ea11854aa))
+* **orgmode:** add `orgmode` module ([f9e2bee](https://github.com/oonamo/ef-themes.nvim/commit/f9e2beeeea9c0ae6789784058ab126c5c7ad2edf))
+* **styles:** Add `classes` and `types` styles ([fce33cd](https://github.com/oonamo/ef-themes.nvim/commit/fce33cde601bdb06b3456010dd3b2e1d32b52c0f))
+
+
+### Bug Fixes
+
+* **base:** Fix `Search` and `CurSearch` groups ([da0e719](https://github.com/oonamo/ef-themes.nvim/commit/da0e719458572c7fec8d1cd26160e2f48aef948d))
+* **core:** correctly determine if a custom theme is dark ([e051636](https://github.com/oonamo/ef-themes.nvim/commit/e0516365e46f0c5705398435ad0ce575f5ee9bfa))
+* **dev:** `hipatterns` now can work without reloading config ([a1cb1d1](https://github.com/oonamo/ef-themes.nvim/commit/a1cb1d154ce046e0543b2103e8cf1a633d900610))
+* **extras:** fix licensing mismatch in kitty extra ([2611f03](https://github.com/oonamo/ef-themes.nvim/commit/2611f03a49a8be64e1bb1a375197ce11d740ba73))
+* **firefox:** use `color-scheme` style and variables to prevent issues ([064b3b5](https://github.com/oonamo/ef-themes.nvim/commit/064b3b5a3ae32594bedcf5eeb86a3036fd58e43d))
+* **style:** fix transparency for `Normal` highlight ([aa8776e](https://github.com/oonamo/ef-themes.nvim/commit/aa8776e05209e09008eee254c145148b2ae2590a))
+
 ## [1.1.0](https://github.com/oonamo/ef-themes.nvim/compare/v1.0.0...v1.1.0) (2025-02-03)
 
 
