@@ -30,7 +30,7 @@ function M.get(c, opts)
     MiniAnimateNormalFloat        = { link      = "NormalFloat" },
 
     MiniClueBorder                = { link      = "FloatBorder" },
-    MiniClueDescGroup             = { fg        = c.keyword },
+    MiniClueDescGroup             = { fg        = c.keyword, bg = c.bg_dim },
     MiniClueDescSingle            = { fg        = c.fg_main },
     MiniClueNextKey               = { fg        = c.keybind, bold          = true },
     MiniClueNextKeyWithPostkeys   = { fg        = c.err },
