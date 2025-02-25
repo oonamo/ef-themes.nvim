@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/oonamo/ef-themes.nvim/compare/v1.2.0...v1.2.1) (2025-02-25)
+
+
+### Bug Fixes
+
+* **mini:** add appropriate background to `MiniClueDescGroup` ([1a8ed9a](https://github.com/oonamo/ef-themes.nvim/commit/1a8ed9a36b6a1a841a6632103df0831a9212a7d2))
+
 ## [1.2.0](https://github.com/oonamo/ef-themes.nvim/compare/v1.1.0...v1.2.0) (2025-02-21)
 
 
