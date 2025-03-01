@@ -38,9 +38,9 @@ function M.get(c, opts)
     DiagnosticVirtualTextInfo   = { fg        = c.info, bg                                   =  c.bg_info }, -- Used for "Information" diagnostic virtual text
     DiagnosticVirtualTextWarn   = { fg        = c.warning, bg                                =  c.bg_warning }, -- Used for "Warning" diagnostic virtual text
     DiagnosticWarn              = { fg        = c.warning }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
-    DiffAdd                     = { bg        = c.bg_added },
-    DiffChange                  = { bg        = c.bg_changed },
-    DiffDelete                  = { bg        = c.bg_removed },
+    DiffAdd                     = { bg        = c.bg_added, fg = c.fg_added },
+    DiffChange                  = { bg        = c.bg_changed, fg = c.fg_changed },
+    DiffDelete                  = { bg        = c.bg_removed, fg = c.fg_removed },
     DiffText                    = { bg        = c.bg_added_refine }, -- diff mode: Changed text within a changed line |diff.txt|
     Directory                   = { fg        = c.accent_0 }, -- directory names (and other special names in listings)
     EndOfBuffer                 = { fg        = c.bg_main }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.

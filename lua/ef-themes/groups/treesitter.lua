@@ -25,6 +25,7 @@ function M.get(c, opts)
 
      ["@annotation"]                   = { fg            = c.variable },
      ["@attribute"]                    = { link          = "PreProc" },
+     ["@attribute.diff"]               = { bg = c.bg_alt, fg = c.fg_main, bold = true },
      ["@boolean"]                      = { link          = "Boolean" },
      ["@character"]                    = { link          = "Character" },
      ["@character.printf"]             = { link          = "SpecialChar" },
