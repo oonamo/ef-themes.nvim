@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 REPO_OWNER="protesilaos"
 REPO_NAME="ef-themes"

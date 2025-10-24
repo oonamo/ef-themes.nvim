@@ -1,7 +1,7 @@
 local M = {
   extras = {
     -- aerc = { url = "https://git.sr.ht/~rjarry/aerc", label = "Aerc" },
-    -- alacritty = { ext = "toml", url = "https://github.com/alacritty/alacritty", label = "Alacritty" },
+    alacritty = { ext = "toml", url = "https://github.com/alacritty/alacritty", label = "Alacritty" },
     -- bat = { ext = "tmTheme", url = "https://github.com/sharkdp/bat", label = "Bat" },
     -- delta = { ext = "gitconfig", url = "https://github.com/dandavison/delta", label = "Delta" },
     -- dunst = { ext = "dunstrc", url = "https://dunst-project.org/", label = "Dunst" },
@@ -20,7 +20,7 @@ local M = {
     --   label = "Terminator",
     -- },
     -- tilix = { ext = "json", url = "https://github.com/gnunn1/tilix", label = "Tilix" },
-    -- tmux = { ext = "tmux", url = "https://github.com/tmux/tmux/wiki", label = "Tmux" },
+    tmux = { ext = "tmux", url = "https://github.com/tmux/tmux/wiki", label = "Tmux" },
     lazygit = { ext = "yml", url = "https://github.com/jesseduffield/lazygit", label = "Lazygit" },
     fzf = { ext = "sh", url = "https://github.com/junegunn/fzf", label = "Fzf" },
     ghostty = { ext = "", url = "https://github.com/ghostty-org/ghostty", label = "Ghostty" },

@@ -1,0 +1,37 @@
+# Modus Themes for Alacritty
+# Auto generated with https://github.com/oonamo/ef-themes.nvim/blob/master/lua/ef-themes/extras/alacritty.lua
+
+# Default colors
+[colors.primary]
+background   = '#000000'
+foreground   = '#d0d0d0'
+
+# Normal colors
+[colors.normal]
+black     = '#000000'
+red       = '#ef6560'
+green     = '#0faa26'
+yellow    = '#bf9032'
+blue      = '#3f95f6'
+magenta   = '#d369af'
+cyan      = '#4fbaef'
+white     = '#d0d0d0'
+
+# Bright colors
+[colors.bright]
+black     = '#1a1a1a'
+red       = '#b02930'
+green     = '#337133'
+yellow    = '#8f5040'
+blue      = '#4648d0'
+magenta   = '#804fdd'
+cyan      = '#2270cf'
+white     = '#857f8f'
+
+[[colors.indexed_colors]]
+index     = 16
+color     = '#d1843f'
+
+[[colors.indexed_colors]]
+index     = 17
+color     = '#d56f72'

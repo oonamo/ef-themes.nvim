@@ -324,10 +324,12 @@
 <!-- extras:start -->
 | Tool | Extra |
 |:--:|:--:|
+| [Alacritty](https://github.com/alacritty/alacritty) | [extras/alacritty](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/alacritty) |
 | [Fzf](https://github.com/junegunn/fzf) | [extras/fzf](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/fzf) |
 | [Ghostty](https://github.com/ghostty-org/ghostty) | [extras/ghostty](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/ghostty) |
 | [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) | [extras/kitty](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/kitty) |
 | [Lazygit](https://github.com/jesseduffield/lazygit) | [extras/lazygit](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/lazygit) |
+| [Tmux](https://github.com/tmux/tmux/wiki) | [extras/tmux](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/tmux) |
 | [Vimium](https://vimium.github.io/) | [extras/vimium](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/vimium) |
 | [WezTerm](https://wezfurlong.org/wezterm/config/files.html) | [extras/wezterm](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/wezterm) |
 | [Windows Terminal](https://aka.ms/terminal-documentation) | [extras/windows_terminal](https://github.com/oonamo/ef-themes.nvim/tree/main/extras/windows_terminal) |
