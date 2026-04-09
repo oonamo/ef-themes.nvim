@@ -15,30 +15,30 @@
 
 <details>
     
-![ef-autumn](https://github.com/user-attachments/assets/9481ab13-b737-42c2-9446-8be774433ff1)
-
 <summary>ef-autumn</summary>
+
+![ef-autumn](https://github.com/user-attachments/assets/9481ab13-b737-42c2-9446-8be774433ff1)
 
 </details>
 <details>
-
-![ef-bio](https://github.com/user-attachments/assets/1ae2bd62-02f8-4ce4-a326-54e0c2ec3a24)
 
 <summary>ef-bio</summary>
 
+![ef-bio](https://github.com/user-attachments/assets/1ae2bd62-02f8-4ce4-a326-54e0c2ec3a24)
+
 </details>
 <details>
     
-![ef-cherie](https://github.com/user-attachments/assets/b8bfcf11-a544-434b-bf78-3bd30f2f4a8a)
-
 <summary>ef-cherie</summary>
 
+![ef-cherie](https://github.com/user-attachments/assets/b8bfcf11-a544-434b-bf78-3bd30f2f4a8a)
+
 </details>
 <details>
     
-![ef-dark](https://github.com/user-attachments/assets/1742c640-6c40-4848-9830-6d96cabec416)
-
 <summary>ef-dark</summary>
+
+![ef-dark](https://github.com/user-attachments/assets/1742c640-6c40-4848-9830-6d96cabec416)
 
 </details>
 <details>
@@ -51,86 +51,86 @@
 </details>
 <details>
 
-![ef-dream](https://github.com/user-attachments/assets/2d2e8471-08fd-4d0e-a106-dd2c1f1411c9)
-
 <summary>ef-dream</summary>
+
+![ef-dream](https://github.com/user-attachments/assets/2d2e8471-08fd-4d0e-a106-dd2c1f1411c9)
 
 </details>
 <details>
 
-![ef-duo-dark](https://github.com/user-attachments/assets/558ff21a-c77e-4c16-9730-c5e404ed9cd9)
-
 <summary>ef-duo-dark</summary>
+
+![ef-duo-dark](https://github.com/user-attachments/assets/558ff21a-c77e-4c16-9730-c5e404ed9cd9)
 
 </details>
 <details>
     
-![ef-elea-dark](https://github.com/user-attachments/assets/be2d3166-8aa8-471e-9f80-b317c3cd2ad9)
-
 <summary>ef-elea-dark</summary>
+
+![ef-elea-dark](https://github.com/user-attachments/assets/be2d3166-8aa8-471e-9f80-b317c3cd2ad9)
 
 </details>
 <details>
-
-![ef-maris-dark](https://github.com/user-attachments/assets/ac1ce696-c715-43e1-b2cd-86c9f38cb028)
 
 <summary>ef-maris-dark</summary>
 
+![ef-maris-dark](https://github.com/user-attachments/assets/ac1ce696-c715-43e1-b2cd-86c9f38cb028)
+
 </details>
 <details>
-
-![ef-melissa-dark](https://github.com/user-attachments/assets/c6c81273-474a-4938-825f-1c97c7cfb952)
 
 <summary>ef-melissa-dark</summary>
 
+![ef-melissa-dark](https://github.com/user-attachments/assets/c6c81273-474a-4938-825f-1c97c7cfb952)
+
 </details>
 <details>
-
-![ef-night](https://github.com/user-attachments/assets/b0614cda-2cc9-403b-8730-4ca77657e265)
 
 <summary>ef-night</summary>
 
+![ef-night](https://github.com/user-attachments/assets/b0614cda-2cc9-403b-8730-4ca77657e265)
+
 </details>
 <details>
-
-![ef-owl](https://github.com/user-attachments/assets/688766af-1418-49f3-961c-5624cd632fcf)
 
 <summary>ef-owl</summary>
 
+![ef-owl](https://github.com/user-attachments/assets/688766af-1418-49f3-961c-5624cd632fcf)
+
 </details>
 <details>
-
-![ef-rosa](https://github.com/user-attachments/assets/e1288b69-8527-475c-817c-e17b94a369c9)
 
 <summary>ef-rosa</summary>
 
+![ef-rosa](https://github.com/user-attachments/assets/e1288b69-8527-475c-817c-e17b94a369c9)
+
 </details>
 <details>
-
-![ef-symbiosis](https://github.com/user-attachments/assets/83c9b514-b96b-4529-8446-5163994fa511)
 
 <summary>ef-symbiosis</summary>
 
+![ef-symbiosis](https://github.com/user-attachments/assets/83c9b514-b96b-4529-8446-5163994fa511)
+
 </details>
 <details>
-
-![ef-trio-dark](https://github.com/user-attachments/assets/20e3ade6-8fe6-4c9e-a6bf-02b82d6cf328)
 
 <summary>ef-trio-dark</summary>
 
+![ef-trio-dark](https://github.com/user-attachments/assets/20e3ade6-8fe6-4c9e-a6bf-02b82d6cf328)
+
 </details>
 <details>
-
-![ef-tritanopia-dark](https://github.com/user-attachments/assets/94fb27e2-6dd8-4374-ae7a-368eea6a659c)
 
 <summary>ef-tritanopia-dark</summary>
 
+![ef-tritanopia-dark](https://github.com/user-attachments/assets/94fb27e2-6dd8-4374-ae7a-368eea6a659c)
+
 </details>
 <details>
 
-![ef-winter](https://github.com/user-attachments/assets/163e066f-936d-4ce9-9967-ae7bcbdfc53d)
-
 <summary>ef-winter</summary>
+
+![ef-winter](https://github.com/user-attachments/assets/163e066f-936d-4ce9-9967-ae7bcbdfc53d)
 
 </details>
 
@@ -146,135 +146,135 @@
 
 <details>
 
-![ef-arbutus](https://github.com/user-attachments/assets/ae0b7905-c7a0-426b-bb21-02c895723160)
-
 <summary>ef-arbutus</summary>
+
+![ef-arbutus](https://github.com/user-attachments/assets/ae0b7905-c7a0-426b-bb21-02c895723160)
 
 </details>
 <details>
-
-![ef-cyprus](https://github.com/user-attachments/assets/4103a6ed-85a9-4896-a27c-5714c900e0eb)
 
 <summary>ef-cyprus</summary>
 
+![ef-cyprus](https://github.com/user-attachments/assets/4103a6ed-85a9-4896-a27c-5714c900e0eb)
+
 </details>
 <details>
 
-
-![ef-day](https://github.com/user-attachments/assets/941ff7dd-31fe-4436-ac5d-3e6809022ff8)
 
 <summary>ef-day</summary>
 
+![ef-day](https://github.com/user-attachments/assets/941ff7dd-31fe-4436-ac5d-3e6809022ff8)
+
 </details>
 <details>
 
-
-![ef-deuteranopia-light](https://github.com/user-attachments/assets/d1e555bb-bfd0-4a66-96e6-5c2d404c9792)
 
 <summary>ef-deuteranopia-light</summary>
 
+![ef-deuteranopia-light](https://github.com/user-attachments/assets/d1e555bb-bfd0-4a66-96e6-5c2d404c9792)
+
 </details>
 <details>
 
-
-![ef-duo-light](https://github.com/user-attachments/assets/613a2a0d-fc22-41af-ab5e-ea57745f0989)
 
 <summary>ef-duo-light</summary>
 
+![ef-duo-light](https://github.com/user-attachments/assets/613a2a0d-fc22-41af-ab5e-ea57745f0989)
+
 </details>
 <details>
 
-
-![ef-eagle](https://github.com/user-attachments/assets/b2a7ac40-b22a-4fc4-88b7-5d5013100f77)
 
 <summary>ef-eagle</summary>
 
+![ef-eagle](https://github.com/user-attachments/assets/b2a7ac40-b22a-4fc4-88b7-5d5013100f77)
+
 </details>
 <details>
 
-
-![ef-elea-light](https://github.com/user-attachments/assets/0f9d5ec2-a905-467a-8133-dd34d3c3eafa)
 
 <summary>ef-elea-light</summary>
 
+![ef-elea-light](https://github.com/user-attachments/assets/0f9d5ec2-a905-467a-8133-dd34d3c3eafa)
+
 </details>
 <details>
 
-
-![ef-frost](https://github.com/user-attachments/assets/3ebbc39a-0177-4fe0-b7b2-896dca52cc45)
 
 <summary>ef-frost</summary>
 
+![ef-frost](https://github.com/user-attachments/assets/3ebbc39a-0177-4fe0-b7b2-896dca52cc45)
+
 </details>
 <details>
 
-
-![ef-kassio](https://github.com/user-attachments/assets/e4bbba65-bdc9-4561-9973-67e6e07a488c)
 
 <summary>ef-kassio</summary>
 
+![ef-kassio](https://github.com/user-attachments/assets/e4bbba65-bdc9-4561-9973-67e6e07a488c)
+
 </details>
 <details>
 
-
-![ef-light](https://github.com/user-attachments/assets/6154ba8b-4cf8-47e7-837a-78cae624285c)
 
 <summary>ef-light</summary>
 
+![ef-light](https://github.com/user-attachments/assets/6154ba8b-4cf8-47e7-837a-78cae624285c)
+
 </details>
 <details>
 
-
-![ef-maris-light](https://github.com/user-attachments/assets/731673ca-049f-459e-a516-28bf355b1f52)
 
 <summary>ef-maris-light</summary>
 
+![ef-maris-light](https://github.com/user-attachments/assets/731673ca-049f-459e-a516-28bf355b1f52)
+
 </details>
 <details>
-
-![ef-melissa-light](https://github.com/user-attachments/assets/3f84b811-ae95-43f9-a233-e13bd1576d18)
 
 <summary>ef-melissa-light</summary>
 
+![ef-melissa-light](https://github.com/user-attachments/assets/3f84b811-ae95-43f9-a233-e13bd1576d18)
+
 </details>
 <details>
 
-
-![ef-reverie](https://github.com/user-attachments/assets/14ad077c-7c23-4f66-89f0-68afb2d9a90b)
 
 <summary>ef-reverie</summary>
 
+![ef-reverie](https://github.com/user-attachments/assets/14ad077c-7c23-4f66-89f0-68afb2d9a90b)
+
 </details>
 <details>
 
-
-![ef-spring](https://github.com/user-attachments/assets/1dc8422c-88fa-4bf8-b01f-d84a58aca3a1)
 
 <summary>ef-spring</summary>
 
+![ef-spring](https://github.com/user-attachments/assets/1dc8422c-88fa-4bf8-b01f-d84a58aca3a1)
+
 </details>
 <details>
 
-
-![ef-summer](https://github.com/user-attachments/assets/bb2dd3a4-fa5f-492a-9d3f-319196b61475)
 
 <summary>ef-summer</summary>
 
+![ef-summer](https://github.com/user-attachments/assets/bb2dd3a4-fa5f-492a-9d3f-319196b61475)
+
 </details>
 <details>
 
-
-![ef-trio-light](https://github.com/user-attachments/assets/ec5fb3e5-7975-48a4-be2b-adced9686ac6)
 
 <summary>ef-trio-light</summary>
 
+![ef-trio-light](https://github.com/user-attachments/assets/ec5fb3e5-7975-48a4-be2b-adced9686ac6)
+
 </details>
 <details>
 
 
-![ef-tritanopia-light](https://github.com/user-attachments/assets/6254772a-f8c6-4d31-bd73-be913556ee87)
-
 <summary>ef-tritanopia-light</summary>
+
+![ef-tritanopia-light](https://github.com/user-attachments/assets/6254772a-f8c6-4d31-bd73-be913556ee87)
 
 </details>
 
