@@ -83,10 +83,10 @@ function M.get(c, opts)
     MiniFilesTitle                = { link      = "FloatTitle" },
     MiniFilesTitleFocused         = { fg        = c.name, bg               = c.bg_dim, bold                 = true },
 
-    MiniHipatternsFixme           = { fg        = c.fg_term_black, bg      = c.err, bold                    = true },
-    MiniHipatternsHack            = { fg        = c.fg_term_black, bg      = c.warning, bold                = true },
-    MiniHipatternsNote            = { fg        = c.fg_term_black, bg      = c.blue, bold                   = true },
-    MiniHipatternsTodo            = { fg        = c.fg_term_black, bg      = c.info, bold                   = true },
+    MiniHipatternsFixme           = { fg        = c.fg_intense,    bg      = c.bg_err, bold                 = true },
+    MiniHipatternsHack            = { fg        = c.fg_intense,    bg      = c.bg_warning, bold             = true },
+    MiniHipatternsNote            = { fg        = c.fg_intense,    bg      = c.bg_blue_intense, bold        = true },
+    MiniHipatternsTodo            = { fg        = c.fg_intense,    bg      = c.bg_info, bold                = true },
 
     MiniIconsAzure                = { fg        = c.blue_warmer },
     MiniIconsBlue                 = { fg        = is_dark and c.blue_faint or c.blue_cooler },
