@@ -151,7 +151,7 @@
 ---@field mail_recipient string
 ---@field mail_subject string
 ---@field mail_other string
----@field bg_search_match string
+---@field bg_search_static string
 ---@field bg_search_current string
 ---@field bg_search_lazy string
 ---@field bg_search_replace string

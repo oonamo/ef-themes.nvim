@@ -34,6 +34,7 @@ Config.defaults = {
 
     diagnostic = "default", -- Can be "full"
     pickers = "default", -- Can be "borderless"
+    tabline = "default", -- Can be "modern"
   },
 
   modules = {

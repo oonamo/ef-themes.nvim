@@ -23,6 +23,19 @@ function M.get(c, opts)
     }
   end
 
+  if opts.styles.tabline == "modern" then
+    picker = vim.tbl_deep_extend("keep", picker, {
+      MiniTablineCurrent = { fg = c.fg_main, bg = c.bg_dim, underline = true, sp = c.accent_0 , bold = true},
+      MiniTablineFill = { bg = c.bg_main },
+      MiniTablineHidden = { fg = c.fg_main, bg = c.bg_main },
+      MiniTablineModifiedCurrent = { fg = c.warning, bg = c.bg_dim, underline = true, sp = c.warning, bold = true },
+      MiniTablineModifiedHidden = { bg = c.bg_main, fg = c.bg_err },
+      MiniTablineModifiedVisible = { fg = c.fg_alt, bg = c.bg_main, underline = true, sp = c.warning },
+      MiniTablineTabpagesection = { bg = c.bg_main, fg = "NONE" },
+      MiniTablineVisible = { fg = c.fg_main, bg = c.bg_main, underline = true, sp = c.accent_0 },
+    })
+  end
+
   local statusline_fg = is_dark and c.fg_term_black or c.bg_main
   -- stylua: ignore
   return vim.tbl_deep_extend("keep", picker, {
