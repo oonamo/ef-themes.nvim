@@ -24,7 +24,6 @@ function Palette.__compatability_layer(name, palette)
   local is_dark = require("ef-themes").is_dark(name)
 
   -- https://github.com/protesilaos/ef-themes/blob/e1f617607a5f0692b398365dcd8412ba1e98ccb3/ef-arbutus-theme.el#L181
-  -- Used to be bg-search-match, now is bg-search-static
   palette["bg_search_match"] = palette["bg_search_static"]
 
   -- https://github.com/protesilaos/modus-themes/blob/21ffe0cd5a65365499c2e2d21a728de3cf5a7082/modus-themes.el#L7837-L7845
@@ -73,6 +72,10 @@ function Palette.__compatability_layer(name, palette)
   palette["bg_tab_bar"] = palette["bg_dim"]
   palette["bg_tab_current"] = palette["bg_main"]
   palette["bg_tab_other"] = palette["bg_inactive"]
+
+  -- https://github.com/protesilaos/ef-themes/blob/e1f617607a5f0692b398365dcd8412ba1e98ccb3/ef-trio-dark-theme.el#L104-L105
+  palette["bg_mode_line"] = palette["bg_mode_line_active"]
+  palette["fg_mode_line"] = palette["fg_mode_line_active"]
 
   return palette
 end
