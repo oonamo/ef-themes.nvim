@@ -60,6 +60,7 @@ local EfThemes = {
   list = {
     -- All the dark themes, as defined by `ef-themes.el`
     dark = {
+      "ef-atlantis",
       "ef-autumn",
       "ef-bio",
       "ef-cherie",
@@ -68,6 +69,7 @@ local EfThemes = {
       "ef-dream",
       "ef-duo-dark",
       "ef-elea-dark",
+      "ef-fig",
       "ef-maris-dark",
       "ef-melissa-dark",
       "ef-night",
@@ -81,6 +83,7 @@ local EfThemes = {
     -- All the light themes, as defined by `ef-themes.el`
     light = {
       "ef-arbutus",
+      "ef-arcadia",
       "ef-cyprus",
       "ef-day",
       "ef-deuteranopia-light",
@@ -92,6 +95,7 @@ local EfThemes = {
       "ef-light",
       "ef-maris-light",
       "ef-melissa-light",
+      "ef-orange",
       "ef-reverie",
       "ef-spring",
       "ef-summer",
