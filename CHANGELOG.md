@@ -1,5 +1,28 @@
 # Changelog
 
+## [2.0.0](https://github.com/oonamo/ef-themes.nvim/compare/v1.2.0...v2.0.0) (2026-08-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* update ef-themes.nvim to have new ef-themes.el themes
+
+### BREAKING
+
+* update ef-themes.nvim to have new ef-themes.el themes ([9ee69a6](https://github.com/oonamo/ef-themes.nvim/commit/9ee69a6ba40583f2c0047aac8963ad1c1d1fe95d))
+
+
+### Features
+
+* add modern tabline option ([27132f2](https://github.com/oonamo/ef-themes.nvim/commit/27132f22a4d1ad25093ab971f197d3fd94c64c10))
+* **diff:** improve diff highlighting ([5deb082](https://github.com/oonamo/ef-themes.nvim/commit/5deb08237d1e243532dfdb5b24c3658c31d255aa))
+
+
+### Bug Fixes
+
+* **mini:** add appropriate background to `MiniClueDescGroup` ([1a8ed9a](https://github.com/oonamo/ef-themes.nvim/commit/1a8ed9a36b6a1a841a6632103df0831a9212a7d2))
+* update new themes to reflect correct color ([9ee69a6](https://github.com/oonamo/ef-themes.nvim/commit/9ee69a6ba40583f2c0047aac8963ad1c1d1fe95d))
+
 ## [1.2.0](https://github.com/oonamo/ef-themes.nvim/compare/v1.1.0...v1.2.0) (2025-02-21)
 
 
