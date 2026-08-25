@@ -10,11 +10,11 @@ split = "#a5aaaf"
 compose_cursor = "#9a501f"
 scrollbar_thumb = "#d0e7c4"
 
-ansi = ["black", "#c3303a", "#00601f", "#9a501f", "#375cc6", "#80308f", "#3f6faf", "gray65"]
-brights = ["gray35", "#d00000", "#007047", "#88541f", "#444fcf", "#5032aa", "#00677f", "white"]
+ansi = ["#221321", "#c3303a", "#00601f", "#9a501f", "#375cc6", "#80308f", "#1f70af", "#b0b7aa"]
+brights = ["#676470", "#d00000", "#355500", "#b04300", "#444fcf", "#9f356a", "#3f6faf", "#edf5e2"]
 
 [colors.tab_bar]
-inactive_tab_edge = "#b0b7aa"
+inactive_tab_edge = "#e0e2d0"
 background = "#edf5e2"
 
 [colors.tab_bar.active_tab]
@@ -23,7 +23,7 @@ bg_color = "#5f5f1f"
 
 [colors.tab_bar.inactive_tab]
 fg_color = "#5f5f1f"
-bg_color = "#d0d7ca"
+bg_color = "#e3e9d6"
 intensity = "Bold"
 
 [colors.tab_bar.inactive_tab_hover]

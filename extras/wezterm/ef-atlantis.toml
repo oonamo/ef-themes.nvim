@@ -1,0 +1,46 @@
+[colors]
+foreground = "#bfcccf"
+background = "#1a143e"
+cursor_bg = "#baa1ab"
+cursor_border = "#baa1ab"
+cursor_fg = "#1a143e"
+selection_bg = "#32446b"
+selection_fg = "#bfcccf"
+split = "#454e59"
+compose_cursor = "#c48502"
+scrollbar_thumb = "#2b265b"
+
+ansi = ["#1a143e", "#ef656a", "#1fa526", "#c48502", "#379cf6", "#d590af", "#4fb0cf", "#7f8385"]
+brights = ["#3a4661", "#f47360", "#77b22f", "#e6832f", "#6a88ff", "#e580ea", "#6fafff", "#bfcccf"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#24314f"
+background = "#1a143e"
+
+[colors.tab_bar.active_tab]
+fg_color = "#1a143e"
+bg_color = "#967e92"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#967e92"
+bg_color = "#1a204b"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#967e92"
+bg_color = "#2b265b"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#1fa526"
+bg_color = "#1a143e"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#379cf6"
+bg_color = "#1a143e"
+
+[metadata]
+aliases = []
+author = "prot"
+name = "ef-atlantis"

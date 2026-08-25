@@ -1,0 +1,46 @@
+[colors]
+foreground = "#e4d3e1"
+background = "#3b2043"
+cursor_bg = "#e0646a"
+cursor_border = "#e0646a"
+cursor_fg = "#3b2043"
+selection_bg = "#643270"
+selection_fg = "#e4d3e1"
+split = "#796f6e"
+compose_cursor = "#e4c53f"
+scrollbar_thumb = "#47275f"
+
+ansi = ["#3b2043", "#ef797f", "#7fbb3f", "#e4c53f", "#57aff6", "#ffb2d6", "#5fc0dc", "#9d9d9d"]
+brights = ["#6a586e", "#ff7f5f", "#aad05a", "#f2a85f", "#78b2ff", "#f28fdf", "#7fc5df", "#e4d3e1"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#4a384e"
+background = "#3b2043"
+
+[colors.tab_bar.active_tab]
+fg_color = "#3b2043"
+bg_color = "#c6a4cf"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#c6a4cf"
+bg_color = "#432e4e"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#c6a4cf"
+bg_color = "#47275f"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#7fbb3f"
+bg_color = "#3b2043"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#57aff6"
+bg_color = "#3b2043"
+
+[metadata]
+aliases = []
+author = "prot"
+name = "ef-fig"

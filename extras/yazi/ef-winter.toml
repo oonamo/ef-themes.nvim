@@ -19,8 +19,8 @@ marker_marked   = { fg = "#d369af", bg = "#d369af" }
 marker_selected = { fg = "#3f95f6", bg = "#3f95f6" }
 
 # Tab
-tab_active   = { fg = "#b8c6d5", bg = "#2a2f42" }
-tab_inactive = { fg = "#807c9f", bg = "#4a4f62" }
+tab_active   = { fg = "#b8c6d5", bg = "#1d202f" }
+tab_inactive = { fg = "#807c9f", bg = "#29282f" }
 tab_width    = 1
 
 # Count
@@ -33,13 +33,13 @@ border_symbol = "│"
 border_style  = { fg = "#4a4955" }
 
 [mode]
-normal_main = { fg = "black", bg = "#3f95f6", bold = true }
+normal_main = { fg = "#0f0b15", bg = "#3f95f6", bold = true }
 normal_alt  = { fg = "#3f95f6", bg = "#807c9f" }
 
-select_main = { fg = "black", bg = "#d369af", bold = true }
+select_main = { fg = "#0f0b15", bg = "#d369af", bold = true }
 select_alt  = { fg = "#d369af", bg = "#807c9f" }
 
-unset_main  = { fg = "black", bg = "#af85ea", bold = true }
+unset_main  = { fg = "#0f0b15", bg = "#af85ea", bold = true }
 unset_alt   = { fg = "#af85ea", bg = "#807c9f" }
 
 [status]
@@ -57,12 +57,12 @@ perm_type  = { fg = "#3f95f6" }
 perm_read  = { fg = "#b58a52" }
 perm_write = { fg = "#f47359" }
 perm_exec  = { fg = "#29a444" }
-perm_sep   = { fg = "black" }
+perm_sep   = { fg = "#0f0b15" }
 
 [pick]
 border   = { fg = "#4a4955" }
 active   = { fg = "#b8c6d5",  bg = "#003045" }
-inactive = { fg = "#bf8f8f" }
+inactive = { fg = "#bf8a9f" }
 
 # Input
 [input]

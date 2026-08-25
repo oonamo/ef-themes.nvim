@@ -1,0 +1,46 @@
+[colors]
+foreground = "#40314e"
+background = "#d6e4d3"
+cursor_bg = "#495080"
+cursor_border = "#495080"
+cursor_fg = "#d6e4d3"
+selection_bg = "#b3c5c0"
+selection_fg = "#40314e"
+split = "#959a9f"
+compose_cursor = "#6b4500"
+scrollbar_thumb = "#d0d0c0"
+
+ansi = ["#40314e", "#882000", "#206020", "#6b4500", "#113384", "#922e7f", "#125a7f", "#b0b7aa"]
+brights = ["#646170", "#9a1500", "#3f6d00", "#743f00", "#3a40a0", "#960f4f", "#2a5090", "#d6e4d3"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#bfc2b0"
+background = "#d6e4d3"
+
+[colors.tab_bar.active_tab]
+fg_color = "#d6e4d3"
+bg_color = "#3f5f5f"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#3f5f5f"
+bg_color = "#ced7c8"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#3f5f5f"
+bg_color = "#d0d0c0"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#206020"
+bg_color = "#d6e4d3"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#113384"
+bg_color = "#d6e4d3"
+
+[metadata]
+aliases = []
+author = "prot"
+name = "ef-arcadia"
