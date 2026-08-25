@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/oonamo/ef-themes.nvim/compare/v2.0.0...v2.0.1) (2026-08-25)
+
+
+### Bug Fixes
+
+* update modeline name to match new convention ([8d575bb](https://github.com/oonamo/ef-themes.nvim/commit/8d575bbbe83f8ec26515a8acf6f8c4e781be9116))
+
 ## [2.0.0](https://github.com/oonamo/ef-themes.nvim/compare/v1.2.0...v2.0.0) (2026-08-25)
 
 
