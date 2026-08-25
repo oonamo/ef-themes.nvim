@@ -81,16 +81,14 @@ jobs:
     needs: [docs, build]
     if: ${{ !failure() && github.ref == 'refs/heads/main' }}
 
-    permissions:
-      contents: write
-      pull-requests: write
-
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.RELEASE_PAT }}
       - uses: googleapis/release-please-action@v4
         id: release
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.RELEASE_PAT }}
           config-file: .github/release-please-config.json
           manifest-file: .github/.release-please-manifest.json
 
@@ -99,7 +97,7 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
-          git remote add gh-token "https://${{ secrets.GITHUB_TOKEN }}@github.com/google-github-actions/release-please-action.git"
+          # git remote add gh-token "https://${{ secrets.GITHUB_TOKEN }}@github.com/google-github-actions/release-please-action.git"
           git tag -d stable || true
           git push origin :stable || true
           git tag -a stable -m "Last Stable Release"
