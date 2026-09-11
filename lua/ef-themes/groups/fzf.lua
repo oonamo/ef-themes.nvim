@@ -14,7 +14,7 @@ function M.get(c, opts)
     FzfLuaFzfPointer    = { fg   = c.magenta_cooler },
     FzfLuaFzfSeparator  = { fg   = c.border, bg     = c.bg_dim },
     FzfLuaFzfMatch      = { fg   = c.accent_0, bold = true },
-    FzfLuaFzfPrompt     = { fg   = c.prompt },
+    FzfLuaFzfPrompt     = { fg   = c.fg_prompt },
     FzfLuaHeaderBind    = { link = "@punctuation.special" },
     FzfLuaHeaderText    = { link = "Title" },
     FzfLuaNormal        = { fg   = c.fg_main, bg    = c.bg_dim },

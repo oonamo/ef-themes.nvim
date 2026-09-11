@@ -10,7 +10,7 @@ function M.get(c, opts)
     NeogitDiffContextHighlight    = { bg   = c.bg_dim },
     NeogitDiffDeleteHighlight     = { fg   = c.fg_removed, bg           = c.bg_removed },
     NeogitHunkHeader              = { bg   = c.bg_alt },
-    NeogitHunkHeaderHighlight     = { bg   = c.bg_active, fg            = c.fg_intense, bold = true },
+    NeogitHunkHeaderHighlight     = { bg   = c.bg_active, fg            = c.fg_main, bold = true },
     NeogitRemote                  = { fg   = c.accent_1 },
 
     NeogitBranchHead              = "NeogitBranch", -- Accent highlight for current HEAD in LogBuffer
@@ -56,11 +56,11 @@ function M.get(c, opts)
     -- NeogitActiveItem           = {},
 
     NeogitDiffHeaderHighlight     = { bg   = c.bg_alt },
-    NeogitHunkHeaderCursor        = { bold = true, bg                   = c.bg_active, fg    = c.fg_intense },
+    NeogitHunkHeaderCursor        = { bold = true, bg                   = c.bg_active, fg    = c.fg_main },
     NeogitDiffContextCursor       = { bg   = c.bg_dim },
     NeogitDiffAddCursor           = { bg   = c.bg_added, fg             = c.fg_added },
     NeogitDiffDeleteCursor        = { bg   = c.bg_removed, fg           = c.fg_removed },
-    NeogitDiffHeaderCursor        = { bg   = c.bg_hover_secondary, fg   = c.fg_intense, bold = true },
+    NeogitDiffHeaderCursor        = { bg   = c.bg_hover_secondary, fg   = c.fg_main, bold = true },
 
     NeogitFilePath                = { fg   = c.name }, --Applied to filepath
     -- NeogitCommitViewHeader     = {}, --Applied to header of Commit View

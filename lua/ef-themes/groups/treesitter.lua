@@ -66,8 +66,8 @@ function M.get(c, opts)
      ["@markup.heading.5.markdown"]    = { link          = "markdownH5" },
      ["@markup.heading.6.markdown"]    = { link          = "markdownH6" },
      ["@markup.italic"]                = { italic        = true },
-     ["@markup.link"]                  = { fg            = c.link, underline                                      =  true },
-     ["@markup.link.label"]            = { fg            = c.link, underline                                      =  true },
+     ["@markup.link"]                  = { fg            = c.fg_link, underline                                      =  true },
+     ["@markup.link.label"]            = { fg            = c.fg_link, underline                                      =  true },
      ["@markup.link.label.symbol"]     = { link          = "Identifier" },
      ["@markup.link.url"]              = { fg            = c.fg_alt },
      ["@markup.list"]                  = { fg            = c.blue_faint }, -- For special punctutation that does not fall in the categories before.
@@ -76,7 +76,7 @@ function M.get(c, opts)
      ["@markup.list.unchecked"]        = { fg            = c.blue }, -- For brackets and parens.
      ["@markup.math"]                  = { link          = "Special" },
      ["@markup.raw"]                   = { link          = "String" },
-     ["@markup.raw.markdown_inline"]   = { fg            = c.prose_code },
+     ["@markup.raw.markdown_inline"]   = { fg            = c.fg_prose_code },
      ["@markup.strikethrough"]         = { strikethrough = true },
      ["@markup.strong"]                = { bold          = true },
      ["@markup.underline"]             = { underline     = true },
@@ -92,7 +92,7 @@ function M.get(c, opts)
      ["@punctuation.special.markdown"] = { fg            = c.accent_3 }, -- For special symbols (e.g. `{}` in string interpolation)
      ["@string"]                       = { link          = "String" },
      ["@string.documentation"]         = { fg            = c.docstring },
-     ["@string.escape"]                = { fg            = c.rx_escape }, -- For escape characters within a string.
+     ["@string.escape"]                = { fg            = c.rx_backslash }, -- For escape characters within a string.
      ["@string.regexp"]                = { fg            = c.blue_cooler }, -- For regexes.
      ["@tag"]                          = { link          = "Label" },
      ["@tag.attribute"]                = { link          = "@property" },

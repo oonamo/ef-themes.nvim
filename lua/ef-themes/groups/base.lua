@@ -18,12 +18,12 @@ function M.get(c, opts)
     Comment                     = { fg        = c.comment, style                             =  opts.styles.comments }, -- any comment
     Conceal                     = { fg        = c.fg_alt }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Constant                    = { fg        = c.constant }, -- (preferred) any constant
-    CurSearch                   = { bg        = c.bg_search_current },
+    CurSearch                   = { bg        = c.bg_search_current, fg = c.fg_main },
     Cursor                      = { fg        = c.bg_main, bg                                =  c.cursor },
     CursorColumn                = { bg        = c.bg_alt }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorIM                    = { link      = "Cursor" },
     CursorLine                  = { bg        = c.bg_hl_line },
-    CursorLineNr                = { fg        = c.fg_intense, bold                           =  true }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    CursorLineNr                = { fg        = c.fg_main, bold                           =  true }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     Debug                       = { fg        = c.yellow_cooler }, --    debugging statements
     Delimiter                   = { link      = "Comment" }, --  character that needs attention
     DiagnosticError             = { fg        = c.err }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
@@ -52,7 +52,7 @@ function M.get(c, opts)
     Folded                      = { fg        = c.border, bg                                 =  c.bg_alt }, -- line used for closed folds
     Function                    = { fg        = c.fnname, style                              =  opts.styles.functions },
     Identifier                  = { fg        = c.identifier, style                          =  opts.styles.variables },
-    IncSearch                   = { bg        = c.bg_search_current, fg                      =  c.fg_intense }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    IncSearch                   = { bg        = c.bg_search_current, fg                      =  c.fg_main }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     Italic                      = { italic    = true, fg                                     =  c.fg_main }, -- (preferred) any italic text
     Keyword                     = { fg        = c.keyword, style                             =  opts.styles.keywords },
     LineNr                      = { fg        = c.fg_dim }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
@@ -60,12 +60,12 @@ function M.get(c, opts)
     LineNrBelow                 = { fg        = c.fg_dim },
     LspCodeLens                 = { fg        = c.comment },
     LspInfoBorder               = { fg        = c.border, bg                                 =  c.bg_dim },
-    LspInlayHint                = { bg        = c.bg_inactive, fg                            =  c.fg_intense },
+    LspInlayHint                = { bg        = c.bg_inactive, fg                            =  c.fg_main },
     LspReferenceRead            = { bg        = c.bg_dim }, -- used for highlighting "read" references
     LspReferenceText            = { bg        = c.bg_dim }, -- used for highlighting "text" references
     LspReferenceWrite           = { bg        = c.bg_dim }, -- used for highlighting "write" references
     LspSignatureActiveParameter = { bg        = c.bg_hover, bold                             =  true },
-    MatchParen                  = { fg        = c.fg_intense, bg                             =  c.bg_paren }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    MatchParen                  = { fg        = c.fg_main, bg                             =  c.bg_paren_match }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg                     = { fg        = c.accent_0, bold                             =  true }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MoreMsg                     = { fg        = c.blue }, -- |more-prompt|
     MsgArea                     = { fg        = c.fg_main }, -- Area for messages and cmdline
@@ -75,14 +75,14 @@ function M.get(c, opts)
     NormalNC                    = { link      = "Normal" }, -- normal text in non-current windows
     NormalSB                    = { fg        = c.fg_alt, bg                                 =  c.bg_alt }, -- normal text in sidebar
     Operator                    = { link      = "Bold" }, -- "sizeof", "+", "*", etc.
-    Pmenu                       = { fg        = c.fg_main, bg                                =  c.bg_inactive },
+    Pmenu                       = { fg        = c.fg_main, bg                                =  c.bg_popup },
     PmenuMatch                  = { fg        = c.accent_0, bold                             =  true },
     PmenuMatchSel               = { fg        = "NONE", bg                                   =  c.bg_completion },
     PmenuSel                    = { bg        = c.bg_completion },
     PreProc                     = { fg        = c.preprocessor }, -- (preferred) generic Preprocessor
     Question                    = { fg        = c.accent_3 }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine                = { bg        = c.bg_region, bold                            =  true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    Search                      = { bg        = c.bg_search_lazy, fg                      =  c.fg_intense }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    Search                      = { bg        = c.bg_search_lazy, fg                      =  c.fg_main }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     SignColumn                  = { bg        = opts.transparent and "NONE" or c.bg_main, fg =  c.fg_alt }, -- column where |signs| are displayed
     Special                     = { fg        = c.blue_faint }, -- (preferred) any special symbol
     SpecialKey                  = { fg        = c.accent_0 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
@@ -91,20 +91,20 @@ function M.get(c, opts)
     SpellLocal                  = { undercurl = true, sp                                     =  c.warning },
     SpellRare                   = { undercurl = true, sp                                     =  c.warning },
     Statement                   = { fg        = c.magenta_cooler }, -- (preferred) any statement
-    StatusLine                  = { fg        = c.fg_mode_line, bg                           =  c.bg_mode_line }, -- status line of current window
+    StatusLine                  = { fg        = c.fg_mode_line_active, bg                           =  c.bg_mode_line_active }, -- status line of current window
     StatusLineNC                = { fg        = c.fg_dim, bg                                 =  c.bg_alt }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     String                      = { fg        = c.string }, --   a string constant: "this is a string"
-    Substitute                  = { bg        = c.bg_search_replace, fg                      =  c.fg_intense }, -- |:substitute| replacement text highlighting
-    TabLine                     = { bg        = c.bg_tab_bar, fg                             =  c.fg_dim }, -- tab pages line, not active tab page label
+    Substitute                  = { bg        = c.bg_search_replace, fg                      =  c.fg_main }, -- |:substitute| replacement text highlighting
+    TabLine                     = { bg        = c.bg_dim, fg                             =  c.fg_dim }, -- tab pages line, not active tab page label
     TabLineFill                 = { bg        = c.bg_main }, -- tab pages line, where there are no labels
-    TabLineSel                  = { fg        = c.fg_alt, bg                                 =  c.bg_tab_current }, -- tab pages line, active tab page label
+    TabLineSel                  = { fg        = c.fg_alt, bg                                 =  c.bg_main }, -- tab pages line, active tab page label
     Title                       = { fg        = c.rainbow_0 }, -- titles for output from ":set all", ":autocmd" etc.
     Todo                        = { fg        = c.prose_todo, bg                             =  c.yellow_warmer }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     Type                        = { fg        = c.type, style = opts.styles.types }, -- (preferred) int, long, char, etc.
     Underlined                  = { underline = true }, -- (preferred) text that stands out, HTML links
     Variable                    = { fg        = c.fg_main },
     VertSplit                   = { fg        = c.border },
-    Visual                      = { bg        = c.bg_region, fg                              =  c.fg_region }, -- Visual mode selection
+    Visual                      = { bg        = c.bg_region, fg                              =  c.fg_main }, -- Visual mode selection
     VisualNOS                   = { bg        = c.bg_region }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg                  = { fg        = c.warning, bold                              =  true },
     Whitespace                  = { fg        = c.fg_dim }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
@@ -112,7 +112,7 @@ function M.get(c, opts)
     WinBar                      = { link      = "StatusLine" }, -- window bar
     WinBarNC                    = { link      = "StatusLineNC" }, -- window bar in inactive windows
     WinSeparator                = { fg        = c.border, bold                               =  true }, -- the column separating vertically split windows
-    ["@markup.link"]            = { fg        = c.link, underline                            =  true, sp                                  = c.border },
+    ["@markup.link"]            = { fg        = c.fg_link, underline                            =  true, sp                                  = c.border },
     diffAdded                   = { fg        = c.fg_added },
     diffChanged                 = { fg        = c.fg_changed },
     diffFile                    = { fg        = c.blue },

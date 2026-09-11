@@ -77,6 +77,17 @@ function Palette.__compatability_layer(name, palette)
   palette["bg_mode_line"] = palette["bg_mode_line_active"]
   palette["fg_mode_line"] = palette["fg_mode_line_active"]
 
+  palette["bg_paren"] = palette["bg_paren_match"]
+
+  palette["link"] = palette["fg_link"]
+  palette["link_alt"] = palette["fg_link_visited"]
+  palette["prompt"] = palette["fg_prompt"]
+  palette["rx_escape"] = palette["rx_backslash"]
+  palette["prose_code"] = palette["fg_prose_code"]
+  palette["prose_macro"] = palette["fg_prose_macro"]
+  palette["prose_verbatim"] = palette["fg_prose_verbatim"]
+  palette["bg_region"] = palette["bg_active"]
+
   return palette
 end
 

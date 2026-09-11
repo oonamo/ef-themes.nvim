@@ -16,7 +16,7 @@ function M.get(c, opts)
 
     ["@org.checkbox"] = { fg = c.warning },
 
-    ["@org.code"] = { fg = c.prose_code },
+    ["@org.code"] = { fg = c.fg_prose_code },
 
     ["@org.drawer"] = { fg = c.prose_metadata },
 
@@ -24,7 +24,7 @@ function M.get(c, opts)
 
     ["@org.directive"] = { fg = c.prose_metadata_value },
 
-    ["@org.footnote"] = { fg = c.link, underline = true },
+    ["@org.footnote"] = { fg = c.fg_link, underline = true },
 
     ["@org.table.heading"] = { fg = c.prose_table, bold = true },
 

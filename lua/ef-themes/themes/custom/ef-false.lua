@@ -5,7 +5,7 @@ tint.palette.bg_active = "bg-main"
 
 tint.palette.fg_main = "#eeffff"
 
-tint.palette.fg_intense = tint.palette.fg_main
+tint.palette.fg_main = tint.palette.fg_main
 tint.palette.fg_dim = "gray50"
 
 tint.palette.fg_mode_line = "#ffffff"
