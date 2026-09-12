@@ -6,13 +6,19 @@ return function(name)
   local c = require("ef-themes.themes").get_palette(name, opts)
 
   local ef_theme = {}
-  local transparent_bg = opts.transparent and "NONE" or c.bg_inactive
-  local inactive_transparent_bg = opts.transparent and "NONE" or c.bg_mode_line
+  local statusline_bg = opts.transparent and "NONE" or c.bg_inactive
+  local inactive_statusline_bg = opts.transparent and "NONE" or c.bg_mode_line_inactive
+
+  -- # HACK: change whole statusline to fit lualine theme
+  vim.api.nvim_set_hl(0, "StatusLine", {
+    fg = c.fg_mode_line_active,
+    bg = statusline_bg,
+  })
 
   ef_theme.normal = {
     a = { bg = c.rainbow_0, fg = c.bg_dim, gui = "bold" },
     b = { bg = c.bg_dim, fg = c.rainbow_0 },
-    c = { bg = transparent_bg, fg = c.fg_main },
+    c = { bg = statusline_bg, fg = c.fg_main },
   }
 
   ef_theme.insert = {
@@ -41,9 +47,9 @@ return function(name)
   }
 
   ef_theme.inactive = {
-    a = { bg = inactive_transparent_bg, fg = c.fg_mode_line },
-    b = { bg = inactive_transparent_bg, fg = c.fg_mode_line, gui = "bold" },
-    c = { bg = inactive_transparent_bg, fg = c.fg_mode_line },
+    a = { bg = inactive_statusline_bg, fg = c.fg_mode_line_inactive },
+    b = { bg = inactive_statusline_bg, fg = c.fg_mode_line_inactive, gui = "bold" },
+    c = { bg = inactive_statusline_bg, fg = c.fg_mode_line_inactive },
   }
 
   return ef_theme
