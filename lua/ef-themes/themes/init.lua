@@ -88,6 +88,15 @@ function Palette.__compatability_layer(name, palette)
   palette["prose_verbatim"] = palette["fg_prose_verbatim"]
   palette["bg_region"] = palette["bg_active"]
 
+  palette["fg_mode_line_inactive"] = palette["fg_dim"]
+  palette["bg_mode_line_inactive"] = palette["bg_inactive"]
+
+  local default_to = function(x, def) return palette[x] and palette[x] or palette[def] end
+
+  palette["modeline_err"] = default_to("modeline_err", "red_faint")
+  palette["modeline_warning"] = default_to("modeline_warning", "yellow_faint")
+  palette["modeline_info"] = default_to("modeline_info", "blue_faint")
+
   return palette
 end
 
