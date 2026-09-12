@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.2](https://github.com/oonamo/ef-themes.nvim/compare/v2.0.1...v2.0.2) (2026-09-12)
+
+
+### Bug Fixes
+
+* **lualine:** check for nil in modeline, force statusline colors style ([f8f3c4d](https://github.com/oonamo/ef-themes.nvim/commit/f8f3c4df0526e5f0f1b17edb624e39fca648e48a))
+* **lualine:** check for nil in modeline, force statusline colors style ([3676d08](https://github.com/oonamo/ef-themes.nvim/commit/3676d0819c86afd3f9802eccd599c109a4213606)), closes [#21](https://github.com/oonamo/ef-themes.nvim/issues/21)
+* transition highlights to newer system ([0437bb0](https://github.com/oonamo/ef-themes.nvim/commit/0437bb071ce8568883cea9f1aac3ce121fc23f3e))
+
 ## [2.0.1](https://github.com/oonamo/ef-themes.nvim/compare/v2.0.0...v2.0.1) (2026-08-25)
 
 
